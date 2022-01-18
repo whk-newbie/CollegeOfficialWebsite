@@ -10,7 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="269c42a1-7ec8-4438-a7c2-fdab4c6cf334" name="Default Changelist" comment="首页建设差不多" />
+    <list default="true" id="269c42a1-7ec8-4438-a7c2-fdab4c6cf334" name="Default Changelist" comment="首页建设差不多">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Educational administration Online.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EducationaladministrationOnline.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +30,7 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/vue/pre" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProjectId" id="23rS418NYquvtky79sxFXpufjcQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -45,6 +51,9 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\admin\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="269c42a1-7ec8-4438-a7c2-fdab4c6cf334" name="Default Changelist" comment="" />
@@ -52,7 +61,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642490518702</updated>
-      <workItem from="1642490520371" duration="1132000" />
+      <workItem from="1642490520371" duration="1248000" />
+      <workItem from="1642491796897" duration="429000" />
     </task>
     <task id="LOCAL-00001" summary="前后端分离项目基于vue3与Djiango，还在建设中">
       <created>1642491156194</created>
@@ -68,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642491296172</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="首页建设差不多">
+      <created>1642491674406</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1642491674406</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +101,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -92,10 +110,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="首页建设差不多" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="206" key="FileChooserDialogImpl" timestamp="1642490688837">
+    <state x="93" y="133" width="1350" height="638" key="DiffContextDialog" timestamp="1642492225678">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state x="549" y="206" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1642490688837" />
+    <state x="93" y="133" width="1350" height="638" key="DiffContextDialog/0.40.1536.824@0.40.1536.824" timestamp="1642492225678" />
+    <state x="549" y="206" key="FileChooserDialogImpl" timestamp="1642492216272">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="549" y="206" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1642492216272" />
     <state x="570" y="349" key="Github.ShareDialog" timestamp="1642491631567">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
@@ -108,13 +130,17 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="576" y="172" key="RollbackChangesDialog/0.40.1536.824@0.40.1536.824" timestamp="1642490754372" />
-    <state x="270" y="96" key="SettingsEditor" timestamp="1642490667350">
+    <state x="270" y="96" key="SettingsEditor" timestamp="1642491978624">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state x="270" y="96" key="SettingsEditor/0.40.1536.824@0.40.1536.824" timestamp="1642490667350" />
-    <state x="361" y="185" key="Vcs.Push.Dialog.v2" timestamp="1642491309991">
+    <state x="270" y="96" key="SettingsEditor/0.40.1536.824@0.40.1536.824" timestamp="1642491978624" />
+    <state x="599" y="321" key="VCS.EditChangelistDialog" timestamp="1642491843433">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state x="361" y="185" key="Vcs.Push.Dialog.v2/0.40.1536.824@0.40.1536.824" timestamp="1642491309991" />
+    <state x="599" y="321" key="VCS.EditChangelistDialog/0.40.1536.824@0.40.1536.824" timestamp="1642491843433" />
+    <state x="361" y="185" key="Vcs.Push.Dialog.v2" timestamp="1642491922975">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="361" y="185" key="Vcs.Push.Dialog.v2/0.40.1536.824@0.40.1536.824" timestamp="1642491922975" />
   </component>
 </project>
