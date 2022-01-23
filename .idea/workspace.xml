@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a8bf776c-d817-4751-be3c-1787d0b7eaa6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pre/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre/src/components/Homebody.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pre/src/components/Homebody.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pre/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pre/src/router/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="245L9fU52ZYWGOsQIRORG2jeW3F" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\admin\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8bf776c-d817-4751-be3c-1787d0b7eaa6" name="Default Changelist" comment="" />
+      <created>1642915351142</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642915351142</updated>
+      <workItem from="1642915352246" duration="1250000" />
+      <workItem from="1642926241741" duration="44000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="github/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myShow1" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="207" key="FileChooserDialogImpl" timestamp="1642915647560">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="549" y="207" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1642915647560" />
+    <state x="270" y="96" key="SettingsEditor" timestamp="1642915784034">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="270" y="96" key="SettingsEditor/0.40.1536.824@0.40.1536.824" timestamp="1642915784034" />
+    <state x="509" y="186" key="VcsDiffUtil.ChangesDialog" timestamp="1642915485483">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="509" y="186" key="VcsDiffUtil.ChangesDialog/0.40.1536.824@0.40.1536.824" timestamp="1642915485483" />
+    <state x="599" y="243" key="svn.repositoryBrowser" timestamp="1642915660467">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="599" y="243" key="svn.repositoryBrowser/0.40.1536.824@0.40.1536.824" timestamp="1642915660467" />
+    <state x="530" y="214" key="svn4idea.import.options" timestamp="1642915656844">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="530" y="214" key="svn4idea.import.options/0.40.1536.824@0.40.1536.824" timestamp="1642915656844" />
+  </component>
+</project>

@@ -22,7 +22,7 @@
                 <el-table-column prop="article.date" width="180"/>
               </el-table>
               <div style="border:0;margin-bottom: 50%">
-                <el-button @click="moreinfo" style="border:0;margin-left:85%;">更多+</el-button>
+                <el-button style="border:0;margin-left:85%;" @click="$router.push('/News')">更多+</el-button>
               </div>
             </div>
           </div>

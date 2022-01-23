@@ -7,7 +7,8 @@
     </div>
     <div class="list">
         <el-menu
-            :default-active="activeIndex"
+            router
+            :default-active="this.$route.path"
             class="el-menu-demo"
             mode="horizontal"
             background-color="#545c64"
@@ -16,12 +17,12 @@
             @select="handleSelect"
             ellipsis="false"
         >
-          <el-menu-item index="1">首页</el-menu-item>
+          <el-menu-item index="/">首页</el-menu-item>
           <el-sub-menu index="2">
             <template #title>学院概况</template>
-            <el-menu-item index="2-1">学院简介</el-menu-item>
-            <el-menu-item index="2-2">学院领导</el-menu-item>
-            <el-menu-item index="2-3">内设机构</el-menu-item>
+            <el-menu-item index="CollegeOverview">学院简介</el-menu-item>
+            <el-menu-item index="leaders">学院领导</el-menu-item>
+            <el-menu-item index="organization">内设机构</el-menu-item>
             <el-sub-menu index="2-4">
               <template #title>师资队伍</template>
               <el-menu-item index="2-4-1">专人教师</el-menu-item>
