@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('mdeditor/', include('mdeditor.urls'))
+    path('mdeditor/', include('mdeditor.urls')),
+    path('api/news/', include('news.urls', namespace='news')),
 ]
 
 if settings.DEBUG:

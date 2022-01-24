@@ -24,12 +24,13 @@ SECRET_KEY = 'django-insecure-o-4rk)y$3$2x!xxd*sn6-_ilxko-iubz*hkk$v+v4ww87-36-l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
 
 # Application definition
 
 INSTALLED_APPS = [
-    'bootstrap_admin',  # 更改后台样式
+    'simpleui',  # 更改后台样式
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'news',
+    'imagenews',
     'info',
+    'userinfo',
     'mdeditor',
 ]
 
@@ -104,9 +107,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'zh-hans'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -125,3 +127,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'  # 你上传的文件和图片会默认存在/media/editor下
+
+# 实现分页
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20
+}
