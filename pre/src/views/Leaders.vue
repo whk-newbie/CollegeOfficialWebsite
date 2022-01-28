@@ -6,6 +6,12 @@
         <CLO/>
       </el-aside>
       <el-container>
+        <el-breadcrumb separator="/">
+          <el-breadcrumb-item>当前位置: </el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/' }">主页</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/CollegeOverview'}">学院概况</el-breadcrumb-item>
+          <el-breadcrumb-item>学院领导</el-breadcrumb-item>
+        </el-breadcrumb>
         <el-header><p>学院领导</p></el-header>
         <el-main>
           <h3>院长：王明文</h3>
@@ -46,6 +52,11 @@ export default {
   font-family: 微软雅黑;
   margin-left: 5%;
 }
+.el-breadcrumb {
+  margin-top: 10px;
+  margin-left:10px;
+  font-family: 微软雅黑;
+}
 .el-aside {
   background-color: #92f6ce;
 }
@@ -60,7 +71,7 @@ export default {
 }
 
 .el-header > p {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 5px;
   color: gray;
 }

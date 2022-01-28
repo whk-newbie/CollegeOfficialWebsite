@@ -29,18 +29,18 @@ const routes = [
         component: Organization
     },
     {
-        path: '/News',
-        name: 'News',
+        path: '/news',
+        name: 'news',
         component: NewsCenter
     },
     {
-        path: '/ImageNews',
-        name: 'ImageNews',
+        path: '/imagenews',
+        name: 'imagenews',
         component: ImageNews
     },
     {
-        path: '/Information',
-        name: 'Information',
+        path: '/information',
+        name: 'information',
         component: Information
     },
 

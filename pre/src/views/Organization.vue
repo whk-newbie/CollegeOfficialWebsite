@@ -6,6 +6,12 @@
         <CLO/>
       </el-aside>
       <el-container>
+        <el-breadcrumb separator="/">
+          <el-breadcrumb-item>当前位置: </el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/' }">主页</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/CollegeOverview'}">学院概况</el-breadcrumb-item>
+          <el-breadcrumb-item>内设机构</el-breadcrumb-item>
+        </el-breadcrumb>
         <el-header><p>内设机构</p></el-header>
         <el-main>
           <el-tabl v-for="item in tableData" :key="item.department">
@@ -84,6 +90,11 @@ export default {
   width: 80%;
   box-shadow: 4px 4px 15px #dad9d9;
 }
+.el-breadcrumb {
+  margin-top: 10px;
+  margin-left:10px;
+  font-family: 微软雅黑;
+}
 
 .el-aside {
   background-color: #92f6ce;
@@ -98,7 +109,7 @@ export default {
 }
 
 .el-header > p {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 5px;
   color: gray;
 }

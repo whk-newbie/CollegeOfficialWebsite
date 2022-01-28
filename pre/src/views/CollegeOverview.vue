@@ -6,6 +6,12 @@
         <CLO/>
       </el-aside>
       <el-container>
+        <el-breadcrumb separator="/">
+          <el-breadcrumb-item>当前位置: </el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/' }">主页</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/CollegeOverview'}">学院概况</el-breadcrumb-item>
+          <el-breadcrumb-item>学院简介</el-breadcrumb-item>
+        </el-breadcrumb>
         <el-header><p>学院简介</p></el-header>
         <el-main class="main">
           <h1>江西师范大学计算机信息工程学院简介</h1>
@@ -76,6 +82,11 @@ export default {
   font-size: 18px;
   font-family: 仿宋_GB2312;
 }
+.el-breadcrumb {
+  margin-top: 10px;
+  margin-left:10px;
+  font-family: 微软雅黑;
+}
 
 .el-aside {
   background-color: #92f6ce;
@@ -91,7 +102,7 @@ export default {
 }
 
 .el-header > p {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 5px;
   color: gray;
 }

@@ -26,12 +26,13 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="66f16be1-b391-4688-8dcf-b4caa62bb9f9" />
   </component>
   <component name="ProjectId" id="23lWulnwVLOltZ90OKl0o8EcLkW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -96,6 +97,9 @@
       <workItem from="1642322611109" duration="15037000" />
       <workItem from="1642478840579" duration="11110000" />
       <workItem from="1642913299950" duration="12719000" />
+      <workItem from="1643090614236" duration="1984000" />
+      <workItem from="1643279131360" duration="3191000" />
+      <workItem from="1643347489559" duration="5182000" />
     </task>
     <servers />
   </component>
@@ -131,22 +135,22 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="640" y="349" key="Github.ShareDialog/0.40.1536.824@0.40.1536.824" timestamp="1642489954301" />
-    <state width="1515" height="178" key="GridCell.Tab.0.bottom" timestamp="1642926489379">
+    <state width="1515" height="178" key="GridCell.Tab.0.bottom" timestamp="1643349991154">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1515" height="178" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1642926489379" />
-    <state width="1515" height="178" key="GridCell.Tab.0.center" timestamp="1642926489379">
+    <state width="1515" height="178" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1643349991154" />
+    <state width="1515" height="178" key="GridCell.Tab.0.center" timestamp="1643349991154">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1515" height="178" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1642926489379" />
-    <state width="1515" height="178" key="GridCell.Tab.0.left" timestamp="1642926489379">
+    <state width="1515" height="178" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1643349991154" />
+    <state width="1515" height="178" key="GridCell.Tab.0.left" timestamp="1643349991154">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1515" height="178" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1642926489379" />
-    <state width="1515" height="178" key="GridCell.Tab.0.right" timestamp="1642926489379">
+    <state width="1515" height="178" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1643349991154" />
+    <state width="1515" height="178" key="GridCell.Tab.0.right" timestamp="1643349991154">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state width="1515" height="178" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1642926489379" />
+    <state width="1515" height="178" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1643349991154" />
     <state x="188" y="153" key="SettingsEditor" timestamp="1642489915150">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
@@ -159,9 +163,9 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="573" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.40.1536.824@0.40.1536.824" timestamp="1642489683913" />
-    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1642923206068">
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1643352520125">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
-    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.40.1536.824@0.40.1536.824" timestamp="1642923206068" />
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.40.1536.824@0.40.1536.824" timestamp="1643352520125" />
   </component>
 </project>
