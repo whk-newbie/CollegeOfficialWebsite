@@ -1,12 +1,11 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
 import Home from "@/views/Home.vue"
-import CollegeOverview from "@/views/CollegeOverview";
-import Leaders from "@/views/Leaders";
-import Organization from "@/views/Organization";
-import Information from "@/views/Information";
-import NewsCenter from "@/views/NewsCenter";
-import ImageNews from "@/views/ImageNews";
-
+import CollegeOverview from "@/views/CollegeOverview/CollegeOverview"
+import Leaders from "@/views/CollegeOverview/Leaders"
+import Organization from "@/views/CollegeOverview/Organization"
+import NewsCenter from "@/views/news/NewsCenter"
+import Information from "@/views/news/Information"
+import ImageNews from "@/views/news/ImageNews"
 const routes = [
     {
         path: '/',
