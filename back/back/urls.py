@@ -23,6 +23,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('mdeditor/', include('mdeditor.urls')),
     path('api/news/', include('news.urls', namespace='news')),
+    path('api/info/', include('info.urls', namespace='info')),
 ]
 
 if settings.DEBUG:

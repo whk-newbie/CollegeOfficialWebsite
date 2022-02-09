@@ -2,48 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84bae19e-f0f5-4284-a06f-37177b386843" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/imagenews/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenews/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenews/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenews/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenews/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenews/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenews/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenews/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imagenews/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/info/migrations/0006_alter_infos_options_alter_infos_body_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/migrations/0004_rename_time_news_create_time_news_update_time.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/migrations/0005_alter_news_create_time_alter_news_title_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/migrations/0006_alter_news_options_alter_news_body.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/migrations/0007_news_author.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/migrations/0008_alter_news_author.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/migrations/0009_alter_news_author_alter_news_avatar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/permissions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/news/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userinfo/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userinfo/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userinfo/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userinfo/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userinfo/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userinfo/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userinfo/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userinfo/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/CollegeOfficialWebsite.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/info/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/info/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/529585a3b9f1ba4b4734f800ba3c18da.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/529585a3b9f1ba4b4734f800ba3c18da.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/84a04eddea274a74a7eb8167607b4ccd.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/84a04eddea274a74a7eb8167607b4ccd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/8b11a0b2ce159576040427a507187a74.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/8b11a0b2ce159576040427a507187a74.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/e25328feb14feb41a3e11af209f201ee.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/e25328feb14feb41a3e11af209f201ee.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/f9d426cf815a462c37a4f06d8539b0cb.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/f9d426cf815a462c37a4f06d8539b0cb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/29f5e0482a1ddc3b2245c57c07068c15.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/29f5e0482a1ddc3b2245c57c07068c15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/3510889af748f9b6ef503b0ef90f88f5.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/3510889af748f9b6ef503b0ef90f88f5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/575f37e267eff194674edcc5c89de13c.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/575f37e267eff194674edcc5c89de13c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/b76947acac0cece7ac5efac94d7d4833.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/b76947acac0cece7ac5efac94d7d4833.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/cb3862b6826bb3bc7fdc49dedfae346b.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/cb3862b6826bb3bc7fdc49dedfae346b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/d20fa0b4a10ddaf16ce583d728be1e17.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/d20fa0b4a10ddaf16ce583d728be1e17.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/e9927789b6ad46d73ce450fbc5c9e0d1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/e9927789b6ad46d73ce450fbc5c9e0d1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/ef2354b1e773106686039eaf48b0f4f8.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/ef2354b1e773106686039eaf48b0f4f8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/src/components/Homebody.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/components/Homebody.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +98,9 @@
       <updated>1643018066238</updated>
       <workItem from="1643018094580" duration="187000" />
       <workItem from="1643018299522" duration="2704000" />
+      <workItem from="1644147263446" duration="166000" />
+      <workItem from="1644147462377" duration="1476000" />
+      <workItem from="1644391225735" duration="6746000" />
     </task>
     <servers />
   </component>
@@ -129,6 +117,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

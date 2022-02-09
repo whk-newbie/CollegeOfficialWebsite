@@ -131,5 +131,5 @@ MEDIA_URL = '/media/'  # 你上传的文件和图片会默认存在/media/editor
 # 实现分页
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 20
+    'PAGE_SIZE': 9,
 }

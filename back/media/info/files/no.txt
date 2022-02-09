@@ -1,0 +1,494 @@
+import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
+import Home from '/views/Home'
+import CollegeOverview from '../views/CollegeOverView/CollegeOverview'
+const routes: Array<RouteRecordRaw> = [
+    {
+        path: '/',
+        name: 'menu',
+        meta: {
+            isShow: false,
+            title: '首页',
+        },
+        component: Home,
+        children: [
+            {
+                path: '/',
+                name: 'home',
+                meta: {
+                    isShow: false,
+                    title: '首页',
+                },
+                component: Home,
+            },
+
+        ]
+    },
+    {
+        path: '/collegeoverview',
+        name: 'PersonalCenter',
+        meta: {
+            isShow: true,
+            title: '学院概况',
+        },
+        component: CollegeOverview,
+        children: [
+            {
+                path: '/collegeoverView',
+                name: 'CollegeobererView',
+                meta: {
+                    isShow: true,
+                    title: '学院简介',
+                },
+                component: () => import('../views/CollegeOverview/CollegeOverview.vue')
+            },
+            {
+                path: '/leaders',
+                name: 'Leaders',
+                meta: {
+                    isShow: true,
+                    title: '学院领导',
+                },
+                component: () => import('../views/CollegeOverview/Leaders.vue')
+            },
+            {
+                path: '/organization',
+                name: 'organization',
+                meta: {
+                    isShow: true,
+                    title: '内设机构',
+                },
+                component: () => import('../views/CollegeOverview/Organization.vue')
+            },
+            {
+                path: 'teachers',
+                name: 'professor',
+                meta: {
+                    isShow: true,
+                    title: '学院概况',
+                },
+                component: CollegeOverview, //还要修改
+                children: [
+                    {
+                        path: '/teachers',
+                        name: 'teachers',
+                        meta: {
+                            isShow: true,
+                            title: '专人教师',
+                        },
+                        component: () => import('../views/CollegeOverview/CollegeOverview.vue')
+                    },
+                    {
+                        path: '/professor',
+                        name: 'professor',
+                        meta: {
+                            isShow: true,
+                            title: '教授队伍',
+                            icon: 'el-icon-s-check'
+                        },
+                        component: () => import('../views/CollegeOverview/Leaders.vue')
+                    },
+                    {
+                        path: '/tutor',
+                        name: 'tutor',
+                        meta: {
+                            isShow: true,
+                            title: '研究生导师',
+                            icon: 'el-icon-collection'
+                        },
+                        component: () => import('../views/CollegeOverview/Organization.vue')
+                    },
+                ]
+
+            }
+        ]
+    },
+    {
+        path: '/newsCenter',
+        name: 'newsCenter',
+        meta: {
+            isShow: true,
+            title: '我的钱包',
+        },
+        component: Home,
+        children: [
+            {
+                path: '/news',
+                name: 'news',
+                meta: {
+                    isShow: true,
+                    title: '学院新闻',
+                },
+                component: () => import('../views/news/NewsCenter.vue')
+            },
+            {
+                path: '/imagenews',
+                name: 'imagenews',
+                meta: {
+                    isShow: true,
+                    title: '图片新闻',
+                },
+                component: () => import('../views/news/ImageNews')
+            },
+            {
+                path: '/information',
+                name: 'Information',
+                meta: {
+                    isShow: true,
+                    title: '学院通知',
+                },
+                component: () => import('../views/news/Information')
+            },
+        ]
+    },
+    {
+        path: '/education',
+        name: 'Education',
+        meta: {
+            isShow: true,
+            title: '人才培养',
+        },
+        children: [
+            {
+                path: '/Graduate',
+                name: 'Graduate',
+                meta: {
+                    isShow: true,
+                    title: '本科生教育',
+                },
+                component: () => import('../views/education/Graduate'),
+                children: [
+                    {
+                        path: '/Graduate',
+                        name: 'Graduate',
+                        meta: {
+                            isShow: true,
+                            title: '专业介绍',
+                        },
+                        component: () => import('../views/education/Graduate')
+                    },
+                    {
+                        path: '/Graduate',
+                        name: 'Graduate',
+                        meta: {
+                            isShow: true,
+                            title: '培养方案',
+                        },
+                        component: () => import('../views/education/Graduate')
+                    },
+                    {
+                        path: '/Graduate',
+                        name: 'Graduate',
+                        meta: {
+                            isShow: true,
+                            title: '教学成果',
+                        },
+                        component: () => import('../views/education/Graduate')
+                    },
+                    {
+                        path: '/Graduate',
+                        name: 'Graduate',
+                        meta: {
+                            isShow: true,
+                            title: '精品课程',
+                        },
+                        component: () => import('../views/education/Graduate')
+                    },
+
+                ]
+            },
+            {
+                path: '/underGraduate',
+                name: 'Undergraduate',
+                meta: {
+                    isShow: true,
+                    title: '研究生教育',
+                },
+                component: () => import('../views/education/Undergraduate'),
+                children: [
+                    {
+                        path: '/Graduate',
+                        name: 'Graduate',
+                        meta: {
+                            isShow: true,
+                            title: '学位点介绍',
+                        },
+                        component: () => import('../views/education/Graduate')
+                    },
+                    {
+                        path: '/Graduate',
+                        name: 'Graduate',
+                        meta: {
+                            isShow: true,
+                            title: '培养方案',
+                        },
+                        component: () => import('../views/education/Graduate')
+                    },
+                    {
+                        path: '/Graduate',
+                        name: 'Graduate',
+                        meta: {
+                            isShow: true,
+                            title: '信息公告',
+                        },
+                        component: () => import('../views/education/Graduate')
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        path: '/research',
+        name: 'Research',
+        meta: {
+            isShow: true,
+            title: '科学研究',
+        },
+        children: [
+            {
+                path: '/Graduate',
+                name: 'Graduate',
+                meta: {
+                    isShow: true,
+                    title: '科研动态',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/Graduate',
+                name: 'Graduate',
+                meta: {
+                    isShow: true,
+                    title: '科研机构',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/Graduate',
+                name: 'Graduate',
+                meta: {
+                    isShow: true,
+                    title: '科研成果',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+        ]
+    },
+    {
+        path: '/teacherstyle',
+        name: 'TeacherStyle',
+        meta: {
+            isShow: false,
+            title: '师德师风',
+        },
+    },
+    {
+        path: '/EnrollmentAndEmployment',
+        name: 'EnrollmentAndEmployment',
+        meta: {
+            isShow: true,
+            title: '招生就业',
+        },
+        children: [
+            {
+                path: '/enrollment',
+                name: 'Enrollment',
+                meta: {
+                    isShow: true,
+                    title: '招生',
+                },
+                component: () => import('../views/EnrollmentAndEmployment/Enrollment')
+            },
+            {
+                path: '/employment',
+                name: 'Employment',
+                meta: {
+                    isShow: true,
+                    title: '就业',
+                },
+                component: () => import('../views/EnrollmentAndEmployment/Employment')
+            },
+        ]
+    },
+    {
+        path:'/partybuilding',
+        name: 'Partybuilding',
+        meta: {
+            isShow: false,
+            title: '党建工作',
+        },
+    },
+    {
+        path: '/gqt',
+        name: 'gqt',
+        meta: {
+            isShow: true,
+            title: '团学工作',
+        },
+        children: [
+            {
+                path: '/gqtnews',
+                name: 'gqtnews',
+                meta: {
+                    isShow: true,
+                    title: '学工新闻',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/JXNUYoungvoice',
+                name: 'JXNUYoungvoice',
+                meta: {
+                    isShow: true,
+                    title: '青年之声江西师范大学',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/gqtOrganization',
+                name: 'gqtOrganization',
+                meta: {
+                    isShow: true,
+                    title: '团学组织',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/member',
+                name: 'member',
+                meta: {
+                    isShow: true,
+                    title: '党员服务',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/Management',
+                name: 'Management System',
+                meta: {
+                    isShow: true,
+                    title: '管理制度',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/honor',
+                name: 'Honor',
+                meta: {
+                    isShow: true,
+                    title: '荣誉室',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+        ]
+    },
+    {
+        path: '/laboratory',
+        name: 'Laboratory',
+        meta: {
+            isShow: true,
+            title: '实验中心',
+        },
+        children: [
+            {
+                path: '/Overview',
+                name: 'Overview',
+                meta: {
+                    isShow: true,
+                    title: '中心概况',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/Comprehensive',
+                name: 'Comprehensive',
+                meta: {
+                    isShow: true,
+                    title: '综合实验室',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/gqtOrganization',
+                name: 'gqtOrganization',
+                meta: {
+                    isShow: true,
+                    title: '硬件实验室',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/member',
+                name: 'member',
+                meta: {
+                    isShow: true,
+                    title: '网络实验室',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/Management',
+                name: 'Management System',
+                meta: {
+                    isShow: true,
+                    title: '物联网实验室',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/honor',
+                name: 'Honor',
+                meta: {
+                    isShow: true,
+                    title: '嵌入式实验室',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+        ]
+    },
+    {
+        path: '/download',
+        name: 'DownloadCenter',
+        meta: {
+            isShow: true,
+            title: '下载中心',
+        },
+        component: Home,
+        children: [
+            {
+                path: '/',
+                name: '',
+                meta: {
+                    isShow: true,
+                    title: '学习资料',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: '/JXNUYoungvoice',
+                name: 'JXNUYoungvoice',
+                meta: {
+                    isShow: true,
+                    title: '软件下载',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+            {
+                path: 'https://dl.ccf.org.cn/index.html?_ack=1',
+                name: 'CCF',
+                meta: {
+                    isShow: true,
+                    title: 'CCF数字图书馆',
+                },
+                component: () => import('../views/education/Graduate')
+            },
+        ]
+    },
+
+]
+
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes
+})
+
+export default router

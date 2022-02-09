@@ -16,10 +16,10 @@
         <el-col :span="12">
           <div class="grid-content bg-purple">
             <div class="newslist">
-              <el-table v-loading="loading" :data="tableData" stripe style="width: 100%;height:135%"
+              <el-table v-loading="loading" :data="tableData.results" stripe style="width: 100%;height:135%"
                         @cell-click="changetodetil">
-                <el-table-column prop="article.title" label="学院新闻"/>
-                <el-table-column prop="article.date" width="180"/>
+                <el-table-column prop="title" label="学院新闻"/>
+                <el-table-column prop="create_time" :formatter="formatted_time" width="180"/>
               </el-table>
               <div style="border:0;margin-bottom: 50%">
                 <el-button style="border:0;margin-left:85%;" @click="$router.push('/News')">更多+</el-button>
@@ -65,10 +65,10 @@
       </el-row>
     </div>
     <div class="info">
-      <el-table v-loading="loading" :data="infoData" stripe style="width: 100%;height:135%" height="100%"
+      <el-table v-loading="loading" :data="infoData.results" stripe style="width: 100%;height:140%"
                 @cell-click="changetodetil">
-        <el-table-column prop="info.title" label="通知"/>
-        <el-table-column prop="info.date" width="180">
+        <el-table-column prop="title" label="通知"/>
+        <el-table-column prop="time" :formatter="formatted_time" width="180" >
           <template #header>
             <el-button @click="moreinfo" style="border:0;textStyle:#8e0e0a">更多+</el-button>
           </template>
@@ -129,7 +129,7 @@
 
 <script>
 import {Connection, Checked, Collection, Reading} from '@element-plus/icons-vue'
-
+import axios from 'axios';
 export default {
   name: "homebody",
   components: {
@@ -143,91 +143,33 @@ export default {
         {url: require("../assets/pic3.jpg"), title: "标题3dfasdfsda"},
         {url: require("../assets/pic4.jpg"), title: "标题4dfasdfdsa"}
       ],
-      tableData: [
-        {
-          article: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-        {
-          article: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-        {
-          article: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-        {
-          article: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-        {
-          article: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-
-      ],
-      infoData: [
-        {
-          info: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-        {
-          info: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-        {
-          info: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-        {
-          info: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-        {
-          info: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        }, {
-          info: {
-            title: "test",
-            date: '2016-05-02',
-          },
-          id: '',
-        },
-
-      ],
+      tableData: '',
+      infoData: '',
     };
   },
+  mounted() {
+    this.getNews()
+    this.getInfo()
+  },
+
   methods: {
+    /// get pagedate
+    getNews(){
+      axios
+          .get('/api/news')
+          .then(response => (this.tableData = response.data))
+    },
+    getInfo() {
+      axios
+          .get('api/info')
+          .then(response => (this.infoData = response.data))
+    },
+    // 格式化时间
+    formatted_time: function (row, column) {
+      const date = new Date(row[column.property]);
+      // return date.toLocaleDateString()
+      return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+    },
     changetodetil() {
       alert("跳转中")
     },
@@ -243,7 +185,7 @@ export default {
   margin: 2% 10%;
   width: 80%;
   height: 35%;
-  box-shadow: 4px 4px 15px #dad9d9;
+  box-shadow: 5px 4px 15px #dad9d9;
   border-radius: 5px;
 }
 
@@ -260,16 +202,16 @@ export default {
   margin: 2% 10%;
   width: 80%;
   height: 35%;
-  box-shadow: 4px 4px 15px #dad9d9;
+  box-shadow: 5px 4px 15px #dad9d9;
   border-radius: 5px;
 }
 
 .info {
   margin: 2% 10%;
   width: 80%;
-  height: 40%;
-  box-shadow: 4px 4px 15px #dad9d9;
-border-radius: 5px;
+  height: 135%;
+  box-shadow: 5px 5px 15px #dad9d9;
+  border-radius: 5px;
 }
 
 .info span {
@@ -282,7 +224,7 @@ border-radius: 5px;
   margin: 2% 10%;
   width: 80%;
   height: 35%;
-  box-shadow: 4px 4px 15px #dad9d9;
+  box-shadow: 5px 5px 15px #dad9d9;
   border-radius: 5px;
 }
 
@@ -296,7 +238,7 @@ border-radius: 5px;
 
 .midlist .grid-content {
   transition: all 0.6s;
-  box-shadow: 4px 4px 15px #dad9d9;
+  box-shadow: 5px 5px 15px #dad9d9;
 }
 
 .midlist .grid-content:hover {

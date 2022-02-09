@@ -10,9 +10,12 @@ from userinfo.serializers import UserDescSerializer
 
 
 class NewsListSerializer(serializers.ModelSerializer):
+    """
+    News List Serializer
+    """
     author = UserDescSerializer(read_only=True)
     # 新增字段，添加超链接
-    url = serializers.HyperlinkedIdentityField(view_name="article:detail")
+    url = serializers.HyperlinkedIdentityField(view_name="news:detail")
 
     class Meta:
         model = News
@@ -27,6 +30,9 @@ class NewsListSerializer(serializers.ModelSerializer):
 
 
 class NewsDetailSerializer(serializers.ModelSerializer):
+    """
+    News detial serializer
+    """
     class Meta:
         model = News
         fields = '__all__'

@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.utils import timezone
+from markdown import Markdown
 from mdeditor.fields import MDTextField
 from django.contrib.auth.models import User
 
@@ -12,7 +13,7 @@ class News(models.Model):
         User,
         null=True,
         on_delete=models.CASCADE,
-        related_name='news',
+        related_name='news_author',
         verbose_name="发布者"
     )
     title = models.CharField(max_length=100, verbose_name="标题")
@@ -22,6 +23,19 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
+
+    # 新增方法，将 body 转换为带 html 标签的正文
+    def get_md(self):
+        md = Markdown(
+            extensions=[
+                'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+                'markdown.extensions.toc',
+            ]
+        )
+        md_body = md.convert(self.body)
+        # toc 是渲染后的目录
+        return md_body, md.toc
 
     class Meta:
         verbose_name = "学院新闻"
