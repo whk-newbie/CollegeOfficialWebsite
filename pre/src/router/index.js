@@ -6,6 +6,11 @@ import Organization from "@/views/CollegeOverview/Organization"
 import NewsCenter from "@/views/news/NewsCenter"
 import Information from "@/views/news/Information"
 import ImageNews from "@/views/news/ImageNews"
+import Teachers from "@/views/teachers/Teachers"
+import Professor from "@/views/teachers/Professor"
+import Tutor from "@/views/teachers/Tutor"
+import Enrollful from "@/views/teachers/Enrollful"
+
 const routes = [
     {
         path: '/',
@@ -42,6 +47,26 @@ const routes = [
         name: 'information',
         component: Information
     },
+    {
+        path: '/teacher',
+        name: 'teacher',
+        component: Teachers
+    },
+    {
+        path: '/professor',
+        name: 'professor',
+        component: Professor
+    },
+    {
+        path: '/tutor',
+        name: 'tutor',
+        component: Tutor
+    },
+    {
+        path: '/enrollful',
+        name: 'enrollful',
+        component: Enrollful
+    }
 
 ]
 

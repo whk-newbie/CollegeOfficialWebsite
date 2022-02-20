@@ -24,7 +24,7 @@
             <template #title>
               <span>研究生教育</span>
             </template>
-            <el-menu-item index="2-1">学位点介绍</el-menu-item>
+            <el-menu-item index="undergraduate">学位点介绍</el-menu-item>
             <el-menu-item index="2-2">培养方案</el-menu-item>
             <el-menu-item index="2-3">信息公告</el-menu-item>
           </el-sub-menu>

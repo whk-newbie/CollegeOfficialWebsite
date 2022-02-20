@@ -25,9 +25,9 @@
           <el-menu-item index="organization">内设机构</el-menu-item>
           <el-sub-menu index="2-4">
             <template #title>师资队伍</template>
-            <el-menu-item index="2-4-1">专人教师</el-menu-item>
-            <el-menu-item index="2-4-2">教授队伍</el-menu-item>
-            <el-menu-item index="2-4-3">硕士生导师</el-menu-item>
+            <el-menu-item index="teacher">专人教师</el-menu-item>
+            <el-menu-item index="professor">教授队伍</el-menu-item>
+            <el-menu-item index="tutor">硕士生导师</el-menu-item>
             <el-menu-item index="2-4-4">招贤纳才</el-menu-item>
           </el-sub-menu>
         </el-sub-menu>

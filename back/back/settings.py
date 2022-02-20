@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'imagenews',
     'info',
     'userinfo',
+    'teachers',
     'mdeditor',
 ]
 
