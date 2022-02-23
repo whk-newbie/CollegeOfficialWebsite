@@ -17,15 +17,15 @@
         </el-header>
         <el-main>
           <div class="news-list">
-            <el-row :gutter="2" class="listitem">
+            <el-row :gutter="2">
               <el-col :span="4">导师名称</el-col>
-              <el-col :span="8">职称</el-col>
-              <el-col :span="8">时间</el-col>
+              <el-col :span="4">职称</el-col>
+              <el-col :span="4">时间</el-col>
             </el-row>
             <el-row :gutter="2" width="100%" v-for="item in teachers_info.results" :key="item.title" class="listitem">
               <el-col :span="4">{{ item.name }}</el-col>
-              <el-col :span="8">{{ item.job_title}}</el-col>
-              <el-col :span="8">{{ item.updated }}</el-col>
+              <el-col :span="4">{{ item.job_title}}</el-col>
+              <el-col :span="4">{{ item.updated }}</el-col>
             </el-row>
           </div>
           <div class="paginationbox">
@@ -91,17 +91,15 @@ export default {
   background-color: #92f6ce;
 }
 .news-list{
-  width: 100%;
-  height: 400px;
-  margin: 0;
+  width: 80%;
+  height: 500px;
   padding: 0;
+  margin-left: 20%;
+  margin-right: 20%;
 }
-
-.listitem {
-  margin: 1px auto 0 30px;
-  padding: 2px 10px;
-  width: 100%;
-  height: 20px;
+.paginationbox{
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .paginationbox {

@@ -13,9 +13,10 @@ class TeacherListSerializer(serializers.ModelSerializer):
     """
     author = UserDescSerializer(read_only=True)
     url = serializers.HyperlinkedIdentityField(view_name="teachers:detail")
+
     class Meta:
         model = Teacher
-        fields = ('url', 'name', 'job_title', 'updated','author')
+        fields = ('url', 'name', 'job_title', 'updated', 'author')
 
 
 class TeacherDetailSerializer(serializers.ModelSerializer):
@@ -26,4 +27,3 @@ class TeacherDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teacher
         fields = '__all__'
-
