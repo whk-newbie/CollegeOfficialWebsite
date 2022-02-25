@@ -43,7 +43,13 @@ import Footer from "@/components/Footer";
 
 export default {
   name: "Undergraduate",
-  components: {Header, Footer}
+  components: {Header, Footer},
+  data() {
+    return {
+      activeIndex: this.$route.path,
+      isCollapse: false
+    }
+  }
 }
 </script>
 

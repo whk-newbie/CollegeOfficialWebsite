@@ -85,19 +85,12 @@
         </el-sub-menu>
         <el-sub-menu index="10">
           <template #title>实验中心</template>
-          <el-menu-item index="10-1">中心概况</el-menu-item>
-          <el-menu-item index="10-2">综合实验室</el-menu-item>
-          <el-menu-item index="10-3">硬件实验室</el-menu-item>
-          <el-menu-item index="10-4">网络实验室</el-menu-item>
-          <el-menu-item index="10-5">物联网实验室</el-menu-item>
-          <el-menu-item index="10-6">嵌入式实验室</el-menu-item>
-        </el-sub-menu>
-        <el-sub-menu index="11">
-          <template #title>主题教育专题</template>
-          <el-menu-item index="11-1">活动报告</el-menu-item>
-          <el-menu-item index="11-2">通知公告</el-menu-item>
-          <el-menu-item index="11-3">文件学习</el-menu-item>
-          <el-menu-item index="11-4">意见征集</el-menu-item>
+          <el-menu-item index="laboratory">中心概况</el-menu-item>
+          <el-menu-item index="gerneral">综合实验室</el-menu-item>
+          <el-menu-item index="hardware">硬件实验室</el-menu-item>
+          <el-menu-item index="network">网络实验室</el-menu-item>
+          <el-menu-item index="IOT">物联网实验室</el-menu-item>
+          <el-menu-item index="embedded">嵌入式实验室</el-menu-item>
         </el-sub-menu>
         <el-sub-menu index="12">
           <template #title>下载中心</template>

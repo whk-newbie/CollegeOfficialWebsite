@@ -10,6 +10,12 @@ import Teachers from "@/views/teachers/Teachers"
 import Professor from "@/views/teachers/Professor"
 import Tutor from "@/views/teachers/Tutor"
 import Enrollful from "@/views/teachers/Enrollful"
+import LaboratoryOverView from "@/views/Laboratory/LaboratoryOverView"
+import Gerneral from "@/views/Laboratory/Gerneral"
+import Hardware from "@/views/Laboratory/Hardware"
+import IOT from "@/views/Laboratory/IOT"
+import Network from "@/views/Laboratory/Network"
+import Embedded from "@/views/Laboratory/Embedded"
 
 const routes = [
     {
@@ -66,6 +72,36 @@ const routes = [
         path: '/enrollful',
         name: 'enrollful',
         component: Enrollful
+    },
+    {
+        path: '/laboratory',
+        name: 'laboratoryOverView',
+        component: LaboratoryOverView
+    },
+    {
+        path: '/gerneral',
+        name: 'Gerneral',
+        component: Gerneral
+    },
+    {
+        path: '/hardware',
+        name: 'Hardware',
+        component: Hardware
+    },
+    {
+        path: '/network',
+        name: "Network",
+        component: Network
+    },
+    {
+        path: '/IOT',
+        name: 'IOT',
+        component: IOT
+    },
+    {
+        path: '/embedded',
+        name: 'Embedded',
+        component: Embedded
     }
 
 ]
