@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a52b83e3-1613-4d29-9c04-449666280092" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/src/views/news/Information.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/views/news/Information.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/information/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/information/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/information/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/information/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,7 @@
       <workItem from="1650680144327" duration="5155000" />
       <workItem from="1650706992940" duration="3347000" />
       <workItem from="1650718884659" duration="2465000" />
-      <workItem from="1650785130294" duration="2269000" />
+      <workItem from="1650785130294" duration="3648000" />
     </task>
     <servers />
   </component>
