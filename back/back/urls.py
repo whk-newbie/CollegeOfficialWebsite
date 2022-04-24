@@ -18,12 +18,13 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework.routers import DefaultRouter
 from News.views import NewsViewSet
+from information.views import InformationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
 router = DefaultRouter()
 router.register(r'news', NewsViewSet)
-
+router.register(r'infos', InformationViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rest_framework.urls')),

@@ -14,7 +14,7 @@ class InformationAdmin(admin.ModelAdmin):
     ordering = ("id",)
 
     fieldsets = (
-        ('', {'fields': (('pub_time', 'author'),)}),
+        ('', {'fields': (('author',),)}),
         ('', {'fields': (('file',),)}),
         ('', {'fields': (('title',),)}),
         ('', {'fields': (('content',),)}),

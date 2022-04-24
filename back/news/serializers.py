@@ -12,7 +12,7 @@ from News.models import News
 from userinfo.serializers import UserDescSerializer
 
 
-class NewsBaseSerializer(serializers.ModelSerializer):
+class NewsBaseSerializer(serializers.HyperlinkedModelSerializer):
     """
     新闻基础序列化
     """
@@ -35,7 +35,7 @@ class NewsSerializer(NewsBaseSerializer):
         extra_kwargs = {'body': {'write_only': True}}
 
 
-class NewsDetailSerializer(serializers.ModelSerializer):
+class NewsDetailSerializer(NewsBaseSerializer):
     """
     News detial serializer
     """
@@ -48,4 +48,4 @@ class NewsDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = News
-        fields = '__all__'
+        fields = ['id', 'title', 'body_html', 'author', 'create_time', 'update_time']
