@@ -9,7 +9,7 @@ from News.permissions import IsAdminUserOrReadOnly
 
 
 class InformationViewSet(viewsets.ModelViewSet):
-    queryset = Information.objects.all()
+    queryset = Information.objects.all().order_by('pub_time')
     serializer_class = InformationSerializer
     permission_classes = [IsAdminUserOrReadOnly]
 
