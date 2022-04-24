@@ -1,13 +1,17 @@
-# -*- coding: utf-8 -*-
-# @Author  : 王汉坤
-# @Time    : 2022/1/24 16:59
-# @environment:PyCharm
-from django.urls import path
-from news import views
-
-app_name = 'news'
-
-urlpatterns = [
-    path('', views.NewsList.as_view(), name='list'),
-    path('<int:pk>/', views.NewsDetail.as_view(), name='detail'),
-]
+# -*- coding: UTF-8 -*-
+"""
+@Project ：back 
+@File    ：urls.py
+@IDE     ：PyCharm 
+@Author  ：whk
+@Date    ：2022/4/18 18:44 
+"""
+# from django.urls import path
+# from News import views
+#
+# app_name = 'news'
+#
+# urlpatterns = [
+#     path('', views.NewsList.as_view(), name='list'),
+#     path('<int:pk>/', views.NewsDetail.as_view(), name='detail'),
+# ]

@@ -16,6 +16,8 @@ class News(models.Model):
         related_name='news_author',
         verbose_name="发布者"
     )
+    # 封面
+    cover = models.ImageField(upload_to='cover/%Y%m%d', null=True, blank=True, verbose_name="封面")
     title = models.CharField(max_length=100, verbose_name="标题")
     body = MDTextField(verbose_name="文章内容")
     create_time = models.DateTimeField(default=timezone.now, verbose_name="创建时间")
@@ -35,7 +37,7 @@ class News(models.Model):
         )
         md_body = md.convert(self.body)
         # toc 是渲染后的目录
-        return md_body, md.toc
+        return md_body
 
     class Meta:
         verbose_name = "学院新闻"

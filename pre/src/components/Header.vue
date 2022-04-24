@@ -15,9 +15,8 @@
           text-color="#fff"
           active-text-color="#ffd04b"
           @select="handleSelect"
-          ellipsis="false"
       >
-        <el-menu-item index="/">首页</el-menu-item>
+        <el-menu-item index="/" >首页</el-menu-item>
         <el-sub-menu index="2">
           <template #title>学院概况</template>
           <el-menu-item index="CollegeOverview">学院简介</el-menu-item>
@@ -34,7 +33,6 @@
         <el-sub-menu index="3">
           <template #title>新闻中心</template>
           <el-menu-item index="news">学院新闻</el-menu-item>
-          <el-menu-item index="imagenews">图片新闻</el-menu-item>
           <el-menu-item index="information">学院通知</el-menu-item>
         </el-sub-menu>
         <el-sub-menu index="4">
@@ -99,7 +97,6 @@
           <el-menu-item index="12-3"><a class="ccf" href="https://dl.ccf.org.cn/index.html?_ack=1">CCF数字图书馆</a></el-menu-item>
         </el-sub-menu>
       </el-menu>
-
     </div>
   </div>
 </template>
@@ -119,12 +116,10 @@ export default {
   data() {
     return {
       activeIndex: this.$route.path,
+      handleSelect:this.$route.path,
     };
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    }
   }
 }
 </script>

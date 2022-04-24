@@ -1,8 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from imagenews.models import ImageNews
-from news.models import News
+
+from News.models import News
 
 
 # admin.site.register(News)
@@ -32,9 +32,7 @@ class NewsAdmin(admin.ModelAdmin):
 
     fieldsets = (
         ('', {'fields': (('create_time', 'author'),)}),
+        ('', {'fields': (('cover',),)}),
         ('', {'fields': (('title',),)}),
         ('', {'fields': (('body',),)}),
     )
-
-
-

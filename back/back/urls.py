@@ -14,18 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+from django.conf.urls import include
+from rest_framework.routers import DefaultRouter
+from News.views import NewsViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
+router = DefaultRouter()
+router.register(r'news', NewsViewSet)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    path('mdeditor/', include('mdeditor.urls')),
-    path('api/news/', include('news.urls', namespace='news')),
-    path('api/imagenews/', include('imagenews.urls', namespace='imagenews')),
-    path('api/info/', include('info.urls', namespace='info')),
-    path('api/teachers/', include('teachers.urls', namespace='teachers')),
+    path('', include('rest_framework.urls')),
+    path('api/', include(router.urls)),
+    path(r'mdeditor/', include('mdeditor.urls'))
 ]
 
 if settings.DEBUG:

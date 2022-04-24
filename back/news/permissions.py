@@ -1,7 +1,11 @@
-# -*- coding: utf-8 -*-
-# @Author  : 王汉坤
-# @Time    : 2022/1/24 17:36
-# @environment:PyCharm
+# -*- coding: UTF-8 -*-
+"""
+@Project ：back 
+@File    ：permissions.py
+@IDE     ：PyCharm 
+@Author  ：whk
+@Date    ：2022/4/18 18:36 
+"""
 from rest_framework import permissions
 
 

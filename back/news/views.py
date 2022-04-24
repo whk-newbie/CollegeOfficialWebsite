@@ -1,26 +1,25 @@
-from news.models import News
-from news.serializers import NewsListSerializer, NewsDetailSerializer
-from rest_framework import generics
-from news.permissions import IsAdminUserOrReadOnly
+from django.shortcuts import render
+
+# Create your views here.
+
+from News.models import News
+from News.serializers import NewsDetailSerializer, NewsSerializer
+from rest_framework import viewsets
+from News.permissions import IsAdminUserOrReadOnly
 
 
-class NewsList(generics.ListCreateAPIView):
-    # 权限设置
+class NewsViewSet(viewsets.ModelViewSet):
+    queryset = News.objects.all().order_by('-create_time')
+    serializer_class = NewsSerializer
     permission_classes = [IsAdminUserOrReadOnly]
-    queryset = News.objects.all()
-    serializer_class = NewsListSerializer
-
-
-class NewsDetail(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAdminUserOrReadOnly]
-    queryset = News.objects.all()
-    serializer_class = NewsDetailSerializer
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
 
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return NewsSerializer
+        else:
+            return NewsDetailSerializer
 
-# Create your views here.
-# class AvatarViewSet(viewsets.ModelViewSet):
-#     queryset = Avatar.objects.all()
-#     serializer_class = AvatarSerializer
+

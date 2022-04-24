@@ -6,17 +6,24 @@
           <div class="grid-content bg-purple">
             <!--    轮播图-->
             <el-carousel class="carousel">
-              <el-carousel-item v-for="item in pics" :key="item.url">
-                <router-view v-bind:to={}><img :src="item.url"/>
-                  <h3>{{ item.title }}</h3></router-view>
-              </el-carousel-item>
+              <!--              生成五个-->
+              <template v-for="(item,index) in tableData.results" :key="index">
+                <router-view :to="{ name: 'NewsDetail', params: { id: item.id }}">
+                  <el-carousel-item v-if="index < 6 && item.cover">
+                    <div class="pic_item">
+                      <img class="small" :src="item.cover"/>
+                      <h3>{{ item.title }}</h3>
+                    </div>
+                  </el-carousel-item>
+                </router-view>
+              </template>
             </el-carousel>
           </div>
         </el-col>
         <el-col :span="12">
           <div class="grid-content bg-purple">
             <div class="newslist">
-              <el-table v-loading="loading" :data="tableData.results" stripe style="width: 100%;height:135%"
+              <el-table v-loading="loading_news" :data="tableData.results" stripe style="width: 100%;height:135%"
                         @cell-click="changetodetil">
                 <el-table-column prop="title" label="学院新闻"/>
                 <el-table-column prop="create_time" :formatter="formatted_time" width="180"/>
@@ -65,10 +72,10 @@
       </el-row>
     </div>
     <div class="info">
-      <el-table v-loading="loading" :data="infoData.results" stripe style="width: 100%;height:140%"
+      <el-table v-loading="loading_info" :data="infoData.results" stripe style="width: 100%;height:140%"
                 @cell-click="changetodetil">
         <el-table-column prop="title" label="通知"/>
-        <el-table-column prop="time" :formatter="formatted_time" width="180" >
+        <el-table-column prop="time" :formatter="formatted_time" width="180">
           <template #header>
             <el-button @click="moreinfo" style="border:0;textStyle:#8e0e0a">更多+</el-button>
           </template>
@@ -130,6 +137,7 @@
 <script>
 import {Connection, Checked, Collection, Reading} from '@element-plus/icons-vue'
 import axios from 'axios';
+
 export default {
   name: "homebody",
   components: {
@@ -137,32 +145,26 @@ export default {
   },
   data() {
     return {
-      pics: [
-        {url: require("../assets/pic1.jpg"), title: "标题1sdfasdf"},
-        {url: require("../assets/pic2.jpg"), title: "标题2sdfasdf"},
-        {url: require("../assets/pic3.jpg"), title: "标题3dfasdfsda"},
-        {url: require("../assets/pic4.jpg"), title: "标题4dfasdfdsa"}
-      ],
+      loading: false,
+      loading_news: false,
+      loading_info: false,
       tableData: '',
       infoData: '',
     };
   },
   mounted() {
+    this.loading_news = true
+    this.loading_info = true
     this.getNews()
-    this.getInfo()
   },
 
   methods: {
     /// get pagedate
-    getNews(){
+    getNews() {
       axios
           .get('/api/news')
           .then(response => (this.tableData = response.data))
-    },
-    getInfo() {
-      axios
-          .get('api/info')
-          .then(response => (this.infoData = response.data))
+      this.loading_news = false
     },
     // 格式化时间
     formatted_time: function (row, column) {
@@ -170,12 +172,12 @@ export default {
       // return date.toLocaleDateString()
       return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
     },
-    changetodetil() {
-      alert("跳转中")
+    changetodetil(row) {
+      this.$router.push({name: 'NewsDetail', params: {id: row.id}})
     },
     moreinfo() {
       alert("正在跳转到更多")
-    }
+    },
   }
 }
 </script>
@@ -187,6 +189,33 @@ export default {
   height: 35%;
   box-shadow: 5px 4px 15px #dad9d9;
   border-radius: 5px;
+}
+
+.small {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.pic_item {
+  position: relative;
+  height: 100%;
+}
+
+.pic_item:hover {
+  cursor: pointer;
+}
+
+.pic_item img {
+  width: 100%;
+  height: 100%;
+}
+
+.pic_item h3 {
+  position: absolute;
+  color: #fff;
+  left: 4rem;
+  bottom: 2rem;
 }
 
 .newslist {

@@ -5,7 +5,7 @@ import Leaders from "@/views/CollegeOverview/Leaders"
 import Organization from "@/views/CollegeOverview/Organization"
 import NewsCenter from "@/views/news/NewsCenter"
 import Information from "@/views/news/Information"
-import ImageNews from "@/views/news/ImageNews"
+import NewsDetail from "@/views/news/NewsDetail"
 import Teachers from "@/views/teachers/Teachers"
 import Professor from "@/views/teachers/Professor"
 import Tutor from "@/views/teachers/Tutor"
@@ -44,9 +44,9 @@ const routes = [
         component: NewsCenter
     },
     {
-        path: '/imagenews',
-        name: 'imagenews',
-        component: ImageNews
+        path: "/news/:id",
+        name: "NewsDetail",
+        component: NewsDetail,
     },
     {
         path: '/information',
