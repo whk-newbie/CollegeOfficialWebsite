@@ -8,9 +8,6 @@
             <el-button type="info" @click="$router.push('/news')">学院新闻</el-button>
           </el-row>
           <el-row>
-            <el-button type="info" @click="$router.push('/imagenews')">图片新闻</el-button>
-          </el-row>
-          <el-row>
             <el-button type="info" @click="$router.push('/information')">通知公告</el-button>
           </el-row>
         </el-col>
