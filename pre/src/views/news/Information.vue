@@ -79,7 +79,7 @@ export default {
 
     },
     getData(number) {
-      axios.get('api/news', {params: {page: number}})
+      axios.get('api/infos', {params: {page: number}})
           .then(
               response => {
                 this.inforsList = this.inforsList.concat(response.data.results)
