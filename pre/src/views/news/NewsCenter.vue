@@ -23,9 +23,10 @@
         <el-main>
 
           <div class="news-list">
-            <el-table :data="newsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%" @cell-click="changetodetil">
+            <el-table :data="newsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
+                      @cell-click="changetodetail">
               <el-table-column prop="title" label="标题" width="600px"/>
-              <el-table-column prop="create_time" label="时间" width="300px" />
+              <el-table-column prop="create_time" label="时间" width="300px"/>
             </el-table>
           </div>
           <div class="paginationbox">
@@ -105,7 +106,7 @@ export default {
       // return date.toLocaleDateString()
       return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
     },
-    changetodetil(row) {
+    changetodetail(row) {
       this.$router.push({name: 'NewsDetail', params: {id: row.id}})
     },
   }
@@ -170,11 +171,12 @@ export default {
   padding: 0;
 }
 
-#el-table-column{
+#el-table-column {
   margin-left: 20px;
   margin-right: 20px;
   width: 50%;
 }
+
 .paginationbox {
   position: relative;
   margin-left: 35%;

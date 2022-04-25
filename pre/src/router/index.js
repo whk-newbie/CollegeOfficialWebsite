@@ -5,6 +5,7 @@ import Leaders from "@/views/CollegeOverview/Leaders"
 import Organization from "@/views/CollegeOverview/Organization"
 import NewsCenter from "@/views/news/NewsCenter"
 import Information from "@/views/news/Information"
+import InfosDetail from '@/views/news/InforsDetail'
 import NewsDetail from "@/views/news/NewsDetail"
 import Teachers from "@/views/teachers/Teachers"
 import Professor from "@/views/teachers/Professor"
@@ -52,6 +53,11 @@ const routes = [
         path: '/information',
         name: 'information',
         component: Information
+    },
+    {
+      path: '/information/:id',
+      name: 'InfosDetail',
+      component: InfosDetail
     },
     {
         path: '/teacher',

@@ -24,7 +24,7 @@
           <div class="grid-content bg-purple">
             <div class="newslist">
               <el-table v-loading="loading_news" :data="tableData.results" stripe style="width: 100%;height:135%"
-                        @cell-click="changetodetil">
+                        @cell-click="changetoNewsDetail">
                 <el-table-column prop="title" label="学院新闻"/>
                 <el-table-column prop="create_time" :formatter="formatted_time" width="180"/>
               </el-table>
@@ -73,11 +73,11 @@
     </div>
     <div class="info">
       <el-table v-loading="loading_info" :data="infoData.results" stripe style="width: 100%;height:140%"
-                @cell-click="changetodetil">
+                @cell-click="changetoInfosdetail">
         <el-table-column prop="title" label="通知"/>
-        <el-table-column prop="time" :formatter="formatted_time" width="180">
+        <el-table-column prop="pub_time" :formatter="formatted_time" width="180">
           <template #header>
-            <el-button @click="moreinfo" style="border:0;textStyle:#8e0e0a">更多+</el-button>
+            <el-button @click="$router.push('/information')" style="border:0;textStyle:#8e0e0a">更多+</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -156,6 +156,7 @@ export default {
     this.loading_news = true
     this.loading_info = true
     this.getNews()
+    this.getInfos()
   },
 
   methods: {
@@ -166,17 +167,26 @@ export default {
           .then(response => (this.tableData = response.data))
       this.loading_news = false
     },
+    getInfos() {
+      axios
+          .get('/api/infos')
+          .then(response => (this.infoData = response.data))
+      this.loading_info = false
+    },
     // 格式化时间
     formatted_time: function (row, column) {
       const date = new Date(row[column.property]);
       // return date.toLocaleDateString()
       return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
     },
-    changetodetil(row) {
+    changetoNewsDetail(row) {
       this.$router.push({name: 'NewsDetail', params: {id: row.id}})
     },
+    changetoInfosdetail(row) {
+      this.$router.push({name: 'InfosDetail', params: {id: row.id}})
+    },
     moreinfo() {
-      alert("正在跳转到更多")
+
     },
   }
 }
