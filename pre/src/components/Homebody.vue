@@ -72,7 +72,7 @@
       </el-row>
     </div>
     <div class="info">
-      <el-table v-loading="loading_info" :data="infoData.results" stripe style="width: 100%;height:140%"
+      <el-table v-loading="loading_info" :data="infoData.results" stripe style="width: 100%;height:400px;"
                 @cell-click="changetoInfosdetail">
         <el-table-column prop="title" label="通知"/>
         <el-table-column prop="pub_time" :formatter="formatted_time" width="180">

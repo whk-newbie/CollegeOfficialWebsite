@@ -16,11 +16,12 @@ class Information(models.Model):
         null=True,
         on_delete=models.CASCADE,
         related_name='info_author',
-        verbose_name="发布者"
+        verbose_name="发布者",
+        default=1
     )
 
     title = models.CharField(max_length=100, verbose_name="标题")
-    content = MDTextField(verbose_name="内容")
+    content = MDTextField(blank=True,verbose_name="内容")
     file = models.FileField(upload_to="information/%Y%m%d", verbose_name="通知文件", blank=True, null=True)
     pub_time = models.DateTimeField(auto_now_add=True, verbose_name="发布时间")
 
