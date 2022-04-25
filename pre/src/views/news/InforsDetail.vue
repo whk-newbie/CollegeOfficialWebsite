@@ -4,7 +4,7 @@
     <div v-if="news!==null">
       <h1 id="title">{{ news.title }}</h1>
       <p id="subtitle">
-        发布时间: {{ formatted_time(news.create_time) }}
+        发布时间: {{ formatted_time(news.pub_time) }}
       </p>
       <div v-html="news.body_html" class="news-body"></div>
     </div>
