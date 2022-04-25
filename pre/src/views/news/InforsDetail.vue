@@ -6,7 +6,16 @@
       <p id="subtitle">
         发布时间: {{ formatted_time(news.pub_time) }}
       </p>
-      <div v-html="news.body_html" class="news-body"></div>
+      <div v-if="news.content_html">
+        <div v-html="news.content_html" class="news-body"></div>
+      </div>
+      <div v-else-if="news.file">
+        <div>文件展示</div>
+      </div>
+      <div v-else>
+          <el-empty description="加载失败！请联系网站管理员，点击下方按钮，返回上一页" />
+          <el-button class="back-btn" type="primary" @click="$router.go(-1)">Primary</el-button>
+      </div>
     </div>
   </div>
   <Footer/>
@@ -72,6 +81,11 @@ export default {
 .news-body {
   margin-left: 10%;
   margin-right: 10%;
+}
+.back-btn {
+  margin-right: 10%;
+  margin-left: 45%;
+  margin-bottom: 2%;
 }
 </style>
 

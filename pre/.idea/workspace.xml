@@ -11,7 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046e9d47-1e6f-4d06-9e1a-8ffd0e788c5c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/views/news/Information.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/news/Information.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/507bc0fde988fbc2ed5c19d242412dc2.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/507bc0fde988fbc2ed5c19d242412dc2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4f08c856d9f8585ab962e3d5a07c5988.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4f08c856d9f8585ab962e3d5a07c5988.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/667120aece8e8f3d13f0fb003e7cc5c8.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/667120aece8e8f3d13f0fb003e7cc5c8.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/news/InforsDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/news/InforsDetail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +139,7 @@
       <workItem from="1650718917850" duration="5531000" />
       <workItem from="1650785462305" duration="98000" />
       <workItem from="1650785852835" duration="4555000" />
-      <workItem from="1650871419598" duration="3260000" />
+      <workItem from="1650871419598" duration="4857000" />
     </task>
     <servers />
   </component>
