@@ -6,15 +6,18 @@
       <p id="subtitle">
         发布时间: {{ formatted_time(news.pub_time) }}
       </p>
-      <div v-if="news.content_html">
-        <div v-html="news.content_html" class="news-body"></div>
-      </div>
-      <div v-else-if="news.file">
-        <div>文件展示</div>
-      </div>
-      <div v-else>
-          <el-empty description="加载失败！请联系网站管理员，点击下方按钮，返回上一页" />
+      <div class="content_body">
+        <div v-if="news.content_html">
+          <div v-html="news.content_html" class="news-body"></div>
+        </div>
+        <div v-else-if="news.file">
+          <div>文件展示</div>
+          <el-button @click="openfile">点此查看文件</el-button>
+        </div>
+        <div v-else>
+          <el-empty description="加载失败！请联系网站管理员，点击下方按钮，返回上一页"/>
           <el-button class="back-btn" type="primary" @click="$router.go(-1)">Primary</el-button>
+        </div>
       </div>
     </div>
   </div>
@@ -52,6 +55,10 @@ export default {
       // return date.toLocaleDateString()
       return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
     },
+    openfile() {
+      var path = this.news.file
+      window.open(path)
+    }
   }
 }
 </script>
@@ -82,6 +89,11 @@ export default {
   margin-left: 10%;
   margin-right: 10%;
 }
+.content_body {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
 .back-btn {
   margin-right: 10%;
   margin-left: 45%;

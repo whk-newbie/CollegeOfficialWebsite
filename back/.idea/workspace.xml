@@ -3,7 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="a52b83e3-1613-4d29-9c04-449666280092" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/507bc0fde988fbc2ed5c19d242412dc2.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/507bc0fde988fbc2ed5c19d242412dc2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/aeb92a7b6dc795d85371f064c40b0e53.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/aeb92a7b6dc795d85371f064c40b0e53.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/1d75a4cdbd5a7f21ea27bfe2f9f23724.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/1d75a4cdbd5a7f21ea27bfe2f9f23724.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/4a24e94bc1bff64d05bc74bf2c15f619.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/4a24e94bc1bff64d05bc74bf2c15f619.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/4f08c856d9f8585ab962e3d5a07c5988.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/4f08c856d9f8585ab962e3d5a07c5988.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/592ccbb7091c6c1ad50c76de920d22f1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/592ccbb7091c6c1ad50c76de920d22f1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/667120aece8e8f3d13f0fb003e7cc5c8.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/667120aece8e8f3d13f0fb003e7cc5c8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/src/views/news/InforsDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/views/news/InforsDetail.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +93,8 @@
       <workItem from="1650706992940" duration="3347000" />
       <workItem from="1650718884659" duration="2465000" />
       <workItem from="1650785130294" duration="5853000" />
-      <workItem from="1650876297424" duration="1665000" />
+      <workItem from="1650876297424" duration="1667000" />
+      <workItem from="1650884458664" duration="140000" />
     </task>
     <servers />
   </component>

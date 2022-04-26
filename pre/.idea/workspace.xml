@@ -12,9 +12,14 @@
   <component name="ChangeListManager">
     <list default="true" id="046e9d47-1e6f-4d06-9e1a-8ffd0e788c5c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../back/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/507bc0fde988fbc2ed5c19d242412dc2.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/507bc0fde988fbc2ed5c19d242412dc2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/aeb92a7b6dc795d85371f064c40b0e53.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/aeb92a7b6dc795d85371f064c40b0e53.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/1d75a4cdbd5a7f21ea27bfe2f9f23724.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/1d75a4cdbd5a7f21ea27bfe2f9f23724.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4a24e94bc1bff64d05bc74bf2c15f619.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4a24e94bc1bff64d05bc74bf2c15f619.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4f08c856d9f8585ab962e3d5a07c5988.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4f08c856d9f8585ab962e3d5a07c5988.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/592ccbb7091c6c1ad50c76de920d22f1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/592ccbb7091c6c1ad50c76de920d22f1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/667120aece8e8f3d13f0fb003e7cc5c8.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/667120aece8e8f3d13f0fb003e7cc5c8.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/news/InforsDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/news/InforsDetail.vue" afterDir="false" />
     </list>
@@ -139,7 +144,8 @@
       <workItem from="1650718917850" duration="5531000" />
       <workItem from="1650785462305" duration="98000" />
       <workItem from="1650785852835" duration="4555000" />
-      <workItem from="1650871419598" duration="4857000" />
+      <workItem from="1650871419598" duration="7359000" />
+      <workItem from="1650983662304" duration="919000" />
     </task>
     <servers />
   </component>
@@ -180,26 +186,26 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="640" y="349" key="Github.ShareDialog/0.40.1536.824@0.40.1536.824" timestamp="1642489954301" />
-    <state width="1899" height="230" key="GridCell.Tab.0.bottom" timestamp="1650790447467">
+    <state width="1899" height="230" key="GridCell.Tab.0.bottom" timestamp="1650882013325">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="230" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1650790447467" />
-    <state width="1899" height="230" key="GridCell.Tab.0.center" timestamp="1650790447467">
+    <state width="1899" height="230" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1650882013325" />
+    <state width="1899" height="230" key="GridCell.Tab.0.center" timestamp="1650882013323">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="230" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1650790447467" />
-    <state width="1899" height="230" key="GridCell.Tab.0.left" timestamp="1650790447467">
+    <state width="1899" height="230" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1650882013323" />
+    <state width="1899" height="230" key="GridCell.Tab.0.left" timestamp="1650882013323">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="230" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1650790447467" />
-    <state width="1899" height="230" key="GridCell.Tab.0.right" timestamp="1650790447467">
+    <state width="1899" height="230" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1650882013323" />
+    <state width="1899" height="230" key="GridCell.Tab.0.right" timestamp="1650882013323">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="230" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1650790447467" />
+    <state width="1899" height="230" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1650882013323" />
     <state x="235" y="183" key="SettingsEditor" timestamp="1650718960287">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
