@@ -8,6 +8,7 @@ import Information from "@/views/news/Information"
 import InfosDetail from '@/views/news/InforsDetail'
 import NewsDetail from "@/views/news/NewsDetail"
 import Teachers from "@/views/teachers/Teachers"
+import TeacherDetail from '@/views/teachers/TeacherDetail'
 import Professor from "@/views/teachers/Professor"
 import Tutor from "@/views/teachers/Tutor"
 import Enrollful from "@/views/teachers/Enrollful"
@@ -63,6 +64,11 @@ const routes = [
         path: '/teacher',
         name: 'teacher',
         component: Teachers
+    },
+    {
+      path: "/teacher/:id",
+      name: 'TeacherDetail',
+      component: TeacherDetail
     },
     {
         path: '/professor',

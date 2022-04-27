@@ -31,7 +31,7 @@ class NewsSerializer(NewsBaseSerializer):
 
     class Meta:
         model = News
-        fields = '__all__'
+        fields = ['id', 'title', 'author', 'cover', 'create_time', 'update_time']
         extra_kwargs = {'body': {'write_only': True}}
 
 

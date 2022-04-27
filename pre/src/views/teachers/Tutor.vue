@@ -6,7 +6,6 @@
         <PTTE/>
       </el-aside>
       <el-container>
-        <el-header>
         <el-breadcrumb separator="/">
           <el-breadcrumb-item>当前位置:</el-breadcrumb-item>
           <el-breadcrumb-item :to="{ path: '/' }">主页</el-breadcrumb-item>
@@ -14,27 +13,25 @@
           <el-breadcrumb-item>师资队伍</el-breadcrumb-item>
           <el-breadcrumb-item>研究生导师</el-breadcrumb-item>
         </el-breadcrumb>
+        <el-header>
+          <p>研究生导师</p>
         </el-header>
         <el-main>
           <div class="news-list">
-            <el-row :gutter="2">
-              <el-col :span="4">导师名称</el-col>
-              <el-col :span="4">职称</el-col>
-              <el-col :span="4">时间</el-col>
-            </el-row>
-            <el-row :gutter="2" width="100%" v-for="item in teachers_info.results" :key="item.title" class="listitem">
-              <el-col :span="4">{{ item.name }}</el-col>
-              <el-col :span="4">{{ item.job_title}}{{item.degree}}{{item.position}}</el-col>
-              <el-col :span="4">{{ item.updated }}</el-col>
-            </el-row>
+            <el-table :data="teachersList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
+                      @cell-click="changetodetail">
+              <el-table-column prop="name" label="名字" width="200px"/>
+              <el-table-column prop="job_title" label="职称" width="200px"/>
+              <el-table-column prop="degree" label="学历" width="200px"/>
+            </el-table>
           </div>
           <div class="paginationbox">
             <el-pagination
                 v-model:currentPage="currentPage"
-                :page-sizes="[14, 28, 42, 56]"
-                :page-size="14"
-                layout="total, sizes, prev, pager, next, jumper"
-                :total="400"
+                :page-sizes="[10, 20, 30, 40]"
+                :page-size="pageSize"
+                layout="total, prev, pager, next, jumper"
+                :total="totalPages"
                 @size-change="handleSizeChange"
                 @current-change="handleCurrentChange"
             >
@@ -55,21 +52,56 @@ import axios from 'axios'
 export default {
   name: "Tutor",
   components: {Header, Footer,PTTE},
-  mounted()     {
-    axios
-        .get('api/teachers')
-        .then(response =>(this.teachers_info = response.data))
+  mounted() {
+    this.getList()
   },
   data() {
     return {
-      teachers_info: ''
+      teachersList: '',
+      totalPages: 0,
+      pageSize: 10,
+      currentPage: 1,
     }
   },
   methods: {
+    getList() {
+      axios
+          .get('/api/teachers')
+          .then(response => {
+            this.totalPages = response.data.count,
+                (this.teachersList = response.data.results)
+            if (response.data.next !== null) {
+              this.getData(response.data.next.charAt(response.data.next.length - 1))
+            }
+          })
+
+    },
+    getData(number) {
+      axios.get('api/teachers', {params: {page: number}})
+          .then(
+              response => {
+                this.teachersList= this.teachersList.concat(response.data.results)
+                if (response.data.next !== null) {
+                  this.getData(response.data.next.charAt(response.data.next.length - 1))
+                }
+              }
+          )
+    },
+    handleSizeChange(val) {
+      // console.log(`每页 ${val} 条`);
+      this.pageSize = val;
+    },
+    handleCurrentChange(val) {
+      // console.log(`当前页: ${val}`);
+      this.currentPage = val;
+    },
     formatted_time: function (row, column) {
       const date = new Date(row[column.property]);
       // return date.toLocaleDateString()
       return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+    },
+    changetodetail(row) {
+      this.$router.push({name: 'TeacherDetail', params: {id: row.id}})
     },
   }
 }
@@ -81,29 +113,66 @@ export default {
   width: 80%;
   box-shadow: 4px 4px 15px #dad9d9;
 }
+.el-main > h3 {
+  font-size: 22px;
+  font-family: 微软雅黑 serif;
+  margin-left: 5%;
+  padding: 0;
+}
+
 .el-breadcrumb {
   margin-top: 10px;
-  margin-left:10px;
-  height: 50px;
-  font-family: 微软雅黑;
+  margin-left: 10px;
+  font-family: 微软雅黑 serif;
 }
+
 .el-aside {
   background-color: #92f6ce;
 }
-.news-list{
-  width: 80%;
-  height: 500px;
-  padding: 0;
-  margin-left: 20%;
-  margin-right: 20%;
+
+
+.el-header {
+  text-align: -webkit-left;
+  font-size: 24px;
+  font-style: normal;
+  font-family: 仿宋_GB2312 serif;
 }
-.paginationbox{
+
+.el-header > p {
+  margin-top: 15px;
+  margin-left: 5px;
+  color: gray;
+}
+
+.el-row {
+  margin-top: 10%;
+  margin-left: 50%;
+}
+
+.el-button {
+  margin-top: 10px;
+  height: 40px;
+  width: 120px;
+}
+
+.news-list {
+  /*width: 100%;*/
+  height: 500px;
+  position: relative;
   margin-left: 20%;
   margin-right: 20%;
+  padding: 0;
+}
+
+#el-table-column {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 50%;
 }
 
 .paginationbox {
   position: relative;
-  left: auto;
+  margin-left: 35%;
+  margin-right: 20%;
 }
 </style>

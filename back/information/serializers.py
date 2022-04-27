@@ -22,7 +22,7 @@ class InformationBaseSerializer(serializers.HyperlinkedModelSerializer):
 class InformationSerializer(InformationBaseSerializer):
     class Meta:
         model = Information
-        fields = '__all__'
+        fields = ['id', 'title',  'author','pub_time']
         extra_kwargs = {'content': {'write_only': True}}
 
 

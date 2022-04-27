@@ -8,7 +8,7 @@
     <a>校内链接：</a><a href="http://www.jxnu.edu.cn/" target="_blank">江西师范大学</a>
     <a href="http://jwc.jxnu.edu.cn/" target="_blank">师大教务在线</a>
     <a href="http://rsc.jxnu.edu.cn/" target="_blank">江西师大人事网</a>
-    <p class="copyright"><span>Copyright©2021 江西师范大学美术学院； 地址：江西省南昌市紫阳大道99号； 电话：0791-88120416， 88120411；邮编：330022</span></p>
+    <p class="copyright"><span>Copyright©2021 江西师范大学计算机信息工程学院； 地址：江西省南昌市紫阳大道99号； 电话：0791-88120416， 88120411；邮编：330022</span></p>
     <p class="copyright"><span>技术支持：whk</span></p>
   </div>
 </div>

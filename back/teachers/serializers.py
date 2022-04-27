@@ -21,7 +21,7 @@ class TeacherBaserSerializer(serializers.HyperlinkedModelSerializer):
 
 class TeacherSerializer(TeacherBaserSerializer):
     class Meta(TeacherBaserSerializer.Meta):
-        fields = '__all__'
+        fields = ['id', 'name', 'job_title', 'position', 'degree']
 
 
 class TeacherDetailSerializer(TeacherBaserSerializer):
