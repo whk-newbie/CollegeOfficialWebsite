@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a52b83e3-1613-4d29-9c04-449666280092" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/src/views/news/Information.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/views/news/Information.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/src/views/news/InforsDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/views/news/InforsDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/src/views/news/NewsCenter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/views/news/NewsCenter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teachers/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/teachers/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teachers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/teachers/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +90,7 @@
       <workItem from="1650884458664" duration="140000" />
       <workItem from="1650985381621" duration="721000" />
       <workItem from="1651040854170" duration="599000" />
-      <workItem from="1651058310074" duration="321000" />
+      <workItem from="1651058310074" duration="2144000" />
     </task>
     <servers />
   </component>
