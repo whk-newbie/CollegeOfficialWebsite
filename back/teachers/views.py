@@ -16,22 +16,41 @@ class TeacherViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         """
-        Optionally restricts the returned teachers to a given user,
-        by filtering against a `username` query parameter in the URL.
+        Inquiry according to keywords
         """
         queryset = Teacher.objects.all()
-        username = self.request.query_params.get('name', None)
-        if username is not None:
-            queryset = queryset.filter(username=username)
-        degree = self.request.query_params.get('degree', None)
-        if degree is not None:
-            queryset = queryset.filter(degree=degree)
-        job_title = self.request.query_params.get('title', None)
-        if job_title is not None:
-            queryset = queryset.filter(job_title=job_title)
+        name = self.request.query_params.get('name', None)
         position = self.request.query_params.get('position', None)
+        degree = self.request.query_params.get('degree', None)
+        job_title = self.request.query_params.get('job_title', None)
+        if name is not None:
+            queryset = queryset.filter(name__icontains=name)
+        if name == "not_null":
+            queryset = queryset.filter(name__isnull=False)
+        if name == "null":
+            queryset = queryset.filter(name__isnull=True)
+
         if position is not None:
-            queryset = queryset.filter(position=position)
+            queryset = queryset.filter(position__icontains=position)
+        if position == "not_null":
+            queryset = queryset.filter(position__isnull=False)
+        if position == "null":
+            queryset = queryset.filter(position__isnull=True)
+
+        if degree is not None:
+            queryset = queryset.filter(degree__icontains=degree)
+        if degree == "not_null":
+            queryset = queryset.filter(degree__isnull=False)
+        if degree == "null":
+            queryset = queryset.filter(degree__isnull=True)
+
+        if job_title is not None:
+            queryset = queryset.filter(job_title__icontains=job_title)
+        if job_title == "not_null":
+            queryset = queryset.filter(job_title__isnull=False)
+        if job_title == "null":
+            queryset = queryset.filter(job_title__isnull=True)
+
         return queryset
 
     def get_serializer_class(self):
