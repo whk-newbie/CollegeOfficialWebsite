@@ -29,6 +29,9 @@ class TeacherViewSet(viewsets.ModelViewSet):
         job_title = self.request.query_params.get('title', None)
         if job_title is not None:
             queryset = queryset.filter(job_title=job_title)
+        position = self.request.query_params.get('position', None)
+        if position is not None:
+            queryset = queryset.filter(position=position)
         return queryset
 
     def get_serializer_class(self):
@@ -36,5 +39,3 @@ class TeacherViewSet(viewsets.ModelViewSet):
             return TeacherSerializer
         else:
             return TeacherDetailSerializer
-
-

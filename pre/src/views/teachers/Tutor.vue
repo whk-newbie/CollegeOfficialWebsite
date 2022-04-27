@@ -24,7 +24,7 @@
             </el-row>
             <el-row :gutter="2" width="100%" v-for="item in teachers_info.results" :key="item.title" class="listitem">
               <el-col :span="4">{{ item.name }}</el-col>
-              <el-col :span="4">{{ item.job_title}}</el-col>
+              <el-col :span="4">{{ item.job_title}}{{item.degree}}{{item.position}}</el-col>
               <el-col :span="4">{{ item.updated }}</el-col>
             </el-row>
           </div>
