@@ -18,7 +18,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
         """
         Inquiry according to keywords
         """
-        queryset = Teacher.objects.all()
+        queryset = Teacher.objects.all().order_by('degree')
         name = self.request.query_params.get('name', None)
         position = self.request.query_params.get('position', None)
         degree = self.request.query_params.get('degree', None)
