@@ -77,7 +77,9 @@ export default {
             this.totalPages = response.data.count,
                 (this.newsList = response.data.results)
             // console.log(this.newsList)
-            this.getData(response.data.next.charAt(response.data.next.length - 1))
+            if (response.data.next !== null) {
+              this.getData(response.data.next.charAt(response.data.next.length - 1))
+            }
           })
 
     },

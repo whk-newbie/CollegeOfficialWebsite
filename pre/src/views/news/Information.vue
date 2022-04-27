@@ -22,9 +22,10 @@
         <el-header><p>通知</p></el-header>
         <el-main>
           <div class="news-list">
-            <el-table :data="inforsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%" @cell-click="changetodetail">
+            <el-table :data="inforsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
+                      @cell-click="changetodetail">
               <el-table-column prop="title" label="标题" width="600px"/>
-              <el-table-column prop="pub_time" label="时间" width="300px" />
+              <el-table-column prop="pub_time" label="时间" width="300px"/>
             </el-table>
           </div>
           <div class="paginationbox">
@@ -74,7 +75,9 @@ export default {
             this.totalPages = response.data.count,
                 (this.inforsList = response.data.results)
             // console.log(this.newsList)
-            this.getData(response.data.next.charAt(response.data.next.length - 1))
+            if (response.data.next !== null) {
+              this.getData(response.data.next.charAt(response.data.next.length - 1))
+            }
           })
 
     },
@@ -159,6 +162,7 @@ export default {
   height: 40px;
   width: 120px;
 }
+
 .news-list {
   /*width: 100%;*/
   height: 500px;

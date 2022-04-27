@@ -12,6 +12,14 @@
         </div>
         <div v-else-if="news.file">
           <div>文件展示</div>
+<!--          <div v-if="judge">-->
+<!--            <div class="pdf" v-show="fileType === 'pdf'">-->
+<!--              <pdf :src="news.file"></pdf>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div v-else>-->
+<!--            <el-button @click="openfile">点此查看文件</el-button>-->
+<!--          </div>-->
           <el-button @click="openfile">点此查看文件</el-button>
         </div>
         <div v-else>
@@ -29,6 +37,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import axios from "axios";
+// import pdf from 'vue-pdf'
 
 export default {
   name: "InfosDetail",
@@ -37,6 +46,7 @@ export default {
     return {
       loading: false,
       news: null,
+      pdfstring: 'pdf'
     }
   },
   mounted() {
@@ -58,6 +68,15 @@ export default {
     openfile() {
       var path = this.news.file
       window.open(path)
+      // window.open("https://view.officeapps.live.com/op/view.aspx?src=" + path)
+    },
+    judge() {
+      if (this.news.file.substring(this.news.file.length - 3) === 'pdf') {
+        return true
+      }
+      else{
+        return false
+      }
     }
   }
 }
@@ -89,6 +108,7 @@ export default {
   margin-left: 10%;
   margin-right: 10%;
 }
+
 .content_body {
   margin-right: 5%;
   margin-left: 5%;
