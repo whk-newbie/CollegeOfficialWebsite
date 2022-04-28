@@ -57,7 +57,7 @@
           <el-menu-item index="5-2">科研机构</el-menu-item>
           <el-menu-item index="5-3">科研成果</el-menu-item>
         </el-sub-menu>
-        <el-menu-item index="6">师德师风</el-menu-item>
+        <el-menu-item index="Tmorality">师德师风</el-menu-item>
         <el-sub-menu index="7">
           <template #title>招生就业</template>
           <el-sub-menu index="7-1">

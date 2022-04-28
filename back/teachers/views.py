@@ -12,7 +12,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
     API endpoint that allows teachers to be viewed or edited.
     Could be searcher by name, job title, degree, etc.
     """
-    queryset = Teacher.objects.all()
+    queryset = Teacher.objects.all().order_by('-id')
     serializer_class = TeacherSerializer
 
     def get_queryset(self):
@@ -62,7 +62,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
 
 
 class TeacherMoralityViewSet(viewsets.ModelViewSet):
-    queryset = TeacherMorality.objects.all()
+    queryset = TeacherMorality.objects.all().order_by('-created')
     serializer_class = TeacherMoralitySerializer
 
     def get_serializer_class(self):

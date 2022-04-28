@@ -9,6 +9,8 @@ import InfosDetail from '@/views/news/InforsDetail'
 import NewsDetail from "@/views/news/NewsDetail"
 import Teachers from "@/views/teachers/Teachers"
 import TeacherDetail from '@/views/teachers/TeacherDetail'
+import Tmorality from '@/views/teachers/Tmorality'
+import TmoralityDetail from '@/views/teachers/TmoralityDetail'
 import Professor from "@/views/teachers/Professor"
 import Tutor from "@/views/teachers/Tutor"
 import Enrollful from "@/views/teachers/Enrollful"
@@ -56,9 +58,9 @@ const routes = [
         component: Information
     },
     {
-      path: '/information/:id',
-      name: 'InfosDetail',
-      component: InfosDetail
+        path: '/information/:id',
+        name: 'InfosDetail',
+        component: InfosDetail
     },
     {
         path: '/teacher',
@@ -66,9 +68,19 @@ const routes = [
         component: Teachers
     },
     {
-      path: "/teachers/:id",
-      name: 'TeacherDetail',
-      component: TeacherDetail
+        path: "/teachers/:id",
+        name: 'TeacherDetail',
+        component: TeacherDetail
+    },
+    {
+        path: '/Tmorality',
+        name: 'Tmorality',
+        component: Tmorality
+    },
+    {
+        path: '/Tmorality/:id',
+        name: 'TmoralityDetail',
+        component: TmoralityDetail
     },
     {
         path: '/professor',

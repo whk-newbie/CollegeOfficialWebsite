@@ -2,13 +2,11 @@
   <Header/>
   <div v-if="news!==null">
     <div class="grid-container" v-loading="loading">
-      <h1 id="title">{{ pages.name }}({{ pages.job_title }}{{ pages.position }})</h1>
+      <h1 id="title">{{ pages.title }}</h1>
       <p id="subtitle">
-        发布时间: {{ formatted_time(pages.updated) }}
+        发布时间: {{ formatted_time(pages.created) }}
       </p>
-      <h3>个人简介</h3>
-      <div v-if="pages.photo"><img :src="pages.photo" alt=""></div>
-      <div v-html="pages.personal_profile_html" class="news-body"></div>
+      <div v-html="pages.content_html" class="news-body"></div>
     </div>
   </div>
   <Footer/>
@@ -20,7 +18,7 @@ import Footer from "@/components/Footer";
 import axios from "axios";
 
 export default {
-  name: "TeacherDetail",
+  name: "TmoralityDetail",
   components: {Header, Footer},
   data: function () {
     return {
@@ -35,7 +33,7 @@ export default {
   methods: {
     getData() {
       axios
-          .get('/api/teachers/' + this.$route.params.id)
+          .get('/api/Tmorality/' + this.$route.params.id)
           .then(response => (this.pages = response.data))
       this.loading = false;
     },
@@ -47,10 +45,11 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 .grid-container {
   margin: 1% 2% 2% 10%;
-  height: 600px;
+  height: auto;
   width: 80%;
   box-shadow: 4px 4px 15px #dad9d9;
 }
@@ -60,12 +59,7 @@ export default {
   margin-top: 5%;
   text-align: center;
   font-size: x-large;
-  padding-top: 20px;
-}
-h3 {
-  margin-top: 5%;
-  text-align: center;
-  font-size: large;
+  padding: 20px;
 }
 
 #subtitle {
@@ -79,10 +73,8 @@ h3 {
   margin-right: 10%;
 }
 </style>
-
 <style>
 .news-body p img {
-
   max-width: 100%;
   border-radius: 50px;
   box-shadow: gray 0 0 20px;
@@ -96,4 +88,3 @@ h3 {
   color: gray;
 }
 </style>
-
