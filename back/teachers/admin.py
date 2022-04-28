@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Teacher, TeacherMorality
+from .models import Teacher, TeacherMorality, recruiting
 
 
 @admin.register(Teacher)
@@ -16,9 +16,17 @@ class TeacherAdmin(admin.ModelAdmin):
 
 @admin.register(TeacherMorality)
 class TeacherMoralityAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content','created')
+    list_display = ('title', 'content', 'created')
     list_display_links = ('title', 'content', 'created')
     list_filter = ('created',)
-    search_fields = ('name', 'morality')
+    search_fields = ('name', 'content')
     list_per_page = 25
 
+
+@admin.register(recruiting)
+class recruitingAdmin(admin.ModelAdmin):
+    list_display = ('title', 'content', 'created')
+    list_display_links = ('title', 'content', 'created')
+    list_filter = ('created',)
+    search_fields = ('name', 'content')
+    list_per_page = 25

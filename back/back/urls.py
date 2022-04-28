@@ -22,13 +22,14 @@ from information.views import InformationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
-from teachers.views import TeacherViewSet, TeacherMoralityViewSet
+from teachers.views import TeacherViewSet, TeacherMoralityViewSet, RecruitingViewSet
 
 router = DefaultRouter()
 router.register(r'news', NewsViewSet)
 router.register(r'infos', InformationViewSet)
 router.register(r'teachers', TeacherViewSet)
 router.register(r'Tmorality', TeacherMoralityViewSet)
+router.register(r'teachers/recruiting', RecruitingViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rest_framework.urls')),

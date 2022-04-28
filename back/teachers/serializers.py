@@ -8,7 +8,7 @@
 """
 from rest_framework import serializers
 
-from teachers.models import Teacher, TeacherMorality
+from teachers.models import Teacher, TeacherMorality, recruiting
 
 
 class TeacherBaserSerializer(serializers.HyperlinkedModelSerializer):
@@ -56,4 +56,28 @@ class TeacherMoralityDetailSerializer(TeacherMoralBaseSerializer):
         return obj.get_md()
 
     class Meta(TeacherMoralBaseSerializer.Meta):
-        fields = ['id', 'title', 'created','content_html']
+        fields = ['id', 'title', 'created', 'content_html']
+
+
+class RecuitingBaseSerializer(serializers.HyperlinkedModelSerializer):
+    id = serializers.IntegerField(read_only=True)
+
+    class Meta:
+        model = recruiting
+        fields = '__all__'
+
+
+class RecuitingSerializer(RecuitingBaseSerializer):
+    class Meta(RecuitingBaseSerializer.Meta):
+        fields = ['id', 'title', 'created']
+
+
+class RecuitingDetailSerializer(RecuitingBaseSerializer):
+    id = serializers.IntegerField(read_only=True)
+    content_html = serializers.SerializerMethodField()
+
+    def get_content_html(self, obj):
+        return obj.get_md()
+
+    class Meta(RecuitingBaseSerializer.Meta):
+        fields = ['id', 'title', 'created', 'content_html']

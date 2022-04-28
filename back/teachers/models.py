@@ -53,7 +53,7 @@ class TeacherMorality(models.Model):
     """
     title = models.CharField(max_length=50, verbose_name="标题")  # morality title
     content = MDTextField(verbose_name="文章内容")
-    created = models.DateTimeField(auto_now_add=True,verbose_name="创建时间")  # create time
+    created = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")  # create time
 
     def __str__(self):
         return self.title
@@ -73,4 +73,32 @@ class TeacherMorality(models.Model):
 
     class Meta:
         verbose_name = "师德师风建设"
+        verbose_name_plural = verbose_name
+
+
+class recruiting(models.Model):
+    """
+    recuiting of teachers
+    """
+    title = models.CharField(max_length=50, verbose_name="标题")  # recuiting title
+    content = MDTextField(verbose_name="招聘信息") # recuiting content
+    created = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")  # create time
+
+    def __str__(self):
+        return self.title
+
+    def get_md(self):
+        md = Markdown(
+            extensions=[
+                'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+                'markdown.extensions.toc',
+            ]
+        )
+        md_body = md.convert(self.content)
+        # toc 是渲染后的目录
+        return md_body
+
+    class Meta:
+        verbose_name = "招聘信息"
         verbose_name_plural = verbose_name
