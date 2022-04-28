@@ -36,3 +36,6 @@ class NewsAdmin(admin.ModelAdmin):
         ('', {'fields': (('title',),)}),
         ('', {'fields': (('body',),)}),
     )
+
+
+

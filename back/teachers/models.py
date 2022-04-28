@@ -39,10 +39,38 @@ class Teacher(models.Model):
         # toc 是渲染后的目录
         return md_body
 
-
     def __str__(self):
         return self.name
 
     class Meta:
         verbose_name = "教师"
+        verbose_name_plural = verbose_name
+
+
+class TeacherMorality(models.Model):
+    """
+    Teacher morality model
+    """
+    title = models.CharField(max_length=50, verbose_name="标题")  # morality title
+    content = MDTextField(verbose_name="文章内容")
+    created = models.DateTimeField(auto_now_add=True,verbose_name="创建时间")  # create time
+
+    def __str__(self):
+        return self.title
+
+    # 新增方法，将 body 转换为带 html 标签的正文
+    def get_md(self):
+        md = Markdown(
+            extensions=[
+                'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+                'markdown.extensions.toc',
+            ]
+        )
+        md_body = md.convert(self.content)
+        # toc 是渲染后的目录
+        return md_body
+
+    class Meta:
+        verbose_name = "师德师风建设"
         verbose_name_plural = verbose_name

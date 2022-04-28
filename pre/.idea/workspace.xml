@@ -11,32 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046e9d47-1e6f-4d06-9e1a-8ffd0e788c5c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/composables/get_Data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../back/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/teachers/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../back/teachers/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/4a323667d917da840d8853c30193643a.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/4a323667d917da840d8853c30193643a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/602dea9909f0a7802e10b8c3ebc7f658.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/602dea9909f0a7802e10b8c3ebc7f658.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/62ea27b991052ecb4f69cbbd66a1f7ff.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/62ea27b991052ecb4f69cbbd66a1f7ff.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/635e6d11ed47b6782491b37a52571989.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/635e6d11ed47b6782491b37a52571989.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/812cc96d85e401739b82ec5051a7d780.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/812cc96d85e401739b82ec5051a7d780.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/86202519ac6fb8a704d91b1c59592587.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/86202519ac6fb8a704d91b1c59592587.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/22c686bf3fe42426b204f967765da890.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/22c686bf3fe42426b204f967765da890.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3b7e8142071f13cffe92760ef1cafe58.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3b7e8142071f13cffe92760ef1cafe58.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3c729b4cd85863e85676d616d8e4329f.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3c729b4cd85863e85676d616d8e4329f.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/43e78e353880264e5b4370b6622c9973.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/43e78e353880264e5b4370b6622c9973.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/62db693fc2a757d4d1a2db69c19c7fe7.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/62db693fc2a757d4d1a2db69c19c7fe7.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a4562ca13c1a48988b9b91bbd2ff34b7.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a4562ca13c1a48988b9b91bbd2ff34b7.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/aa98311ff2da3150a58ac53ec89eff23.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/aa98311ff2da3150a58ac53ec89eff23.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/b3c2c6e527762d4f94f0c3bd793de100.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/b3c2c6e527762d4f94f0c3bd793de100.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/ce578afc0df82327709864c4f2bdd921.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/ce578afc0df82327709864c4f2bdd921.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d48d094a2b7571712883a93cc4b3f649.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d48d094a2b7571712883a93cc4b3f649.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/news/Information.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/news/Information.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/news/NewsCenter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/news/NewsCenter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/news/NewsDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/news/NewsDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/teachers/TeacherDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/teachers/TeacherDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +139,8 @@
       <workItem from="1650871419598" duration="7359000" />
       <workItem from="1650983662304" duration="2505000" />
       <workItem from="1651063778505" duration="3135000" />
-      <workItem from="1651108186576" duration="6171000" />
+      <workItem from="1651108186576" duration="6823000" />
+      <workItem from="1651133976572" duration="1367000" />
     </task>
     <servers />
   </component>
@@ -199,39 +177,30 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="549" y="207" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1642915349472" />
-    <state x="640" y="349" key="Github.ShareDialog" timestamp="1642489954301">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="640" y="349" key="Github.ShareDialog/0.40.1536.824@0.40.1536.824" timestamp="1642489954301" />
-    <state width="1899" height="307" key="GridCell.Tab.0.bottom" timestamp="1651114447570">
+    <state width="1899" height="265" key="GridCell.Tab.0.bottom" timestamp="1651134699439">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="307" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1651114447570" />
-    <state width="1899" height="307" key="GridCell.Tab.0.center" timestamp="1651114447570">
+    <state width="1899" height="265" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1651134699439" />
+    <state width="1899" height="265" key="GridCell.Tab.0.center" timestamp="1651134699438">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="307" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1651114447570" />
-    <state width="1899" height="307" key="GridCell.Tab.0.left" timestamp="1651114447569">
+    <state width="1899" height="265" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1651134699438" />
+    <state width="1899" height="265" key="GridCell.Tab.0.left" timestamp="1651134699438">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="307" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1651114447569" />
-    <state width="1899" height="307" key="GridCell.Tab.0.right" timestamp="1651114447570">
+    <state width="1899" height="265" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1651134699438" />
+    <state width="1899" height="265" key="GridCell.Tab.0.right" timestamp="1651134699438">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="307" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1651114447570" />
+    <state width="1899" height="265" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1651134699438" />
     <state x="235" y="183" key="SettingsEditor" timestamp="1650718960287">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state x="188" y="153" key="SettingsEditor/0.40.1536.824@0.40.1536.824" timestamp="1642489915150" />
     <state x="235" y="183" key="SettingsEditor/0.40.1920.1040@0.40.1920.1040" timestamp="1650718960287" />
-    <state x="361" y="185" key="Vcs.Push.Dialog.v2" timestamp="1642489714848">
-      <screen x="0" y="40" width="1536" height="824" />
-    </state>
-    <state x="361" y="185" key="Vcs.Push.Dialog.v2/0.40.1536.824@0.40.1536.824" timestamp="1642489714848" />
     <state x="573" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1644397440345">
       <screen x="0" y="40" width="1536" height="824" />
     </state>

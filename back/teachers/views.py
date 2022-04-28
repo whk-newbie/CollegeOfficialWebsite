@@ -2,8 +2,9 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import viewsets
-from teachers.models import Teacher
-from teachers.serializers import TeacherSerializer, TeacherDetailSerializer
+from teachers.models import Teacher, TeacherMorality
+from teachers.serializers import TeacherSerializer, TeacherDetailSerializer, TeacherMoralitySerializer, \
+    TeacherMoralityDetailSerializer
 
 
 class TeacherViewSet(viewsets.ModelViewSet):
@@ -58,3 +59,14 @@ class TeacherViewSet(viewsets.ModelViewSet):
             return TeacherSerializer
         else:
             return TeacherDetailSerializer
+
+
+class TeacherMoralityViewSet(viewsets.ModelViewSet):
+    queryset = TeacherMorality.objects.all()
+    serializer_class = TeacherMoralitySerializer
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return TeacherMoralitySerializer
+        else:
+            return TeacherMoralityDetailSerializer
