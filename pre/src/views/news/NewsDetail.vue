@@ -1,7 +1,7 @@
 <template>
-  <Header/>
-  <div class="grid-container" v-loading="loading">
-    <div v-if="news!==null">
+  <div v-if="news!==null">
+    <Header/>
+    <div class="grid-container" v-loading="loading">
       <h1 id="title">{{ news.title }}</h1>
       <p id="subtitle">
         发布时间: {{ formatted_time(news.create_time) }}
@@ -23,7 +23,7 @@ export default {
   data: function () {
     return {
       loading: false,
-      news: null,
+      news: ''
     }
   },
   mounted() {
@@ -35,7 +35,7 @@ export default {
       axios
           .get('/api/news/' + this.$route.params.id)
           .then(response => (this.news = response.data))
-        this.loading = false;
+      this.loading = false;
     },
     formatted_time: function (time) {
       const date = new Date(time);
@@ -67,6 +67,7 @@ export default {
   color: gray;
   font-size: small;
 }
+
 .news-body {
   margin-left: 10%;
   margin-right: 10%;

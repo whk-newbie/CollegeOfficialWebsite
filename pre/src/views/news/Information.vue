@@ -58,13 +58,15 @@ export default {
   components: {Header, Footer},
   data() {
     return {
+      loading: false,
       inforsList: [],
       totalPages: 0,
       pageSize: 10,
       currentPage: 1,
     }
   },
-  created() {
+  mounted() {
+    this.loading = true;
     this.getList();
   },
   methods: {
@@ -79,7 +81,7 @@ export default {
               this.getData(response.data.next.charAt(response.data.next.length - 1))
             }
           })
-
+      this.loading = false;
     },
     getData(number) {
       axios.get('api/infos', {params: {page: number}})
@@ -101,11 +103,11 @@ export default {
       // console.log(`当前页: ${val}`);
       this.currentPage = val;
     },
-    formatted_time: function (row, column) {
-      const date = new Date(row[column.property]);
-      // return date.toLocaleDateString()
-      return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
-    },
+    // formatted_time: function (row, column) {
+    //   const date = new Date(row[column.property]);
+    //   // return date.toLocaleDateString()
+    //   return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
+    // },
     changetodetail(row) {
       this.$router.push({name: 'NewsDetail', params: {id: row.id}})
     },

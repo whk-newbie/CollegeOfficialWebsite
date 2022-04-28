@@ -24,7 +24,7 @@
 
           <div class="news-list">
             <el-table :data="newsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
-                      @cell-click="changetodetail">
+                      @cell-click="changetodetail" v-loading="loading">
               <el-table-column prop="title" label="标题" width="600px"/>
               <el-table-column prop="create_time" label="时间" width="300px"/>
             </el-table>
@@ -53,12 +53,16 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import axios from "axios";
+// import {ref} from "@vue/reactivity";
+// import get_Data from "@/composables/get_Data";
 
 export default {
   name: "NewsCenter",
   components: {Header, Footer},
+
   data: function () {
     return {
+      loading: false,
       newsList: [],
       totalPages: 0,
       pageSize: 10,
@@ -66,7 +70,8 @@ export default {
 
     }
   },
-  created() {
+  mounted() {
+    this.loading = true;
     this.getList();
   },
   methods: {
@@ -81,6 +86,7 @@ export default {
               this.getData(response.data.next.charAt(response.data.next.length - 1))
             }
           })
+      this.loading = false;
 
     },
     getData(number) {
@@ -102,11 +108,6 @@ export default {
     handleCurrentChange(val) {
       // console.log(`当前页: ${val}`);
       this.currentPage = val;
-    },
-    formatted_time: function (row, column) {
-      const date = new Date(row[column.property]);
-      // return date.toLocaleDateString()
-      return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
     },
     changetodetail(row) {
       this.$router.push({name: 'NewsDetail', params: {id: row.id}})

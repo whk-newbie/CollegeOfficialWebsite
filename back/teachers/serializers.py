@@ -32,4 +32,4 @@ class TeacherDetailSerializer(TeacherBaserSerializer):
         return obj.get_md()
 
     class Meta(TeacherBaserSerializer.Meta):
-        fields = ['id', 'name', 'personal_profile_html']
+        fields = ['id', 'name', 'job_title', 'position', 'degree', 'personal_profile_html', 'updated']

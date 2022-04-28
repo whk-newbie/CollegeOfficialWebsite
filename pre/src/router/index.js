@@ -66,7 +66,7 @@ const routes = [
         component: Teachers
     },
     {
-      path: "/teacher/:id",
+      path: "/teachers/:id",
       name: 'TeacherDetail',
       component: TeacherDetail
     },
