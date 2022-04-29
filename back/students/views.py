@@ -3,9 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets
 
-from students.models import Major, Plan, Teaching, Course
+from students.models import Major, Plan, Teaching, Course, Notice
 from students.serializers import MajorSerializer, MajorDetailSerializer, PlanSerializer, PlanDetailSerializer, \
-    TeachingSerializer, TeachingDetailSerializer, CourseSerializer, CourseDetailSerializer
+    TeachingSerializer, TeachingDetailSerializer, CourseSerializer, CourseDetailSerializer, NoticeSerializer, \
+    NoticeDetailSerializer
 
 
 class MajorViewSet(viewsets.ModelViewSet):
@@ -78,3 +79,21 @@ class CourseViewSet(viewsets.ModelViewSet):
             return CourseSerializer
         else:
             return CourseDetailSerializer
+
+
+class NoticeViewSet(viewsets.ModelViewSet):
+    queryset = Notice.objects.all().order_by('-create_time')
+    serializer_class = NoticeSerializer
+
+    def get_queryset(self):
+        queryset = Notice.objects.all()
+        category = self.request.query_params.get('category', None)
+        if category is not None:
+            queryset = queryset.filter(category=category)
+        return queryset
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return NoticeSerializer
+        else:
+            return NoticeDetailSerializer
