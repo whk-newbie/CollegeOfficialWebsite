@@ -23,7 +23,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from students.views import MajorViewSet, PlanViewSet, TeachingViewSet, CourseViewSet, NoticeViewSet, \
-    EnrollmentViewSet
+    EnrollmentViewSet, EmploymentViewSet
 from teachers.views import TeacherViewSet, TeacherMoralityViewSet, RecruitingViewSet
 
 router = DefaultRouter()
@@ -38,8 +38,8 @@ router.register(r'student/plan', PlanViewSet)
 router.register(r'student/teaching', TeachingViewSet)
 router.register(r'student/course', CourseViewSet)
 router.register(r'student/notice', NoticeViewSet)
-router.register(r'student/Enrollment', EnrollmentViewSet)
-# router.register(r'student/job', NewsViewSet)
+router.register(r'student/enrollment', EnrollmentViewSet)
+router.register(r'student/employment', EmploymentViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

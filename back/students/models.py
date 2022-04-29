@@ -167,29 +167,29 @@ class Enrollment(models.Model):
         verbose_name = '学院招生'
         verbose_name_plural = verbose_name
 
-#
-# # 学生就业
-# class Job(models.Model):
-#     title = models.CharField(max_length=20, unique=True, verbose_name="标题")
-#     category = models.CharField(max_length=20, choices=choices, default='研究生', verbose_name='学生类别')
-#     file = models.FileField(upload_to='student/job/', blank=True, verbose_name='文件')
-#     description = MDTextField(max_length=200, blank=True, verbose_name='文字介绍')
-#     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
-#
-#     def __str__(self):
-#         return self.title
-#
-#     def get_md(self):
-#         md = Markdown(
-#             extensions=[
-#                 'markdown.extensions.extra',
-#                 'markdown.extensions.codehilite',
-#             ]
-#         )
-#         md_body = md.convert(self.description)
-#         # toc 是渲染后的目录
-#         return md_body
-#
-#     class Meta:
-#         verbose_name = '学生就业'
-#         verbose_name_plural = verbose_name
+
+# 学生就业
+class Employment(models.Model):
+    title = models.CharField(max_length=20, unique=True, verbose_name="标题")
+    category = models.CharField(max_length=20, choices=choices, default='研究生', verbose_name='学生类别')
+    file = models.FileField(upload_to='student/job/', blank=True, verbose_name='文件')
+    description = MDTextField(max_length=200, blank=True, verbose_name='文字介绍')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+
+    def __str__(self):
+        return self.title
+
+    def get_md(self):
+        md = Markdown(
+            extensions=[
+                'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+            ]
+        )
+        md_body = md.convert(self.description)
+        # toc 是渲染后的目录
+        return md_body
+
+    class Meta:
+        verbose_name = '学生就业'
+        verbose_name_plural = verbose_name
