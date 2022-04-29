@@ -5,7 +5,7 @@ from requests import Response
 from rest_framework import viewsets
 from teachers.models import Teacher, TeacherMorality, recruiting
 from teachers.serializers import TeacherSerializer, TeacherDetailSerializer, TeacherMoralitySerializer, \
-    TeacherMoralityDetailSerializer, RecuitingDetailSerializer, RecuitingSerializer
+    TeacherMoralityDetailSerializer, RecruitingDetailSerializer, RecruitingSerializer
 
 
 class TeacherViewSet(viewsets.ModelViewSet):
@@ -75,10 +75,10 @@ class TeacherMoralityViewSet(viewsets.ModelViewSet):
 
 class RecruitingViewSet(viewsets.ModelViewSet):
     queryset = recruiting.objects.all().order_by('-created')
-    serializer_class = RecuitingSerializer
+    serializer_class = RecruitingSerializer
 
     def get_serializer_class(self):
         if self.action == 'list':
-            return RecuitingSerializer
+            return RecruitingSerializer
         else:
-            return RecuitingDetailSerializer
+            return RecruitingDetailSerializer
