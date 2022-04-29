@@ -58,35 +58,35 @@ class Plan(models.Model):
     class Meta:
         verbose_name = '培养方案'
         verbose_name_plural = verbose_name
-#
-#
-# # 教学成果
-# class Teaching(models.Model):
-#     name = models.CharField(max_length=20, unique=True, verbose_name='教学成果名称')
-#     category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别')
-#     file = models.FileField(upload_to='student/teaching/', blank=True, verbose_name='教学成果文件')
-#     description = MDTextField(max_length=200, blank=True, verbose_name='教学成果介绍')
-#     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
-#
-#     def __str__(self):
-#         return self.name
-#
-#     def get_md(self):
-#         md = Markdown(
-#             extensions=[
-#                 'markdown.extensions.extra',
-#                 'markdown.extensions.codehilite',
-#             ]
-#         )
-#         md_body = md.convert(self.description)
-#         # toc 是渲染后的目录
-#         return md_body
-#
-#     class Meta:
-#         verbose_name = '教学成果'
-#         verbose_name_plural = verbose_name
-#
-#
+
+
+# 教学成果
+class Teaching(models.Model):
+    name = models.CharField(max_length=20, unique=True, verbose_name='教学成果名称')
+    category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别',default='本科生')
+    file = models.FileField(upload_to='student/teaching/', blank=True, verbose_name='教学成果文件')
+    description = MDTextField(max_length=200, blank=True, verbose_name='教学成果介绍')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+
+    def __str__(self):
+        return self.name
+
+    def get_md(self):
+        md = Markdown(
+            extensions=[
+                'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+            ]
+        )
+        md_body = md.convert(self.description)
+        # toc 是渲染后的目录
+        return md_body
+
+    class Meta:
+        verbose_name = '教学成果'
+        verbose_name_plural = verbose_name
+
+
 # # 精品课程
 # class Course(models.Model):
 #     name = models.CharField(max_length=20, unique=True, verbose_name='精品课程名称')
