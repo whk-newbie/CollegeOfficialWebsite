@@ -22,7 +22,7 @@ from information.views import InformationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
-from students.views import MajorViewSet, PlanViewSet, TeachingViewSet
+from students.views import MajorViewSet, PlanViewSet, TeachingViewSet, CourseViewSet
 from teachers.views import TeacherViewSet, TeacherMoralityViewSet, RecruitingViewSet
 
 router = DefaultRouter()
@@ -35,7 +35,7 @@ router.register(r'recruiting', RecruitingViewSet)
 router.register(r'student/major', MajorViewSet)
 router.register(r'student/plan', PlanViewSet)
 router.register(r'student/teaching', TeachingViewSet)
-# router.register(r'student/course', NewsViewSet)
+router.register(r'student/course', CourseViewSet)
 # router.register(r'student/infos', NewsViewSet)
 # router.register(r'student/notice', NewsViewSet)
 # router.register(r'student/recruit', NewsViewSet)
