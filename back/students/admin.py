@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from students.models import Major, Plan, Teaching, Course, Notice
+from students.models import Major, Plan, Teaching, Course, Notice, Enrollment
 
 
 @admin.register(Major)
@@ -46,6 +46,16 @@ class CourseAdmin(admin.ModelAdmin):
 
 @admin.register(Notice)
 class NoticeAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'create_time',)
+    list_display_links = ('id', 'title',)
+    list_filter = ('title',)
+    search_fields = ('title',)
+    list_per_page = 10
+    ordering = ('-create_time',)
+
+
+@admin.register(Enrollment)
+class EnrollmentAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'create_time',)
     list_display_links = ('id', 'title',)
     list_filter = ('title',)

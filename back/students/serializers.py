@@ -8,7 +8,7 @@
 """
 from rest_framework import serializers
 
-from students.models import Major, Plan, Teaching, Course, Notice
+from students.models import Major, Plan, Teaching, Course, Notice, Enrollment
 
 
 class BaseSerializer(serializers.HyperlinkedModelSerializer):
@@ -138,6 +138,22 @@ class NoticeDetailSerializer(BaseSerializer):
         fields = ['id', 'title', 'file', 'description_html', 'create_time']
 
 
+class EnrollmentSerializer(BaseSerializer):
+    class Meta:
+        model = Enrollment
+        fields = ['id', 'url', 'title', 'create_time']
+
+
+class EnrollmentDetailSerializer(BaseSerializer):
+    id = serializers.IntegerField(read_only=True)
+    description_html = serializers.SerializerMethodField()
+
+    def get_description_html(self, obj):
+        return obj.get_md()
+
+    class Meta:
+        model = Enrollment
+        fields = ['id', 'title', 'file', 'description_html', 'create_time']
 # class PlanBaseSerializer(serializers.HyperlinkedModelSerializer):
 #     id = serializers.IntegerField(read_only=True)
 #

@@ -37,14 +37,14 @@
         </el-sub-menu>
         <el-sub-menu index="4">
           <template #title>人才培养</template>
-          <el-sub-menu index="graduate">
+          <el-sub-menu index="4-1">
             <template #title>本科生教育</template>
-            <el-menu-item index="">专业介绍</el-menu-item>
+            <el-menu-item index="education">专业介绍</el-menu-item>
             <el-menu-item index="4-1-2">培养方案</el-menu-item>
             <el-menu-item index="4-1-3">教学成果</el-menu-item>
             <el-menu-item index="4-1-4">精品课程</el-menu-item>
           </el-sub-menu>
-          <el-sub-menu index="undergraduate">
+          <el-sub-menu index="4-2">
             <template #title>研究生教育</template>
             <el-menu-item index="4-2-1">学位点介绍</el-menu-item>
             <el-menu-item index="4-2-2">培养方案</el-menu-item>

@@ -22,22 +22,23 @@ from information.views import InformationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
-from students.views import MajorViewSet, PlanViewSet, TeachingViewSet, CourseViewSet, NoticeViewSet
+from students.views import MajorViewSet, PlanViewSet, TeachingViewSet, CourseViewSet, NoticeViewSet, \
+    EnrollmentViewSet
 from teachers.views import TeacherViewSet, TeacherMoralityViewSet, RecruitingViewSet
 
 router = DefaultRouter()
 router.register(r'news', NewsViewSet)
 router.register(r'infos', InformationViewSet)
-router.register(r'teachers', TeacherViewSet)
-router.register(r'Tmorality', TeacherMoralityViewSet)
-router.register(r'recruiting', RecruitingViewSet)
+router.register(r'teachers/teacher', TeacherViewSet)
+router.register(r'teachers/Tmorality', TeacherMoralityViewSet)
+router.register(r'teachers/recruiting', RecruitingViewSet)
 #
 router.register(r'student/major', MajorViewSet)
 router.register(r'student/plan', PlanViewSet)
 router.register(r'student/teaching', TeachingViewSet)
 router.register(r'student/course', CourseViewSet)
 router.register(r'student/notice', NoticeViewSet)
-# router.register(r'student/recruit', NewsViewSet)
+router.register(r'student/Enrollment', EnrollmentViewSet)
 # router.register(r'student/job', NewsViewSet)
 
 urlpatterns = [
