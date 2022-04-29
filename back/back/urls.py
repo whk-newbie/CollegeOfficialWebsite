@@ -22,6 +22,7 @@ from information.views import InformationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
+from students.views import MajorViewSet
 from teachers.views import TeacherViewSet, TeacherMoralityViewSet, RecruitingViewSet
 
 router = DefaultRouter()
@@ -29,7 +30,17 @@ router.register(r'news', NewsViewSet)
 router.register(r'infos', InformationViewSet)
 router.register(r'teachers', TeacherViewSet)
 router.register(r'Tmorality', TeacherMoralityViewSet)
-router.register(r'teachers/recruiting', RecruitingViewSet)
+router.register(r'recruiting', RecruitingViewSet)
+#
+router.register(r'student/major', MajorViewSet)
+# router.register(r'/student/plan', NewsViewSet)
+# router.register(r'/student/teaching', NewsViewSet)
+# router.register(r'/student/course', NewsViewSet)
+# router.register(r'/student/infos', NewsViewSet)
+# router.register(r'/student/notice', NewsViewSet)
+# router.register(r'/student/recruit', NewsViewSet)
+# router.register(r'/student/job', NewsViewSet)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rest_framework.urls')),

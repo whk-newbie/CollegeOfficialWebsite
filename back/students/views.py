@@ -1,0 +1,25 @@
+from django.shortcuts import render
+
+# Create your views here.
+from rest_framework import viewsets
+
+from students.models import Major
+from students.serializers import MajorSerializer, MajorDetailSerializer
+
+
+class MajorViewSet(viewsets.ModelViewSet):
+    queryset = Major.objects.all()
+    serializer_class = MajorSerializer
+
+    def get_queryset(self):
+        queryset = Major.objects.all()
+        category = self.request.query_params.get('category', None)
+        if category is not None:
+            queryset = queryset.filter(category=category)
+        return queryset
+
+    def get_serializer_class(self):
+        if self.action == 'list':
+            return MajorSerializer
+        else:
+            return MajorDetailSerializer
