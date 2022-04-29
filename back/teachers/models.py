@@ -68,7 +68,6 @@ class TeacherMorality(models.Model):
             ]
         )
         md_body = md.convert(self.content)
-        # toc 是渲染后的目录
         return md_body
 
     class Meta:
@@ -96,7 +95,6 @@ class recruiting(models.Model):
             ]
         )
         md_body = md.convert(self.content)
-        # toc 是渲染后的目录
         return md_body
 
     class Meta:

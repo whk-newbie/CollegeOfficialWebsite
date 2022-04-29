@@ -25,7 +25,6 @@ class Major(models.Model):
             ]
         )
         md_body = md.convert(self.description)
-        # toc 是渲染后的目录
         return md_body
 
     class Meta:
@@ -79,7 +78,6 @@ class Teaching(models.Model):
             ]
         )
         md_body = md.convert(self.description)
-        # toc 是渲染后的目录
         return md_body
 
     class Meta:
@@ -106,7 +104,6 @@ class Course(models.Model):
             ]
         )
         md_body = md.convert(self.description)
-        # toc 是渲染后的目录
         return md_body
 
     class Meta:
@@ -133,7 +130,6 @@ class Notice(models.Model):
             ]
         )
         md_body = md.convert(self.description)
-        # toc 是渲染后的目录
         return md_body
 
     class Meta:
@@ -160,7 +156,6 @@ class Enrollment(models.Model):
             ]
         )
         md_body = md.convert(self.description)
-        # toc 是渲染后的目录
         return md_body
 
     class Meta:
@@ -187,7 +182,6 @@ class Employment(models.Model):
             ]
         )
         md_body = md.convert(self.description)
-        # toc 是渲染后的目录
         return md_body
 
     class Meta:

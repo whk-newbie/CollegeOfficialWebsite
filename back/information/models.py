@@ -34,7 +34,6 @@ class Information(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
-                'markdown.extensions.toc',
             ]
         )
         return md.convert(self.content)

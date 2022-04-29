@@ -22,6 +22,7 @@ from information.views import InformationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
+from research.views import ResearchViewsSet, InstitutionsViewsSet, AchievementsViewSet
 from students.views import MajorViewSet, PlanViewSet, TeachingViewSet, CourseViewSet, NoticeViewSet, \
     EnrollmentViewSet, EmploymentViewSet
 from teachers.views import TeacherViewSet, TeacherMoralityViewSet, RecruitingViewSet
@@ -40,6 +41,10 @@ router.register(r'student/course', CourseViewSet)
 router.register(r'student/notice', NoticeViewSet)
 router.register(r'student/enrollment', EnrollmentViewSet)
 router.register(r'student/employment', EmploymentViewSet)
+#
+router.register(r'research/research', ResearchViewsSet)
+router.register(r'research/institutions', InstitutionsViewsSet)
+router.register(r'research/achievements', AchievementsViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

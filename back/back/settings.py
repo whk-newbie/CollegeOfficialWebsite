@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'News',
-    'information',
-    'teachers',
-    'students',
+    'News',  # 新闻模块
+    'information',  # 通知模块
+    'teachers',  # 老师相关模块
+    'students',  # 学生相关模块
+    'research',  # 科学研究模块
     'userinfo',
     'mdeditor',
 ]

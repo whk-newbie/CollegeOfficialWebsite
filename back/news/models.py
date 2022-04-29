@@ -36,7 +36,6 @@ class News(models.Model):
             ]
         )
         md_body = md.convert(self.body)
-        # toc 是渲染后的目录
         return md_body
 
     class Meta:
