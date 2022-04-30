@@ -9,13 +9,13 @@ choices = (('本科生', '本科生'), ('研究生', '研究生'), ('博士生',
 
 # 专业介绍
 class Major(models.Model):
-    name = models.CharField(max_length=20, unique=True, verbose_name='专业名称')
+    title = models.CharField(max_length=20, unique=True, verbose_name='专业名称')
     category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别')
     description = MDTextField(max_length=200, blank=True, verbose_name='专业介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_md(self):
         md = Markdown(
@@ -34,14 +34,14 @@ class Major(models.Model):
 
 # 培养方案
 class Plan(models.Model):
-    name = models.CharField(max_length=20, unique=True, verbose_name='培养方案名称')
+    title = models.CharField(max_length=20, unique=True, verbose_name='培养方案名称')
     category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别')
     file = models.FileField(upload_to='student/plan/', blank=True, verbose_name='培养方案文件')
     description = MDTextField(max_length=200, blank=True, verbose_name='培养方案介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_md(self):
         md = Markdown(
@@ -61,14 +61,14 @@ class Plan(models.Model):
 
 # 教学成果
 class Teaching(models.Model):
-    name = models.CharField(max_length=20, unique=True, verbose_name='教学成果名称')
+    title = models.CharField(max_length=20, unique=True, verbose_name='教学成果名称')
     category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别', default='本科生')
     file = models.FileField(upload_to='student/teaching/', blank=True, verbose_name='教学成果文件')
     description = MDTextField(max_length=200, blank=True, verbose_name='教学成果介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_md(self):
         md = Markdown(
@@ -87,14 +87,14 @@ class Teaching(models.Model):
 
 # 精品课程
 class Course(models.Model):
-    name = models.CharField(max_length=20, unique=True, verbose_name='精品课程名称')
+    title = models.CharField(max_length=20, unique=True, verbose_name='精品课程名称')
     category = models.CharField(max_length=20, choices=choices, default='本科生', verbose_name='学生类别')
     file = models.FileField(upload_to='student/course/', blank=True, verbose_name='精品课程文件')
     description = MDTextField(max_length=200, blank=True, verbose_name='精品课程介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_md(self):
         md = Markdown(

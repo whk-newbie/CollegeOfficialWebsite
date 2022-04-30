@@ -25,7 +25,7 @@ class BaseSerializer(serializers.HyperlinkedModelSerializer):
 class MajorSerializer(BaseSerializer):
     class Meta:
         model = Major
-        fields = ['id', 'url', 'name', 'create_time']
+        fields = ['id', 'url', 'title', 'create_time']
 
 
 class MajorDetailSerializer(BaseSerializer):
@@ -37,39 +37,13 @@ class MajorDetailSerializer(BaseSerializer):
 
     class Meta:
         model = Major
-        fields = ['id', 'name', 'description_html', 'create_time']
+        fields = ['id', 'title', 'description_html', 'create_time']
 
-
-#
-# class MajorBaseSerializer(serializers.HyperlinkedModelSerializer):
-#     id = serializers.IntegerField(read_only=True)
-#
-#     class Meta:
-#         model = Major
-#         fields = '__all__'
-#
-#
-# class MajorSerializer(MajorBaseSerializer):
-#     class Meta(MajorBaseSerializer.Meta):
-#         model = Major
-#         fields = ['id', 'name', 'create_time']
-#
-#
-# class MajorDetailSerializer(MajorBaseSerializer):
-#     id = serializers.IntegerField(read_only=True)
-#     description_html = serializers.SerializerMethodField()
-#
-#     def get_description_html(self, obj):
-#         return obj.get_md()
-#
-#     class Meta(MajorBaseSerializer.Meta):
-#         model = Major
-#         fields = ['id', 'name', 'description_html', 'create_time']
 
 class PlanSerializer(BaseSerializer):
     class Meta:
         model = Plan
-        fields = ['id', 'url', 'name', 'create_time']
+        fields = ['id', 'url', 'title', 'create_time']
 
 
 class PlanDetailSerializer(BaseSerializer):
@@ -81,13 +55,13 @@ class PlanDetailSerializer(BaseSerializer):
 
     class Meta:
         model = Plan
-        fields = ['id', 'name', 'file', 'description_html', 'create_time']
+        fields = ['id', 'title', 'file', 'description_html', 'create_time']
 
 
 class TeachingSerializer(BaseSerializer):
     class Meta:
         model = Teaching
-        fields = ['id', 'url', 'name', 'create_time']
+        fields = ['id', 'url', 'title', 'create_time']
 
 
 class TeachingDetailSerializer(BaseSerializer):
@@ -99,13 +73,13 @@ class TeachingDetailSerializer(BaseSerializer):
 
     class Meta:
         model = Teaching
-        fields = ['id', 'name', 'file', 'description_html', 'create_time']
+        fields = ['id', 'title', 'file', 'description_html', 'create_time']
 
 
 class CourseSerializer(BaseSerializer):
     class Meta:
         model = Course
-        fields = ['id', 'url', 'name', 'create_time']
+        fields = ['id', 'url', 'title', 'create_time']
 
 
 class CourseDetailSerializer(BaseSerializer):
@@ -117,7 +91,7 @@ class CourseDetailSerializer(BaseSerializer):
 
     class Meta:
         model = Course
-        fields = ['id', 'name', 'file', 'description_html', 'create_time']
+        fields = ['id', 'title', 'file', 'description_html', 'create_time']
 
 
 class NoticeSerializer(BaseSerializer):

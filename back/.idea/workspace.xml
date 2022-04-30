@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a52b83e3-1613-4d29-9c04-449666280092" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Group/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Group/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/students/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/students/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/students/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/students/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/students/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +103,7 @@
       <workItem from="1651148055569" duration="5795000" />
       <workItem from="1651197057521" duration="13143000" />
       <workItem from="1651233142993" duration="6182000" />
-      <workItem from="1651282332588" duration="8419000" />
+      <workItem from="1651282332588" duration="9767000" />
     </task>
     <servers />
   </component>
