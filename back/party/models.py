@@ -49,3 +49,5 @@ class PartyFileAndTrends(models.Model):
     class Meta:
         verbose_name = '党史教育文件及动态'
         verbose_name_plural = verbose_name
+
+

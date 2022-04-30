@@ -21,3 +21,4 @@ class PartyFileAdmin(admin.ModelAdmin):
     list_filter = ('time',)
     search_fields = ('title', 'category')
     list_per_page = 50
+

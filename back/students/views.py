@@ -3,11 +3,11 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets
 
-from students.models import Major, Plan, Teaching, Course, Notice, Enrollment, Employment
+from students.models import Major, Plan, Teaching, Course, Notice, Enrollment, Employment, Learning
 from students.serializers import MajorSerializer, MajorDetailSerializer, PlanSerializer, PlanDetailSerializer, \
     TeachingSerializer, TeachingDetailSerializer, CourseSerializer, CourseDetailSerializer, NoticeSerializer, \
     NoticeDetailSerializer, EnrollmentSerializer, EnrollmentDetailSerializer, EmploymentSerializer, \
-    EmploymentDetailSerializer
+    EmploymentDetailSerializer, LearningSerializer
 
 
 class MajorViewSet(viewsets.ModelViewSet):
@@ -134,3 +134,15 @@ class EmploymentViewSet(viewsets.ModelViewSet):
             return EmploymentSerializer
         else:
             return EmploymentDetailSerializer
+
+class LearningViewSet(viewsets.ModelViewSet):
+    queryset = Learning.objects.all().order_by('-create_time')
+    serializer_class = LearningSerializer
+
+    def get_queryset(self):
+        queryset = Learning.objects.all()
+        category = self.request.query_params.get('category', None)
+        if category is not None:
+            queryset = queryset.filter(category=category)
+        return queryset
+

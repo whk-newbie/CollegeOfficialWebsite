@@ -8,7 +8,7 @@
 """
 from rest_framework import serializers
 
-from students.models import Major, Plan, Teaching, Course, Notice, Enrollment, Employment
+from students.models import Major, Plan, Teaching, Course, Notice, Enrollment, Employment, Learning
 
 
 class BaseSerializer(serializers.HyperlinkedModelSerializer):
@@ -172,3 +172,9 @@ class EmploymentDetailSerializer(BaseSerializer):
     class Meta:
         model = Employment
         fields = ['id', 'title', 'file', 'description_html', 'create_time']
+
+
+class LearningSerializer(BaseSerializer):
+    class Meta:
+        model = Learning
+        fields = "__all__"
