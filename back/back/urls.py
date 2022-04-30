@@ -22,7 +22,8 @@ from information.views import InformationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
-from research.views import ResearchViewsSet, InstitutionsViewsSet, AchievementsViewSet
+from party.views import PartyBuildingViewSet, PartyFileAndTrendsViewSet
+from research.views import ResearchViewSet, InstitutionsViewSet, AchievementsViewSet
 from students.views import MajorViewSet, PlanViewSet, TeachingViewSet, CourseViewSet, NoticeViewSet, \
     EnrollmentViewSet, EmploymentViewSet
 from teachers.views import TeacherViewSet, TeacherMoralityViewSet, RecruitingViewSet
@@ -42,9 +43,13 @@ router.register(r'student/notice', NoticeViewSet)
 router.register(r'student/enrollment', EnrollmentViewSet)
 router.register(r'student/employment', EmploymentViewSet)
 #
-router.register(r'research/research', ResearchViewsSet)
-router.register(r'research/institutions', InstitutionsViewsSet)
+router.register(r'research/research', ResearchViewSet)
+router.register(r'research/institutions', InstitutionsViewSet)
 router.register(r'research/achievements', AchievementsViewSet)
+
+#
+router.register(r'party/building', PartyBuildingViewSet)
+router.register(r'party/fileandtrends', PartyFileAndTrendsViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

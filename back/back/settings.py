@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'teachers',  # 老师相关模块
     'students',  # 学生相关模块
     'research',  # 科学研究模块
+    'party',  # 党建模块
     'userinfo',
     'mdeditor',
 ]
@@ -133,3 +134,5 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+
+SIMPLEUI_HOME_INFO = False

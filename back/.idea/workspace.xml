@@ -2,21 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a52b83e3-1613-4d29-9c04-449666280092" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/research/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/research/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/party/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/party/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/party/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/party/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/party/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/party/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/party/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/party/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/information/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/information/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/students/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/students/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teachers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/teachers/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/research/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/600ff84c23edd02c58797239a829f59b.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/600ff84c23edd02c58797239a829f59b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/6ced9c138e38890d24b2716dabed37ba.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/6ced9c138e38890d24b2716dabed37ba.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/136a2a53064df1f64a44ed84e335add2.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/136a2a53064df1f64a44ed84e335add2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/376e77954375b85e37e91156559fda94.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/376e77954375b85e37e91156559fda94.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/58badbcc04217dd86a69f2520ba6ec83.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/58badbcc04217dd86a69f2520ba6ec83.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/5ff9c10c5a8b86aa94e875f80bc807ac.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/5ff9c10c5a8b86aa94e875f80bc807ac.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +117,8 @@
       <workItem from="1651134149508" duration="7958000" />
       <workItem from="1651148055569" duration="5795000" />
       <workItem from="1651197057521" duration="13143000" />
-      <workItem from="1651233142993" duration="4816000" />
+      <workItem from="1651233142993" duration="6182000" />
+      <workItem from="1651282332588" duration="3533000" />
     </task>
     <servers />
   </component>
