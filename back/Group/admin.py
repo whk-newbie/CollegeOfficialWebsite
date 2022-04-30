@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 
 # Base admin class
-from Group.models import News, Group, Party, System, Honor
+from Group.models import GroupNews, Group, Party, System, Honor
 
 
 class BaseAdmin(admin.ModelAdmin):
@@ -14,7 +14,7 @@ class BaseAdmin(admin.ModelAdmin):
     list_per_page = 50
 
 
-@admin.register(News)
+@admin.register(GroupNews)
 class NewsAdmin(BaseAdmin):
     pass
 

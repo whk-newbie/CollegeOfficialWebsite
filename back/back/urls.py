@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from rest_framework.routers import DefaultRouter
+
+from Group.views import GroupNewsViewSet, GroupViewSet, PartyViewSet, SystemViewSet, HonorViewSet
 from News.views import NewsViewSet
 from information.views import InformationViewSet
 from django.conf import settings
@@ -52,6 +54,12 @@ router.register(r'research/achievements', AchievementsViewSet)
 router.register(r'party/building', PartyBuildingViewSet)
 router.register(r'party/fileandtrends', PartyFileAndTrendsViewSet)
 
+#
+router.register(r'group/groupnews', GroupNewsViewSet)
+router.register(r'group/group', GroupViewSet)
+router.register(r'group/party', PartyViewSet)
+router.register(r'group/system', SystemViewSet)
+router.register(r'group/honor', HonorViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rest_framework.urls')),

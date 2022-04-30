@@ -24,7 +24,7 @@ class BaseModel(models.Model):
                 'markdown.extensions.codehilite',
             ]
         )
-        md_body = md.convert(self.description)
+        md_body = md.convert(self.desc)
         return md_body
 
     def __str__(self):
@@ -32,7 +32,7 @@ class BaseModel(models.Model):
 
 
 # 学工新闻
-class News(BaseModel):
+class GroupNews(BaseModel):
     """
     News
     """
