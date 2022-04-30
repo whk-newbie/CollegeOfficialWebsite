@@ -135,6 +135,7 @@ class EmploymentViewSet(viewsets.ModelViewSet):
         else:
             return EmploymentDetailSerializer
 
+
 class LearningViewSet(viewsets.ModelViewSet):
     queryset = Learning.objects.all().order_by('-create_time')
     serializer_class = LearningSerializer
@@ -145,4 +146,3 @@ class LearningViewSet(viewsets.ModelViewSet):
         if category is not None:
             queryset = queryset.filter(category=category)
         return queryset
-

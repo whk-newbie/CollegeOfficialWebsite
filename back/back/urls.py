@@ -25,7 +25,7 @@ from django.conf.urls.static import static
 from party.views import PartyBuildingViewSet, PartyFileAndTrendsViewSet
 from research.views import ResearchViewSet, InstitutionsViewSet, AchievementsViewSet
 from students.views import MajorViewSet, PlanViewSet, TeachingViewSet, CourseViewSet, NoticeViewSet, \
-    EnrollmentViewSet, EmploymentViewSet
+    EnrollmentViewSet, EmploymentViewSet, LearningViewSet
 from teachers.views import TeacherViewSet, TeacherMoralityViewSet, RecruitingViewSet
 
 router = DefaultRouter()
@@ -42,6 +42,7 @@ router.register(r'student/course', CourseViewSet)
 router.register(r'student/notice', NoticeViewSet)
 router.register(r'student/enrollment', EnrollmentViewSet)
 router.register(r'student/employment', EmploymentViewSet)
+router.register(r"student/Learning", LearningViewSet)
 #
 router.register(r'research/research', ResearchViewSet)
 router.register(r'research/institutions', InstitutionsViewSet)

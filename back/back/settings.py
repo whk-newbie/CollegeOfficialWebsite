@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'students',  # 学生相关模块
     'research',  # 科学研究模块
     'party',  # 党建模块
+    'Group',  # 团学模块
     'userinfo',
     'mdeditor',
 ]
