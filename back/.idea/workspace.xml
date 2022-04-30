@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a52b83e3-1613-4d29-9c04-449666280092" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Thematic/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thematic/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thematic/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thematic/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thematic/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thematic/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thematic/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Thematic/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Group/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Group/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Group/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Group/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Group/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Group/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -105,7 +111,7 @@
       <workItem from="1651148055569" duration="5795000" />
       <workItem from="1651197057521" duration="13143000" />
       <workItem from="1651233142993" duration="6182000" />
-      <workItem from="1651282332588" duration="11542000" />
+      <workItem from="1651282332588" duration="19858000" />
     </task>
     <servers />
   </component>

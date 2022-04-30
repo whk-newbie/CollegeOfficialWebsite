@@ -19,7 +19,7 @@ class BaseSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['id', 'url', 'title', 'create_time', 'update_time']
 
 
-class BaseDetailGroupSerializer(serializers.ModelSerializer):
+class BaseDetailSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     desc_html = serializers.SerializerMethodField()
 
@@ -37,19 +37,19 @@ class GroupNewsSerializer(BaseSerializer):
         fields = ['id', 'url', 'title', 'create_time', 'update_time']
 
 
-class GroupNewsDetailSerializer(BaseDetailGroupSerializer):
+class GroupNewsDetailSerializer(BaseDetailSerializer):
     class Meta:
         model = GroupNews
         fields = ['id', 'title', 'create_time', 'update_time', 'desc_html']
 
 
-class GroupSerializer(BaseDetailGroupSerializer):
+class GroupSerializer(BaseDetailSerializer):
     class Meta:
         model = Group
         fields = ['id', 'url', 'title', 'create_time', 'update_time']
 
 
-class GroupDetailSerializer(BaseDetailGroupSerializer):
+class GroupDetailSerializer(BaseDetailSerializer):
     class Meta:
         model = Group
         fields = ['id', 'title', 'create_time', 'update_time', 'desc_html']
@@ -61,7 +61,7 @@ class PartySerializer(BaseSerializer):
         fields = ['id', 'url', 'title', 'create_time', 'update_time']
 
 
-class PartyDetailSerializer(BaseDetailGroupSerializer):
+class PartyDetailSerializer(BaseDetailSerializer):
     class Meta:
         model = Party
         fields = ['id', 'title', 'create_time', 'update_time', 'desc_html']
@@ -73,7 +73,7 @@ class SystemSerializer(BaseSerializer):
         fields = ['id', 'url', 'title', 'create_time', 'update_time']
 
 
-class SystemDetailSerializer(BaseDetailGroupSerializer):
+class SystemDetailSerializer(BaseDetailSerializer):
     class Meta:
         model = System
         fields = ['id', 'title', 'create_time', 'update_time', 'desc_html']
@@ -85,7 +85,7 @@ class HonorSerializer(BaseSerializer):
         fields = ['id', 'url', 'title', 'create_time', 'update_time']
 
 
-class HonorDetailSerializer(BaseDetailGroupSerializer):
+class HonorDetailSerializer(BaseDetailSerializer):
     class Meta:
         model = Honor
         fields = ['id', 'title', 'create_time', 'update_time', 'desc_html']

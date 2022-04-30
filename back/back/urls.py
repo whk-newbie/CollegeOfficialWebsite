@@ -20,6 +20,7 @@ from rest_framework.routers import DefaultRouter
 
 from Group.views import GroupNewsViewSet, GroupViewSet, PartyViewSet, SystemViewSet, HonorViewSet
 from News.views import NewsViewSet
+from Thematic.views import InfosViewSet, FilelearnViewSet, ReportViewSet
 from information.views import InformationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
@@ -33,10 +34,11 @@ from teachers.views import TeacherViewSet, TeacherMoralityViewSet, RecruitingVie
 router = DefaultRouter()
 router.register(r'news', NewsViewSet)
 router.register(r'infos', InformationViewSet)
+# 教师模块api
 router.register(r'teachers/teacher', TeacherViewSet)
 router.register(r'teachers/Tmorality', TeacherMoralityViewSet)
 router.register(r'teachers/recruiting', RecruitingViewSet)
-#
+# 学生模块api
 router.register(r'student/major', MajorViewSet)
 router.register(r'student/plan', PlanViewSet)
 router.register(r'student/teaching', TeachingViewSet)
@@ -45,21 +47,26 @@ router.register(r'student/notice', NoticeViewSet)
 router.register(r'student/enrollment', EnrollmentViewSet)
 router.register(r'student/employment', EmploymentViewSet)
 router.register(r"student/Learning", LearningViewSet)
-#
+# 科学研究模块api
 router.register(r'research/research', ResearchViewSet)
 router.register(r'research/institutions', InstitutionsViewSet)
 router.register(r'research/achievements', AchievementsViewSet)
 
-#
+# 党建党史模块api
 router.register(r'party/building', PartyBuildingViewSet)
 router.register(r'party/fileandtrends', PartyFileAndTrendsViewSet)
 
-#
+# 团学模块api
 router.register(r'group/groupnews', GroupNewsViewSet)
 router.register(r'group/group', GroupViewSet)
 router.register(r'group/party', PartyViewSet)
 router.register(r'group/system', SystemViewSet)
 router.register(r'group/honor', HonorViewSet)
+# 主题教育模块api
+router.register(r'education/report', ReportViewSet)
+router.register(r'education/infos', InfosViewSet)
+router.register(r'education/filelearn', FilelearnViewSet)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rest_framework.urls')),

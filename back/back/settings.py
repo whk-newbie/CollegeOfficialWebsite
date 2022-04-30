@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'research',  # 科学研究模块
     'party',  # 党建模块
     'Group',  # 团学模块
+    'Thematic',  # 主题教育模块
     'userinfo',
     'mdeditor',
 ]
@@ -135,5 +136,191 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
-
+# simpleui settings
 SIMPLEUI_HOME_INFO = False
+SIMPLEUI_HOME_QUICK = False
+SIMPLEUI_HOME_ACTION = True
+SIMPLEUI_ANALYSIS = True
+SIMPLEUI_DEFAULT_ICON = False
+SIMPLEUI_CONFIG = {
+    # 是否使用系统默认菜单，自定义菜单时建议关闭。
+    'system_keep': False,
+
+    # 用于菜单排序和过滤, 不填此字段为默认排序和全部显示。空列表[] 为全部不显示.
+    # 设置是否开启动态菜单, 默认为False. 如果开启, 则会在每次用户登陆时刷新展示菜单内容。
+    # 一般建议关闭。
+    'dynamic': False,
+    'menus': [
+        {
+            'app': 'information',
+            'name': '通知发布',
+            'icon': 'fa fa-tasks',
+            'models': [{
+                'name': '通知列表',
+                'icon': '',
+                'url': 'information/information'
+            }]
+        },
+        {
+            'app': 'News',
+            'name': '新闻中心',
+            'icon': 'fa fa-newspaper',
+            'models': [{
+                'name': "新闻列表",
+                'icon': '',
+                'url': 'News/news'
+            }]
+        },
+        {
+            'app': 'research',
+            'name': '科学研究',
+            'icon': 'fa fa-search',
+            'models': [{
+                'name': '科研动态',
+                'icon': '',
+                'url': 'research/research'
+            }, {
+                'name': '科研机构',
+                'icon': '',
+                'url': 'research/institutions'
+            }, {
+                'name': '科研成果',
+                'icon': 'fa fa-trophy',
+                'url': 'research/achievements'
+            }, ]
+        },
+        {
+            'app': 'students',
+            'name': '学生信息管理',
+            'icon': 'fa fa-graduation-cap',
+            'models': [{
+                'name': '专业介绍',
+                'icon': 'fa fa-book',
+                'url': 'students/major'
+            }, {
+                'name': '培养方案',
+                'icon': 'fa fa-book',
+                'url': 'students/plan'
+            }, {
+                'name': '教学成果',
+                'icon': 'fa fa-star',
+                'url': 'students/teaching'
+            }, {
+                'name': '精品课程',
+                'icon': 'fa fa-book',
+                'url': 'students/course'
+            }, {
+                'name': '研究生信息公告',
+                'icon': 'fa fa-bullhorn',
+                'url': 'students/notice'
+            }, {
+                'name': '学院招生',
+                'icon': '',
+                'url': 'students/enrollment'
+            }, {
+                'name': '学生就业',
+                'icon': '',
+                'url': 'students/employment'
+            }, {
+                'name': '学习资料',
+                'icon': 'fa fa-file',
+                'url': 'students/learning'
+            }]
+        },
+        {
+            'app': 'teachers',
+            'name': '教师信息管理',
+            'icon': 'fa fa-book',
+            'models': [{
+                'name': '教师信息',
+                'icon': '',
+                'url': 'teachers/teacher'
+            }, {
+                'name': '师德师风建设',
+                'icon': '',
+                'url': 'teachers/teachermorality'
+            }, {
+                'name': '招贤纳士',
+                'icon': '',
+                'url': 'teachers/recruiting'
+            }, ]
+        },
+        {
+            'app': 'party',
+            'name': '党建与党史',
+            'icon': '',
+            'models': [{
+                'name': '党建工作',
+                'icon': '',
+                'url': 'party/partybuilding'
+            }, {
+                'name': '党史学习教育',
+                'icon': '',
+                'url': 'party/partybuilding'
+            }]
+        },
+        {
+            'app': 'Group',
+            'name': '团学工作',
+            'icon': 'fa fa-users',
+            'models': [{
+                'name': '学工新闻',
+                'icon': '',
+                'url': 'Group/groupnews'
+            }, {
+                'name': '团学组织',
+                'icon': '',
+                'url': 'Group/group'
+            }, {
+                'name': '党员服务',
+                'icon': '',
+                'url': 'Group/party'
+            }, {
+                'name': '管理制度',
+                'icon': '',
+                'url': 'Group/system'
+            }, {
+                'name': '荣誉室',
+                'icon': '',
+                'url': 'Group/honor'
+            }]
+        },
+        {
+            'app': 'Thematic',
+            'name': '主题教育',
+            'icon': 'fa fa-address-book',
+            'models': [{
+                'name': '活动报道',
+                'icon': '',
+                'url': 'Thematic/report'
+            }, {
+                'name': '通知公告',
+                'icon': '',
+                'url': 'Thematic/infos'
+            }, {
+                'name': '文件学习',
+                'icon': '',
+                'url': 'Thematic/filelearn'
+            }]
+        },
+
+        {
+            'app': 'auth',
+            'name': '权限认证',
+            'icon': 'fas fa-user-shield',
+            'models': [
+                {
+                    'name': '用户列表',
+                    'icon': 'fa fa-user',
+                    'url': 'auth/user/'
+                },
+                {
+                    'name': '用户组',
+                    'icon': 'fa fa-th-list',
+                    'url': 'auth/group/'
+                }
+            ]
+        }
+
+    ]
+}
