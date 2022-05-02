@@ -1,13 +1,13 @@
 <template>
   <el-col>
     <el-row>
-      <el-button type="info" @click="$router.push('/CollegeOverview')">学院简介</el-button>
+      <el-button type="info" @click="$router.push('/collegeOverView/overview')">学院简介</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/leaders')">学院领导</el-button>
+      <el-button type="info" @click="$router.push('/collegeOverView/leaders')">学院领导</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/organization')">内设机构</el-button>
+      <el-button type="info" @click="$router.push('/collegeOverView/organization')">内设机构</el-button>
     </el-row>
   </el-col>
 </template>
