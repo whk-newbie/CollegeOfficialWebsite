@@ -1,16 +1,16 @@
 <template>
   <el-col>
     <el-row>
-      <el-button type="info" @click="$router.push('/teacher')">专任教师</el-button>
+      <el-button type="info" @click="$router.push('/teacher/teachers')">专任教师</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/professor')">教授队伍</el-button>
+      <el-button type="info" @click="$router.push('/teacher/professor')">教授队伍</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/tutor')">研究生导师</el-button>
+      <el-button type="info" @click="$router.push('/teacher/tutor')">研究生导师</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/enrollful')">招贤纳士</el-button>
+      <el-button type="info" @click="$router.push('/teacher/enrollful')">招贤纳士</el-button>
     </el-row>
   </el-col>
 </template>

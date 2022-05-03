@@ -45,6 +45,7 @@ export default {
 
 .imgs {
   padding: 80px 50px;
+
 }
 
 .imgs span {
@@ -61,7 +62,8 @@ export default {
 }
 .menu-list {
   position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding: 0 5% ;
+  background:#4a967a;
+
 }
 </style>

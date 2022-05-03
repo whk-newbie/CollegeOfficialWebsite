@@ -122,11 +122,6 @@ export default {
       // console.log(`当前页: ${val}`);
       this.currentPage = val;
     },
-    // formatted_time: function (row, column) {
-    //   const date = new Date(row[column.property]);
-    //   // return date.toLocaleDateString()
-    //   return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
-    // },
     changetodetail(row) {
       this.$router.push({name: this.detail, params: {id: row.id}})
     },

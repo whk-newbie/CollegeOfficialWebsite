@@ -5,10 +5,10 @@ import CollegeOverview from "@/views/CollegeOverview/CollegeOverview"
 import Leaders from "@/views/CollegeOverview/Leaders"
 import Organization from "@/views/CollegeOverview/Organization"
 
-// import NewsCenter from "@/views/news/NewsCenter"
-// import Information from "@/views/news/Information"
+import NewsCenter from "@/views/news/NewsCenter"
+import Information from "@/views/news/Information"
 // import InfosDetail from '@/views/news/InforsDetail'
-// import NewsDetail from "@/views/news/NewsDetail"
+import NewsDetail from "@/views/news/NewsDetail"
 
 
 import Teachers from "@/views/teachers/Teachers"
@@ -37,7 +37,7 @@ const routes = [
             is_show: false,
             title: '首页',
         },
-        children:null
+        children: null
     },
     {
         path: '/home',
@@ -61,7 +61,7 @@ const routes = [
         },
         children: [{
             path: '/collegeOverView/overview',
-            name: '/collegeOverViewoverview',
+            name: 'collegeOverViewoverview',
             component: CollegeOverview,
             meta: {
                 is_show: true,
@@ -133,7 +133,81 @@ const routes = [
                 },
             ]
         },]
-    }
+    },
+    {
+        path: '/newsAndinfos',
+        name: 'newsAndinfos',
+        component: Second,
+        meta: {
+            is_show: true,
+            title: "新闻公告",
+        },
+        children: [{
+            path: '/newsAndinfos/overview',
+            name: '/collegeOverViewoverview',
+            component: NewsCenter,
+            meta: {
+                is_show: true,
+                title: "学院新闻"
+            },
+            children: []
+        },
+            {
+                path: '/newsAndinfos/inforsCenter',
+                name: 'infosCenter',
+                component: Information,
+                meta: {
+                    is_show: true,
+                    title: "通知公告"
+                },
+                children: []
+            }]
+    },
+    {
+        path: '/education',
+        name: 'deucation',
+        component: Second,
+        meta: {
+            is_show: true,
+            title: "人才培养"
+        },
+        children: [
+            {
+                path: '/education/graduatie',
+                name: "graduate",
+                component: () => import('@/views/education/Graduate'),
+                meta: {
+                    is_show: true,
+                    title: "本科生教育"
+                },
+                children: []
+            },
+            {
+                path: '/education/undergraduatie',
+                name: "undergraduate",
+                component: () => import('@/views/education/Undergraduate'),
+                meta: {
+                    is_show: true,
+                    title: "研究生教育"
+                },
+                children: []
+            }
+        ]
+    },
+    {
+        path: '/infosdetail',
+        name: 'NewsDetail',
+        component: NewsDetail,
+        meta: {is_show: false,},
+        children: null
+    },
+    {
+        path: '/newdetail',
+        name: 'NewsDetail',
+        component: NewsDetail,
+        meta: {is_show: false,},
+        children: null
+    },
 ]
 
 const router = createRouter({

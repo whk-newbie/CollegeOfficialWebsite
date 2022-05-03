@@ -8,14 +8,16 @@
             <el-carousel class="carousel">
               <!--              生成五个-->
               <template v-for="(item,index) in tableData.results" :key="index">
-                <router-view :to="{ name: 'NewsDetail', params: { id: item.id }}">
-                  <el-carousel-item v-if="index < 6 && item.cover">
-                    <div class="pic_item">
-                      <img class="small" :src="item.cover"/>
-                      <h3>{{ item.title }}</h3>
-                    </div>
-                  </el-carousel-item>
-                </router-view>
+
+                <el-carousel-item v-if="index < 6 && item.cover"
+                                  @click="$router.push({ name: 'NewsDetail', params: { id: item.id }})">
+                  <!--                  <router-view :to="{ name: 'NewsDetail', params: { id: item.id }}">-->
+                  <div class="pic_item">
+                    <img class="small" :src="item.cover"/>
+                    <h3>{{ item.title }}</h3>
+                  </div>
+                </el-carousel-item>
+
               </template>
             </el-carousel>
           </div>
@@ -29,7 +31,7 @@
                 <el-table-column prop="create_time" :formatter="formatted_time" width="180"/>
               </el-table>
               <div style="border:0;margin-bottom: 50%">
-                <el-button style="border:0;margin-left:85%;" @click="$router.push('/News')">更多+</el-button>
+                <el-button style="border:0;margin-left:85%;" @click="$router.push()">更多+</el-button>
               </div>
             </div>
           </div>

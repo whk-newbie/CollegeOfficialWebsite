@@ -1,16 +1,16 @@
 <template>
   <Header/>
-<!--  <Homebody/>-->
+  <Homebody/>
   <Footer/>
 </template>
 
 <script>
 import Header from "@/components/Header";
-// import Homebody from "@/components/Homebody";
+import Homebody from "@/components/Homebody";
 import Footer from "@/components/Footer";
 export default {
   name: "Home",
-  components: { Header,Footer}
+  components: { Header,Homebody,Footer}
 }
 </script>
 
