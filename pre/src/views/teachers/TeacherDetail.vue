@@ -35,7 +35,7 @@ export default {
   methods: {
     getData() {
       axios
-          .get('/api/teachers/' + this.$route.params.id)
+          .get('/api/teachers/teacher/' + this.$route.params.id)
           .then(response => (this.pages = response.data))
       this.loading = false;
     },

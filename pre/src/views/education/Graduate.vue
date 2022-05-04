@@ -6,9 +6,10 @@
         <el-menu
             default-active="activeMenu"
             class="el-menu-vertical-demo"
-            @open="1"
             @select="handleSelect"
+            :default-openeds="defaultopen"
             background-color="#92f6ce"
+            unique-opened=true
         >
           <el-sub-menu index="1">
             <template #title>
@@ -17,7 +18,7 @@
             <el-menu-item index="1-1">专业介绍</el-menu-item>
             <el-menu-item index="1-2">培养方案</el-menu-item>
             <el-menu-item index="1-3">教学成果</el-menu-item>
-            <el-menu-item index="'1-4">精品课程</el-menu-item>
+            <el-menu-item index="1-4">精品课程</el-menu-item>
           </el-sub-menu>
           <el-sub-menu index="2">
             <template #title>
@@ -34,15 +35,15 @@
           <el-breadcrumb-item>当前位置:</el-breadcrumb-item>
           <el-breadcrumb-item :to="{ path: '/home' }">主页</el-breadcrumb-item>
           <el-breadcrumb-item>人才培养</el-breadcrumb-item>
-          <el-breadcurmb-item>{{where}}</el-breadcurmb-item>
+          <el-breadcurmb-item>{{ where }}</el-breadcurmb-item>
         </el-breadcrumb>
-        <el-header><p>通知</p></el-header>
+        <el-header><p>{{where}}</p></el-header>
         <el-main>
           <div class="news-list">
             <el-table :data="inforsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
                       @cell-click="changetodetail">
-              <el-table-column prop="name" label="标题" width="600px"/>
-              <el-table-column prop="pub_time" label="时间" width="300px"/>
+              <el-table-column prop="title" label="标题" width="600px"/>
+              <el-table-column prop="create_time" label="时间" width="300px"/>
             </el-table>
           </div>
           <div class="paginationbox">
@@ -74,6 +75,9 @@ import axios from 'axios'
 export default {
   name: "Graduate",
   components: {Header, Footer},
+  created() {
+    this.judge()
+  },
   data() {
     return {
       inforsList: [],
@@ -81,7 +85,8 @@ export default {
       pageSize: 10,
       currentPage: 1,
       detail: 'majorDetail',
-      activeMenu: "1",
+      activeMenu: "1-1",
+      defaultopen: ['1',],
       where: '专业介绍',
     }
   },
@@ -90,7 +95,7 @@ export default {
       axios
           .get(url)
           .then(response => {
-            this.totalPages = response.data.count,
+            (this.totalPages = response.data.count),
                 (this.inforsList = response.data.results)
             // console.log(this.newsList)
             if (response.data.next !== null) {
@@ -101,8 +106,7 @@ export default {
     },
     getData(number, url) {
       axios.get(url, {params: {page: number}})
-          .then(
-              response => {
+          .then(response => {
                 this.inforsList = this.inforsList.concat(response.data.results)
                 // console.log(this.newsList)
                 if (response.data.next !== null) {
@@ -122,43 +126,56 @@ export default {
     changetodetail(row) {
       this.$router.push({name: this.detail, params: {id: row.id}})
     },
-    handleSelect(key,keyPath) {
-      if (keyPath === '1-1') {
+    handleSelect(key) {
+      if (key === '1-1') {
         this.getList('/api/student/major?category=本科生')
         this.detail = "majorDetail"
         this.where = "专业介绍"
-        this.reload()
+        // console.log("change sucessful")
       }
-      if (keyPath === '1-2') {
+      if (key === '1-2') {
         this.getList('/api/student/plan?category=本科生')
         this.detail = "planDetail"
         this.where = "培养方案"
-        this.reload()
       }
-      if (keyPath === '1-3') {
+      if (key === '1-3') {
         this.getList('/api/student/teaching?category=本科生')
         this.detail = "teachingDetail"
         this.where = "教学成果"
       }
-      if (keyPath === '1-4') {
+      if (key === '1-4') {
         this.getList('/api/student/course?category=本科生')
         this.detail = "courseDetail"
         this.where = "精品课程"
       }
-      if (keyPath === '2-1') {
+      if (key === '2-1') {
         this.getList('/api/student/major?category=研究生')
         this.detail = "majorDetail"
         this.where = "学位点介绍"
       }
-      if (keyPath === '2-2') {
+      if (key === '2-2') {
         this.getList('/api/student/plan?category=研究生')
         this.detail = "planDetail"
         this.where = "培养方案"
       }
-      if (keyPath === '2-3') {
+      if (key === '2-3') {
         this.getList('/api/student/notice')
         this.detail = "noticeDetail"
         this.where = "信息公告"
+      }
+    },
+    judge() {
+      // console.log(this.$route.fullPath)
+      const paths = this.$route.fullPath.split('/')[2]
+      // console.log(paths)
+      if (paths === "undergraduate") {
+        this.getList('/api/student/major?category=研究生')
+        this.detail = "majorDetail"
+        this.where = "学位点介绍"
+        this.defaultopen = ['2',]
+      }
+      else {
+        this.getList('/api/student/major?category=本科生')
       }
     }
   }
@@ -214,6 +231,12 @@ export default {
   margin-left: 5%;
   margin-right: 5%;
   padding: 0;
+}
+
+.el-breadcrumb {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: 华文仿宋, serif;
 }
 
 #el-table-column {

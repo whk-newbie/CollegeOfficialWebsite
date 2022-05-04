@@ -7,14 +7,13 @@ import Organization from "@/views/CollegeOverview/Organization"
 
 import NewsCenter from "@/views/news/NewsCenter"
 import Information from "@/views/news/Information"
-// import InfosDetail from '@/views/news/InforsDetail'
+import InfosDetail from '@/views/news/InforsDetail'
 import NewsDetail from "@/views/news/NewsDetail"
 
 
 import Teachers from "@/views/teachers/Teachers"
-// import TeacherDetail from '@/views/teachers/TeacherDetail'
-// import Tmorality from '@/views/teachers/Tmorality'
-// import TmoralityDetail from '@/views/teachers/TmoralityDetail'
+import TeacherDetail from '@/views/teachers/TeacherDetail'
+import TmoralityDetail from '@/views/teachers/TmoralityDetail'
 import Professor from "@/views/teachers/Professor"
 import Tutor from "@/views/teachers/Tutor"
 import Enrollful from "@/views/teachers/Enrollful"
@@ -173,7 +172,7 @@ const routes = [
         },
         children: [
             {
-                path: '/education/graduatie',
+                path: '/education/graduate',
                 name: "graduate",
                 component: () => import('@/views/education/Graduate'),
                 meta: {
@@ -183,7 +182,7 @@ const routes = [
                 children: []
             },
             {
-                path: '/education/undergraduatie',
+                path: '/education/undergraduate',
                 name: "undergraduate",
                 component: () => import('@/views/education/Undergraduate'),
                 meta: {
@@ -195,16 +194,71 @@ const routes = [
         ]
     },
     {
-        path: '/infosdetail',
+        path: '/research',
+        name: 'research',
+        component: Second,
+        meta: {
+            is_show: true,
+            title: '科学研究'
+        },
+        children: [
+            {
+                path: '/research/research',
+                name: 'researchers',
+                component: () => import('@/views/research/research'),
+                meta: {
+                    is_show: true,
+                    title: '科研动态'
+                },
+                children: []
+            },
+            {
+                path: '/research/institutions',
+                name: 'insitutions',
+                component: () => import('@/views/research/institutions'),
+                meta: {
+                    is_show: true,
+                    title: '科研机构'
+                },
+                children: []
+            },
+            {
+                path: '/research/achievement',
+                name: 'achievement',
+                component: () => import('@/views/research/achievement'),
+                meta: {
+                    is_show: true,
+                    title: '科研成果'
+                },
+                children: []
+            },
+        ]
+    },
+    {
+        path: '/newdetail/:id',
         name: 'NewsDetail',
         component: NewsDetail,
         meta: {is_show: false,},
         children: null
     },
     {
-        path: '/newdetail',
-        name: 'NewsDetail',
-        component: NewsDetail,
+        path: '/infosdetail/:id',
+        name: 'InfosDetail',
+        component: InfosDetail,
+        meta: {is_show: false,},
+        children: null
+    },
+    {
+        path: '/teacherDetail/:id',
+        name: 'TeacherDetail',
+        component: TeacherDetail,
+        meta: {is_show: false,},
+        children: null
+    },
+    {
+        path: '/TmoralityDetail/:id',
+        name: 'TmoralityDetail',
+        component: TmoralityDetail,
         meta: {is_show: false,},
         children: null
     },

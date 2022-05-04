@@ -15,7 +15,7 @@ class MajorViewSet(viewsets.ModelViewSet):
     serializer_class = MajorSerializer
 
     def get_queryset(self):
-        queryset = Major.objects.all()
+        queryset = Major.objects.all().order_by('-create_time')
         category = self.request.query_params.get('category', None)
         if category is not None:
             queryset = queryset.filter(category=category)
@@ -33,7 +33,7 @@ class PlanViewSet(viewsets.ModelViewSet):
     serializer_class = PlanSerializer
 
     def get_queryset(self):
-        queryset = Plan.objects.all()
+        queryset = Plan.objects.all().order_by('-create_time')
         category = self.request.query_params.get('category', None)
         if category is not None:
             queryset = queryset.filter(category=category)
@@ -51,7 +51,7 @@ class TeachingViewSet(viewsets.ModelViewSet):
     serializer_class = TeachingSerializer
 
     def get_queryset(self):
-        queryset = Teaching.objects.all()
+        queryset = Teaching.objects.all().order_by('-create_time')
         category = self.request.query_params.get('category', None)
         if category is not None:
             queryset = queryset.filter(category=category)
@@ -69,7 +69,7 @@ class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = CourseSerializer
 
     def get_queryset(self):
-        queryset = Course.objects.all()
+        queryset = Course.objects.all().order_by('-create_time')
         category = self.request.query_params.get('category', None)
         if category is not None:
             queryset = queryset.filter(category=category)
@@ -87,7 +87,7 @@ class NoticeViewSet(viewsets.ModelViewSet):
     serializer_class = NoticeSerializer
 
     def get_queryset(self):
-        queryset = Notice.objects.all()
+        queryset = Notice.objects.all().order_by('-create_time')
         category = self.request.query_params.get('category', None)
         if category is not None:
             queryset = queryset.filter(category=category)
@@ -105,7 +105,7 @@ class EnrollmentViewSet(viewsets.ModelViewSet):
     serializer_class = EnrollmentSerializer
 
     def get_queryset(self):
-        queryset = Enrollment.objects.all()
+        queryset = Enrollment.objects.all().order_by('-create_time')
         category = self.request.query_params.get('category', None)
         if category is not None:
             queryset = queryset.filter(category=category)
@@ -123,7 +123,7 @@ class EmploymentViewSet(viewsets.ModelViewSet):
     serializer_class = EmploymentSerializer
 
     def get_queryset(self):
-        queryset = Employment.objects.all()
+        queryset = Employment.objects.all().order_by('-create_time')
         category = self.request.query_params.get('category', None)
         if category is not None:
             queryset = queryset.filter(category=category)
@@ -141,7 +141,7 @@ class LearningViewSet(viewsets.ModelViewSet):
     serializer_class = LearningSerializer
 
     def get_queryset(self):
-        queryset = Learning.objects.all()
+        queryset = Learning.objects.all().order_by('-create_time')
         category = self.request.query_params.get('category', None)
         if category is not None:
             queryset = queryset.filter(category=category)

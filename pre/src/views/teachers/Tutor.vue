@@ -66,7 +66,7 @@ export default {
   methods: {
     getList() {
       axios
-          .get('/api/teachers')
+          .get('/api//teachers/teacher')
           .then(response => {
             this.totalPages = response.data.count,
                 (this.teachersList = response.data.results)
@@ -77,7 +77,7 @@ export default {
 
     },
     getData(number) {
-      axios.get('api/teachers', {params: {page: number}})
+      axios.get('api/teachers/teacher', {params: {page: number}})
           .then(
               response => {
                 this.teachersList= this.teachersList.concat(response.data.results)

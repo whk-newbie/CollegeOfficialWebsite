@@ -7,7 +7,6 @@
         <template #title>
           {{ item.meta.title }}
           <el-icon>
-            <arrow-down-bold/>
           </el-icon>
         </template>
         <!--        第二层-->

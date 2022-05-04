@@ -49,7 +49,7 @@ export default {
   methods: {
     getList() {
       axios
-          .get('/api/Tmorality')
+          .get('/api//teachers/Tmorality')
           .then(response => {
             this.totalPages = response.data.count,
                 (this.lists = response.data.results)
@@ -60,7 +60,7 @@ export default {
       this.loading = false;
     },
     getData(number) {
-      axios.get('api/Tmorality', {params: {page: number}})
+      axios.get('api//teachers/Tmorality', {params: {page: number}})
           .then(
               response => {
                 this.lists = this.lists.concat(response.data.results)
