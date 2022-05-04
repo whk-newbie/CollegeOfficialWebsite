@@ -140,7 +140,7 @@ class Notice(models.Model):
 # 招生
 class Enrollment(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name="标题")
-    category = models.CharField(max_length=20, choices=choices, default='研究生', verbose_name='学生类别')
+    category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别')
     file = models.FileField(upload_to='student/Enrollment/', blank=True, verbose_name='文件')
     description = MDTextField(max_length=200, blank=True, verbose_name='文字介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
@@ -166,7 +166,7 @@ class Enrollment(models.Model):
 # 学生就业
 class Employment(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name="标题")
-    category = models.CharField(max_length=20, choices=choices, default='研究生', verbose_name='学生类别')
+    category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别')
     file = models.FileField(upload_to='student/job/', blank=True, verbose_name='文件')
     description = MDTextField(max_length=200, blank=True, verbose_name='文字介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')

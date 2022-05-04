@@ -1,10 +1,13 @@
 <template>
-<div></div>
+  <Enrollment/>
 </template>
 
 <script>
+import Enrollment from './Enrollment'
+
 export default {
-  name: "Employment"
+  name: "Employment",
+  components: {Enrollment}
 }
 </script>
 

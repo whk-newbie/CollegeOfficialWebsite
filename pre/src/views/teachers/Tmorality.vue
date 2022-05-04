@@ -1,25 +1,36 @@
 <template>
   <Header/>
   <div class="container">
-    <div class="news-list">
-      <el-table :data="lists.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
-                @cell-click="changetodetail" v-loading="loading">
-        <el-table-column prop="title" label="标题" width="600px"/>
-        <el-table-column prop="created" label="时间" width="300px"/>
-      </el-table>
-    </div>
-    <div class="paginationbox">
-      <el-pagination
-          v-model:currentPage="currentPage"
-          :page-sizes="[10, 20, 30, 40]"
-          :page-size="pageSize"
-          layout="total, prev, pager, next, jumper"
-          :total="totalPages"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-      >
-      </el-pagination>
-    </div>
+    <el-container>
+      <el-breadcrumb separator="/">
+        <el-breadcrumb-item>当前位置:</el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">主页</el-breadcrumb-item>
+        <el-breadcrumb-item>师德师风</el-breadcrumb-item>
+      </el-breadcrumb>
+      <el-header><p>师德师风</p></el-header>
+      <el-main>
+        <div class="news-list">
+          <el-table :data="lists.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
+                    @cell-click="changetodetail" v-loading="loading">
+            <el-table-column prop="title" label="标题" width="600px"/>
+            <el-table-column prop="created" label="时间" width="300px"/>
+          </el-table>
+        </div>
+        <div class="paginationbox">
+          <el-pagination
+              v-model:currentPage="currentPage"
+              :page-sizes="[10, 20, 30, 40]"
+              :page-size="pageSize"
+              layout="total, prev, pager, next, jumper"
+              :total="totalPages"
+              @size-change="handleSizeChange"
+              @current-change="handleCurrentChange"
+          >
+          </el-pagination>
+        </div>
+      </el-main>
+    </el-container>
+
   </div>
   <Footer/>
 </template>
@@ -86,19 +97,55 @@ export default {
 </script>
 
 <style scoped>
-
 .container {
   margin: 2% 2% 2% 10%;
   width: 80%;
   box-shadow: 4px 4px 15px #dad9d9;
 }
 
+.el-main > h3 {
+  font-size: 22px;
+  font-family: 微软雅黑, serif;
+  margin-left: 5%;
+}
+
+.el-breadcrumb {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: 微软雅黑, serif;
+}
+
+
+.el-header {
+  text-align: -webkit-left;
+  font-size: 24px;
+  font-style: normal;
+  font-family: 仿宋_GB2312, serif;
+}
+
+.el-header > p {
+  margin-top: 15px;
+  margin-left: 5px;
+  color: gray;
+}
+
+.el-row {
+  margin-top: 10%;
+  margin-left: 50%;
+}
+
+.el-button {
+  margin-top: 10px;
+  height: 40px;
+  width: 120px;
+}
+
 .news-list {
   /*width: 100%;*/
   height: 500px;
   position: relative;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding: 0;
 }
 

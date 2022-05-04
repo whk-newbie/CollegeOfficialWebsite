@@ -13,10 +13,14 @@ import NewsDetail from "@/views/news/NewsDetail"
 
 import Teachers from "@/views/teachers/Teachers"
 import TeacherDetail from '@/views/teachers/TeacherDetail'
+import Tmorality from '@/views/teachers/Tmorality'
 import TmoralityDetail from '@/views/teachers/TmoralityDetail'
 import Professor from "@/views/teachers/Professor"
 import Tutor from "@/views/teachers/Tutor"
 import Enrollful from "@/views/teachers/Enrollful"
+
+import Enrollment from '@/views/EnrollmentAndEmployment/Enrollment'
+import Employment from '@/views/EnrollmentAndEmployment/Employment'
 //
 // import test from "@/views/education/test"
 //
@@ -164,7 +168,7 @@ const routes = [
     },
     {
         path: '/education',
-        name: 'deucation',
+        name: 'education',
         component: Second,
         meta: {
             is_show: true,
@@ -173,7 +177,7 @@ const routes = [
         children: [
             {
                 path: '/education/graduate',
-                name: "graduate",
+                name: "graduate_1",
                 component: () => import('@/views/education/Graduate'),
                 meta: {
                     is_show: true,
@@ -183,7 +187,7 @@ const routes = [
             },
             {
                 path: '/education/undergraduate',
-                name: "undergraduate",
+                name: "undergraduate_1",
                 component: () => import('@/views/education/Undergraduate'),
                 meta: {
                     is_show: true,
@@ -233,6 +237,78 @@ const routes = [
                 children: []
             },
         ]
+    },
+    {
+        path: '/teacherMorality',
+        name: 'teacherMorality',
+        component: Tmorality,
+        meta: {
+            is_show: true,
+            title: '师德师风'
+        },
+        children: []
+    },
+    {
+        path: '/enrollAndEmploy',
+        name: "enrollAndEmploy",
+        component: Second,
+        meta: {
+            is_show: true,
+            title: "招生就业"
+        },
+        children: [{
+            path: '/graduate',
+            name: 'graduate21',
+            component: Second,
+            meta: {
+                is_show: true,
+                title: '本科生'
+            },
+            children: [{
+                path: '/graduate/enrollment',
+                name: "enrollment1",
+                component: Enrollment,
+                meta: {
+                    is_show: true,
+                    title: "招生"
+                },
+            }, {
+                path: '/graduate/employment',
+                name: "employment1",
+                component: Employment,
+                meta: {
+                    is_show: true,
+                    title: "就业"
+                },
+
+            }]
+        }, {
+            path: '/undergraduate',
+            name: 'undergraduate22',
+            component: Second,
+            meta: {
+                is_show: true,
+                title: '研究生'
+            },
+            children: [{
+                path: '/undergraduate/enrollment',
+                name: "Enrollment1",
+                component: Enrollment,
+                meta: {
+                    is_show: true,
+                    title: "招生"
+                },
+
+            }, {
+                path: '/undergraduate/employment',
+                name: "Employment2",
+                component: Employment,
+                meta: {
+                    is_show: true,
+                    title: "就业"
+                },
+            }]
+        }]
     },
     {
         path: '/newdetail/:id',
