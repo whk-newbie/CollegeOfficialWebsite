@@ -23,6 +23,7 @@
       </el-sub-menu>
       <el-menu-item v-else :index="item.path">{{ item.meta.title }}</el-menu-item>
     </div>
+    <el-button @click="toadmin" color="#4a967a" size="small" >管理员登录</el-button>
   </el-menu>
 
 </template>
@@ -45,7 +46,11 @@ export default {
       menuItems
     }
   },
-  methods: {}
+  methods: {
+    toadmin() {
+      window.location.href = 'http://127.0.0.1:8000/admin/'
+    }
+  }
 }
 </script>
 
@@ -59,4 +64,10 @@ export default {
   margin-right: 2px;
 }
 
+.el-button{
+  left: 2px;
+  font-size: 5px;
+  color: #fff;
+  margin-top: 16px;
+}
 </style>

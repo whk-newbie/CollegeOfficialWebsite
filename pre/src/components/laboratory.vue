@@ -1,22 +1,22 @@
 <template>
   <el-col>
     <el-row>
-      <el-button type="info" @click="$router.push('/laboratory')">中心概况</el-button>
+      <el-button type="info" @click="$router.push('/Laboratory/laboratory')">中心概况</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/gerneral')">综合实验室</el-button>
+      <el-button type="info" @click="$router.push('/Laboratory/gerneral')">综合实验室</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/hardware')">硬件实验室</el-button>
+      <el-button type="info" @click="$router.push('/Laboratory/hardware')">硬件实验室</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/network')">网络实验室</el-button>
+      <el-button type="info" @click="$router.push('/Laboratory/network')">网络实验室</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/IOT')">物联网验室</el-button>
+      <el-button type="info" @click="$router.push('/Laboratory/IOT')">物联网验室</el-button>
     </el-row>
     <el-row>
-      <el-button type="info" @click="$router.push('/embedded')">嵌入式验室</el-button>
+      <el-button type="info" @click="$router.push('/Laboratory/embedded')">嵌入式验室</el-button>
     </el-row>
   </el-col>
 </template>

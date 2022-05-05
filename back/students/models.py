@@ -193,7 +193,7 @@ class Employment(models.Model):
 class Learning(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name="标题")
     category = models.CharField(max_length=20, choices=(("学习资料", "学习资料"), ("软件", "软件")),
-                                verbose_name='学生类别')
+                                verbose_name='文件类别')
     file = models.FileField(upload_to='student/learning/', blank=True, verbose_name='文件')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 

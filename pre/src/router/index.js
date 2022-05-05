@@ -23,12 +23,12 @@ import Employment from '@/views/EnrollmentAndEmployment/Employment'
 
 import PartyBuilding from '@/views/Party/PartyBuilding'
 
-// import LaboratoryOverView from "@/views/Laboratory/LaboratoryOverView"
-// import Gerneral from "@/views/Laboratory/Gerneral"
-// import Hardware from "@/views/Laboratory/Hardware"
-// import IOT from "@/views/Laboratory/IOT"
-// import Network from "@/views/Laboratory/Network"
-// import Embedded from "@/views/Laboratory/Embedded"
+import LaboratoryOverView from "@/views/Laboratory/LaboratoryOverView"
+import Gerneral from "@/views/Laboratory/Gerneral"
+import Hardware from "@/views/Laboratory/Hardware"
+import IOT from "@/views/Laboratory/IOT"
+import Network from "@/views/Laboratory/Network"
+import Embedded from "@/views/Laboratory/Embedded"
 
 const routes = [
     {
@@ -319,7 +319,119 @@ const routes = [
         },
         children: []
     },
-    
+    {
+        path: '/group',
+        name: 'group',
+        component: Second,
+        meta: {
+            is_show: true,
+            title: "团学工作"
+        },
+        children: []
+    },
+    {
+        path: '/Laboratory',
+        name: 'exCenter',
+        component: Second,
+        meta: {
+            is_show: true,
+            title: "实验中心"
+        },
+        children: [
+            {
+                path: '/Laboratory/laboratory',
+                name: "laboratory",
+                component: LaboratoryOverView,
+                meta: {
+                    is_show: true,
+                    title: "中心概况",
+                },
+                children: []
+            },
+            {
+                path: '/Laboratory/gerneral',
+                name: "gerneral",
+                component: Gerneral,
+                meta: {
+                    is_show: true,
+                    title: "综合实验室",
+                },
+                children: []
+            },
+            {
+                path: '/Laboratory/hardware',
+                name: "hardware",
+                component: Hardware,
+                meta: {
+                    is_show: true,
+                    title: "硬件实验室",
+                },
+                children: []
+            },
+            {
+                path: '/Laboratory/network',
+                name: "network",
+                component: Network,
+                meta: {
+                    is_show: true,
+                    title: "网络实验室",
+                },
+                children: []
+            },
+            {
+                path: '/Laboratory/IOT',
+                name: "IOT",
+                component: IOT,
+                meta: {
+                    is_show: true,
+                    title: "物联网实验室",
+                },
+                children: []
+            },
+            {
+                path: '/Laboratory/embedded',
+                name: "embedded",
+                component: Embedded,
+                meta: {
+                    is_show: true,
+                    title: "嵌入式实验室",
+                },
+                children: []
+            },
+
+        ]
+    },
+    {
+        path: '/downloadCenter',
+        name: 'downloadCenter',
+        component: Second,
+        meta: {
+            is_show: true,
+            title: "下载中心"
+        },
+        children: [
+            {
+                path: '/downloadCenter/materials',
+                name: "materials",
+                component: () => import('@/views/downloadCenter/downloadCenter'),
+                meta: {
+                    is_show: true,
+                    title: "学习资料",
+                },
+                children: []
+            },
+            {
+                path: '/downloadCenter/application',
+                name: "application",
+                component: () => import('@/views/downloadCenter/application'),
+                meta: {
+                    is_show: true,
+                    title: "软件下载",
+                },
+                children: []
+            },
+        ]
+    },
     {
         path: '/newdetail/:id',
         name: 'NewsDetail',
