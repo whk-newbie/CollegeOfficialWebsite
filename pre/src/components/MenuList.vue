@@ -23,7 +23,7 @@
       </el-sub-menu>
       <el-menu-item v-else :index="item.path">{{ item.meta.title }}</el-menu-item>
     </div>
-    <el-button @click="toadmin" color="#4a967a" size="small" >管理员登录</el-button>
+    <button @click="toadmin" color="" size="small" class="admin-button">管理员登录</button>
   </el-menu>
 
 </template>
@@ -64,10 +64,20 @@ export default {
   margin-right: 2px;
 }
 
-.el-button{
+.admin-button{
   left: 2px;
+  width: 80px;
+  height: 50px;
   font-size: 5px;
+  background-color: #4a967a;
   color: #fff;
-  margin-top: 16px;
+  margin-top: 4px;
+  border-radius: 10px;
+  border: 0;
+}
+.admin-button:hover{
+  cursor: pointer;
+  color: #1a8dc2;
+
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <Header/>
-  <div class="body">
+  <div class="container">
     <el-container>
       <el-aside width="20%">
         <PTTE/>
@@ -14,7 +14,7 @@
             <el-breadcrumb-item>师资队伍</el-breadcrumb-item>
             <el-breadcrumb-item>专任教师</el-breadcrumb-item>
           </el-breadcrumb>
-          <el-table :data="tableData" style="width: 100%" height="850px" size="small" border="true">
+          <el-table :data="tableData" style="width: 80%" height="850px" size="small">
             <el-table-column prop="list1" label="计算机科学系" width="150"/>
             <el-table-column prop="list2" label="计算机技术系" width="150"/>
             <el-table-column prop="list3" label="计算机网络工程系" width="150"/>
@@ -68,26 +68,11 @@ export default {
 </script>
 
 <style scoped>
-.body {
-  margin: 2% 2% 2% 10%;
-  width: 80%;
-  box-shadow: 4px 4px 15px #dad9d9;
-}
-.el-breadcrumb {
-  margin-top: 10px;
-  margin-left: 10px;
-  height:5%;
-  font-family: 微软雅黑;
-}
-
-.el-aside {
-  background-color: #92f6ce;
-}
-.el-main {
-  height: 900px;
-}
+@import "~@/styles/body.css";
 .el-table {
-  margin-left: 20%;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 </style>

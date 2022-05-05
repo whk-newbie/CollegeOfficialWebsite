@@ -191,65 +191,12 @@ export default {
   box-shadow: 4px 4px 15px #dad9d9;
 }
 
-.container {
-  margin: 2% 2% 2% 10%;
-  width: 80%;
-  box-shadow: 4px 4px 15px #dad9d9;
-}
+
 
 .el-aside {
   background-color: #92f6ce;
 }
 
 
-.el-header {
-  text-align: -webkit-left;
-  font-size: 24px;
-  font-style: normal;
-  font-family: 仿宋_GB2312 serif;
-}
-
-.el-header > p {
-  margin-top: 15px;
-  margin-left: 5px;
-  color: gray;
-}
-
-.el-row {
-  margin-top: 10%;
-  margin-left: 50%;
-}
-
-.el-button {
-  margin-top: 10px;
-  height: 40px;
-  width: 120px;
-}
-
-.news-list {
-  /*width: 100%;*/
-  height: 500px;
-  position: relative;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding: 0;
-}
-
-.el-breadcrumb {
-  margin-top: 10px;
-  margin-left: 10px;
-  font-family: 华文仿宋, serif;
-}
-
-#el-table-column {
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 50%;
-}
-
-.paginationbox {
-  position: relative;
-  margin-left: 35%;
-  margin-right: 20%;
-}
+@import "~@/styles/body.css";
 </style>

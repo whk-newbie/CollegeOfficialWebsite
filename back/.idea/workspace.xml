@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a52b83e3-1613-4d29-9c04-449666280092" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pre/src/styles/body.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/2920534cb433f45b8ef792c383c5734b.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/2920534cb433f45b8ef792c383c5734b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/cafbc0e3407aea5c43faa9cf34fba413.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/cafbc0e3407aea5c43faa9cf34fba413.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/1f4a83abeef969ed6a083c4d95f1ca59.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/1f4a83abeef969ed6a083c4d95f1ca59.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/95a9a6de886d866b615d9d46af2e6e68.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/95a9a6de886d866b615d9d46af2e6e68.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/b6972de61b62fb55ae4c31c1f573b984.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/b6972de61b62fb55ae4c31c1f573b984.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/src/views/group/GroupNews.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/views/group/GroupNews.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +117,7 @@
       <workItem from="1651659171639" duration="825000" />
       <workItem from="1651664508679" duration="697000" />
       <workItem from="1651667790448" duration="594000" />
-      <workItem from="1651732955120" duration="3908000" />
+      <workItem from="1651732955120" duration="4502000" />
     </task>
     <servers />
   </component>
