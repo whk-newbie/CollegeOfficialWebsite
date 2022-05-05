@@ -5,13 +5,22 @@
       <el-aside width="20%">
         <el-col>
           <el-row>
-            <el-button type="info" @click="$router.push('/research/research')">科研动态</el-button>
+            <el-button type="info" @click="$router.push('/group/news')">团学工作</el-button>
           </el-row>
           <el-row>
-            <el-button type="info" @click="$router.push('/research/institutions')">科研机构</el-button>
+            <el-button type="info" @click="$router.push('/group/qnzs')">青年之声</el-button>
           </el-row>
           <el-row>
-            <el-button type="info" @click="$router.push('/research/achievement')">科研成果</el-button>
+            <el-button type="info" @click="$router.push('/group/group')">团学组织</el-button>
+          </el-row>
+          <el-row>
+            <el-button type="info" @click="$router.push('/group/service')">党员服务</el-button>
+          </el-row>
+          <el-row>
+            <el-button type="info" @click="$router.push('/group/management')">管理制度</el-button>
+          </el-row>
+          <el-row>
+            <el-button type="info" @click="$router.push('/group/honor')">荣誉室</el-button>
           </el-row>
         </el-col>
       </el-aside>
@@ -115,16 +124,24 @@ export default {
     change() {
       const paths = this.$route.fullPath.split('/')[2]
       console.log(paths)
-      if (paths === "research") {
-        this.getList('/api/research/research')
+      if (paths === "news") {
+        this.getList('/api/group/groupnews')
       }
-      if (paths === "institutions") {
-        this.getList('/api/research/institutions')
-        this.where = "科研机构"
+      if (paths === "group") {
+        this.getList('/api/group/group')
+        this.where = "团学组织"
       }
-      if (paths === "achievement") {
-        this.getList('/api/research/achievements')
-        this.where = "科研成果"
+      if (paths === "service") {
+        this.getList('/api/group/party')
+        this.where = "党员服务"
+      }
+      if (paths === "management") {
+        this.getList('/api/group/manage')
+        this.where = "管理制度"
+      }
+      if (paths === "honor") {
+        this.getList('/api/group/honor')
+        this.where = "荣誉室"
       }
     }
   }

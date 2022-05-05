@@ -44,6 +44,9 @@
     margin-top: 10px;
     height: 40px;
     width: 120px;
+    position: relative;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 
 .news-list {
