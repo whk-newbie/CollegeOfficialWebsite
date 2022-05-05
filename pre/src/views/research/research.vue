@@ -29,7 +29,7 @@
             <el-table :data="newsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
                       @cell-click="changetodetail" v-loading="loading">
               <el-table-column prop="title" label="标题" width="600px"/>
-              <el-table-column prop="create_time" label="时间" width="300px"/>
+              <el-table-column prop="create_time" label="时间" width="300px" :formatter="formatted_time"/>
             </el-table>
           </div>
           <div class="paginationbox">
@@ -56,6 +56,7 @@
 import axios from "axios";
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import formatted_time from '@/composables/formatted_time';
 
 export default {
   name: "research",
@@ -68,7 +69,7 @@ export default {
       pageSize: 10,
       currentPage: 1,
       where: "科研动态",
-
+      formatted_time
     }
   },
   created() {
@@ -122,6 +123,7 @@ export default {
       }
       if (paths === "achievement") {
         this.getList( '/api/research/achievements')
+        this.where = "科研成果"
       }
     }
   }

@@ -43,7 +43,7 @@
             <el-table :data="inforsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
                       @cell-click="changetodetail">
               <el-table-column prop="title" label="标题" width="600px"/>
-              <el-table-column prop="create_time" label="时间" width="300px"/>
+              <el-table-column prop="create_time" label="时间" width="300px" :formatter="formatted_time"/>
             </el-table>
           </div>
           <div class="paginationbox">
@@ -71,6 +71,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import axios from 'axios'
+import formatted_time from '@/composables/formatted_time';
 
 export default {
   name: "Graduate",
@@ -88,6 +89,7 @@ export default {
       activeMenu: "1-1",
       defaultopen: ['1',],
       where: '专业介绍',
+      formatted_time
     }
   },
   methods: {

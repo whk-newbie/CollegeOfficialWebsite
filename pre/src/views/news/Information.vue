@@ -5,10 +5,10 @@
       <el-aside width="20%">
         <el-col>
           <el-row>
-            <el-button type="info" @click="$router.push('/news')">学院新闻</el-button>
+            <el-button type="info" @click="$router.push('/newsAndinfos/overview')">学院新闻</el-button>
           </el-row>
           <el-row>
-            <el-button type="info" @click="$router.push('/information')">通知公告</el-button>
+            <el-button type="info" @click="$router.push('/newsAndinfos/inforsCenter')">通知公告</el-button>
           </el-row>
         </el-col>
       </el-aside>
@@ -25,7 +25,7 @@
             <el-table :data="inforsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
                       @cell-click="changetodetail">
               <el-table-column prop="title" label="标题" width="600px"/>
-              <el-table-column prop="pub_time" label="时间" width="300px"/>
+              <el-table-column prop="pub_time" label="时间" width="300px" :formatter="formatted_time"/>
             </el-table>
           </div>
           <div class="paginationbox">
@@ -52,6 +52,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import axios from "axios";
+import formatted_time from '@/composables/formatted_time';
 
 export default {
   name: "Information",
@@ -63,6 +64,7 @@ export default {
       totalPages: 0,
       pageSize: 10,
       currentPage: 1,
+      formatted_time
     }
   },
   mounted() {

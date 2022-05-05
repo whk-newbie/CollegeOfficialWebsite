@@ -10,7 +10,6 @@ import Information from "@/views/news/Information"
 import InfosDetail from '@/views/news/InforsDetail'
 import NewsDetail from "@/views/news/NewsDetail"
 
-
 import Teachers from "@/views/teachers/Teachers"
 import TeacherDetail from '@/views/teachers/TeacherDetail'
 import Tmorality from '@/views/teachers/Tmorality'
@@ -21,9 +20,9 @@ import Enrollful from "@/views/teachers/Enrollful"
 
 import Enrollment from '@/views/EnrollmentAndEmployment/Enrollment'
 import Employment from '@/views/EnrollmentAndEmployment/Employment'
-//
-// import test from "@/views/education/test"
-//
+
+import PartyBuilding from '@/views/Party/PartyBuilding'
+
 // import LaboratoryOverView from "@/views/Laboratory/LaboratoryOverView"
 // import Gerneral from "@/views/Laboratory/Gerneral"
 // import Hardware from "@/views/Laboratory/Hardware"
@@ -310,6 +309,17 @@ const routes = [
             }]
         }]
     },
+    {
+        path: '/party',
+        name: 'Party',
+        component: PartyBuilding,
+        meta: {
+            is_show: true,
+            title: '党建工作'
+        },
+        children: []
+    },
+    
     {
         path: '/newdetail/:id',
         name: 'NewsDetail',

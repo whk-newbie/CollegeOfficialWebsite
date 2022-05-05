@@ -139,6 +139,7 @@
 <script>
 import {Connection, Checked, Collection, Reading} from '@element-plus/icons-vue'
 import axios from 'axios';
+import formatted_time from '@/composables/formatted_time';
 
 export default {
   name: "homebody",
@@ -152,6 +153,7 @@ export default {
       loading_info: false,
       tableData: '',
       infoData: '',
+      formatted_time
     };
   },
   mounted() {
@@ -174,12 +176,6 @@ export default {
           .get('/api/infos')
           .then(response => (this.infoData = response.data))
       this.loading_info = false
-    },
-    // 格式化时间
-    formatted_time: function (row, column) {
-      const date = new Date(row[column.property]);
-      // return date.toLocaleDateString()
-      return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
     },
     changetoNewsDetail(row) {
       this.$router.push({name: 'NewsDetail', params: {id: row.id}})
