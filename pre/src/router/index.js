@@ -1,40 +1,12 @@
 import {createRouter, createWebHashHistory} from 'vue-router'
-import Home from "@/views/Home.vue"
+
 import Second from '@/views/CollegeOverview/Second'
-import CollegeOverview from "@/views/CollegeOverview/CollegeOverview"
-import Leaders from "@/views/CollegeOverview/Leaders"
-import Organization from "@/views/CollegeOverview/Organization"
-
-import NewsCenter from "@/views/news/NewsCenter"
-import Information from "@/views/news/Information"
-import InfosDetail from '@/views/news/InforsDetail'
-import NewsDetail from "@/views/news/NewsDetail"
-
-import Teachers from "@/views/teachers/Teachers"
-import TeacherDetail from '@/views/teachers/TeacherDetail'
-import Tmorality from '@/views/teachers/Tmorality'
-import TmoralityDetail from '@/views/teachers/TmoralityDetail'
-import Professor from "@/views/teachers/Professor"
-import Tutor from "@/views/teachers/Tutor"
-import Enrollful from "@/views/teachers/Enrollful"
-
-import Enrollment from '@/views/EnrollmentAndEmployment/Enrollment'
-import Employment from '@/views/EnrollmentAndEmployment/Employment'
-
-import PartyBuilding from '@/views/Party/PartyBuilding'
-
-import LaboratoryOverView from "@/views/Laboratory/LaboratoryOverView"
-import Gerneral from "@/views/Laboratory/Gerneral"
-import Hardware from "@/views/Laboratory/Hardware"
-import IOT from "@/views/Laboratory/IOT"
-import Network from "@/views/Laboratory/Network"
-import Embedded from "@/views/Laboratory/Embedded"
 
 const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home,
+        component: () => import("@/views/Home.vue"),
         meta: {
             is_show: false,
             title: '首页',
@@ -44,7 +16,7 @@ const routes = [
     {
         path: '/home',
         name: 'home',
-        component: Home,
+        component: () => import("@/views/Home.vue"),
         meta: {
             is_show: true,
             title: "首页",
@@ -64,7 +36,7 @@ const routes = [
         children: [{
             path: '/collegeOverView/overview',
             name: 'collegeOverViewoverview',
-            component: CollegeOverview,
+            component: () => import("@/views/CollegeOverview/CollegeOverview"),
             meta: {
                 is_show: true,
                 title: "学院简介"
@@ -73,7 +45,7 @@ const routes = [
         }, {
             path: '/collegeOverView/leaders',
             name: 'leaders',
-            component: Leaders,
+            component: () => import("@/views/CollegeOverview/Leaders"),
             meta: {
                 is_show: true,
                 title: "学院领导"
@@ -82,7 +54,7 @@ const routes = [
         }, {
             path: '/collegeOverView/organization',
             name: 'organization',
-            component: Organization,
+            component: () => import("@/views/CollegeOverview/Organization"),
             meta: {
                 is_show: true,
                 title: "内设机构"
@@ -100,7 +72,7 @@ const routes = [
                 {
                     path: '/teacher/teachers',
                     name: 'teachers',
-                    component: Teachers,
+                    component: () => import("@/views/teachers/Teachers"),
                     meta: {
                         is_show: true,
                         title: "专任教师"
@@ -109,7 +81,7 @@ const routes = [
                 {
                     path: '/teacher/professor',
                     name: 'professor',
-                    component: Professor,
+                    component: () => import("@/views/teachers/Professor"),
                     meta: {
                         is_show: true,
                         title: "教授队伍"
@@ -118,7 +90,7 @@ const routes = [
                 {
                     path: '/teacher/tutor',
                     name: 'tutor',
-                    component: Tutor,
+                    component: () => import("@/views/teachers/Tutor"),
                     meta: {
                         is_show: true,
                         title: "硕士生导师"
@@ -127,7 +99,7 @@ const routes = [
                 {
                     path: '/teacher/enrollful',
                     name: 'enrollful',
-                    component: Enrollful,
+                    component: () => import("@/views/teachers/Enrollful"),
                     meta: {
                         is_show: true,
                         title: "专任教师"
@@ -147,7 +119,7 @@ const routes = [
         children: [{
             path: '/newsAndinfos/overview',
             name: '/collegeOverViewoverview',
-            component: NewsCenter,
+            component: () => import("@/views/news/NewsCenter"),
             meta: {
                 is_show: true,
                 title: "学院新闻"
@@ -157,7 +129,7 @@ const routes = [
             {
                 path: '/newsAndinfos/inforsCenter',
                 name: 'infosCenter',
-                component: Information,
+                component: () => import("@/views/news/Information"),
                 meta: {
                     is_show: true,
                     title: "通知公告"
@@ -240,7 +212,7 @@ const routes = [
     {
         path: '/teacherMorality',
         name: 'teacherMorality',
-        component: Tmorality,
+        component: () => import('@/views/teachers/Tmorality'),
         meta: {
             is_show: true,
             title: '师德师风'
@@ -266,7 +238,7 @@ const routes = [
             children: [{
                 path: '/graduate/enrollment',
                 name: "enrollment1",
-                component: Enrollment,
+                component: () => import('@/views/EnrollmentAndEmployment/Enrollment'),
                 meta: {
                     is_show: true,
                     title: "招生"
@@ -274,7 +246,7 @@ const routes = [
             }, {
                 path: '/graduate/employment',
                 name: "employment1",
-                component: Employment,
+                component: () => import('@/views/EnrollmentAndEmployment/Employment'),
                 meta: {
                     is_show: true,
                     title: "就业"
@@ -292,7 +264,7 @@ const routes = [
             children: [{
                 path: '/undergraduate/enrollment',
                 name: "Enrollment1",
-                component: Enrollment,
+                component: () => import('@/views/EnrollmentAndEmployment/Enrollment'),
                 meta: {
                     is_show: true,
                     title: "招生"
@@ -301,7 +273,7 @@ const routes = [
             }, {
                 path: '/undergraduate/employment',
                 name: "Employment2",
-                component: Employment,
+                component: () => import('@/views/EnrollmentAndEmployment/Employment'),
                 meta: {
                     is_show: true,
                     title: "就业"
@@ -312,7 +284,7 @@ const routes = [
     {
         path: '/party',
         name: 'Party',
-        component: PartyBuilding,
+        component: () => import('@/views/Party/PartyBuilding'),
         meta: {
             is_show: true,
             title: '党建工作'
@@ -327,7 +299,64 @@ const routes = [
             is_show: true,
             title: "团学工作"
         },
-        children: []
+        children: [
+            {
+                path: '/group/news',
+                name: "groupnews",
+                component: () => import("@/views/group/GroupNews"),
+                meta: {
+                    is_show: true,
+                    title: '学工新闻'
+                },
+                children: []
+            },
+            {
+                path: '/group/qnzs',
+                name: "qnzs",
+                component: () => import("@/views/group/qnzs"),
+                meta: {
+                    is_show: true,
+                    title: '青年之声江西师范大学'
+                },
+                children: []
+            }, {
+                path: '/group/group',
+                name: "group",
+                component: () => import("@/views/group/Group"),
+                meta: {
+                    is_show: true,
+                    title: '团学组织'
+                },
+                children: []
+            }, {
+                path: '/group/service',
+                name: "service",
+                component: () => import("@/views/group/Service"),
+                meta: {
+                    is_show: true,
+                    title: '党员服务'
+                },
+                children: []
+            }, {
+                path: '/group/management',
+                name: "management",
+                component: () => import("@/views/group/Management"),
+                meta: {
+                    is_show: true,
+                    title: '管理制度'
+                },
+                children: []
+            }, {
+                path: '/group/honor',
+                name: "grouphonor",
+                component: () => import('@/views/group/Honor'),
+                meta: {
+                    is_show: true,
+                    title: '荣誉室'
+                },
+                children: []
+            }
+        ]
     },
     {
         path: '/Laboratory',
@@ -341,7 +370,7 @@ const routes = [
             {
                 path: '/Laboratory/laboratory',
                 name: "laboratory",
-                component: LaboratoryOverView,
+                component: () => import("@/views/Laboratory/LaboratoryOverView"),
                 meta: {
                     is_show: true,
                     title: "中心概况",
@@ -351,7 +380,7 @@ const routes = [
             {
                 path: '/Laboratory/gerneral',
                 name: "gerneral",
-                component: Gerneral,
+                component: () => import("@/views/Laboratory/Gerneral"),
                 meta: {
                     is_show: true,
                     title: "综合实验室",
@@ -361,7 +390,7 @@ const routes = [
             {
                 path: '/Laboratory/hardware',
                 name: "hardware",
-                component: Hardware,
+                component: () => import("@/views/Laboratory/Hardware"),
                 meta: {
                     is_show: true,
                     title: "硬件实验室",
@@ -371,7 +400,7 @@ const routes = [
             {
                 path: '/Laboratory/network',
                 name: "network",
-                component: Network,
+                component: () => import("@/views/Laboratory/Network"),
                 meta: {
                     is_show: true,
                     title: "网络实验室",
@@ -381,7 +410,7 @@ const routes = [
             {
                 path: '/Laboratory/IOT',
                 name: "IOT",
-                component: IOT,
+                component: () => import("@/views/Laboratory/IOT"),
                 meta: {
                     is_show: true,
                     title: "物联网实验室",
@@ -391,7 +420,7 @@ const routes = [
             {
                 path: '/Laboratory/embedded',
                 name: "embedded",
-                component: Embedded,
+                component: () => import("@/views/Laboratory/Embedded"),
                 meta: {
                     is_show: true,
                     title: "嵌入式实验室",
@@ -435,28 +464,28 @@ const routes = [
     {
         path: '/newdetail/:id',
         name: 'NewsDetail',
-        component: NewsDetail,
+        component: () => import("@/views/news/NewsDetail"),
         meta: {is_show: false,},
         children: null
     },
     {
         path: '/infosdetail/:id',
         name: 'InfosDetail',
-        component: InfosDetail,
+        component: () => import('@/views/news/InforsDetail'),
         meta: {is_show: false,},
         children: null
     },
     {
         path: '/teacherDetail/:id',
         name: 'TeacherDetail',
-        component: TeacherDetail,
+        component: () => import('@/views/teachers/TeacherDetail'),
         meta: {is_show: false,},
         children: null
     },
     {
         path: '/TmoralityDetail/:id',
         name: 'TmoralityDetail',
-        component: TmoralityDetail,
+        component: () => import('@/views/teachers/TmoralityDetail'),
         meta: {is_show: false,},
         children: null
     },

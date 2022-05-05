@@ -11,44 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046e9d47-1e6f-4d06-9e1a-8ffd0e788c5c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/downloadCenter/application.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/downloadCenter/downloadCenter.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/group/Group.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/group/GroupNews.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/group/Honor.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/group/Management.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/group/Service.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/group/qnzs.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../back/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../back/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/students/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../back/students/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/1f2db25bbc410d6e109a9f641abd063b.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/1f2db25bbc410d6e109a9f641abd063b.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/49f473a20168073012522e6aea4e1e44.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/49f473a20168073012522e6aea4e1e44.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/4faaafbcc6ed40f1fd8826f8960015e1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/4faaafbcc6ed40f1fd8826f8960015e1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/801215e7010491a6ae62a3175cbbbcb9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/801215e7010491a6ae62a3175cbbbcb9.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bad73f0f161f820e7f9a727fd20c766d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bad73f0f161f820e7f9a727fd20c766d.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bc080d18b6ff7474edc9a26b60f5174d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bc080d18b6ff7474edc9a26b60f5174d.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bf33b53ac26c2cb4fcb6355abc13e2cf.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bf33b53ac26c2cb4fcb6355abc13e2cf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/6317f8682d80886cbc6f4dc5f90d9259.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/6317f8682d80886cbc6f4dc5f90d9259.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/8cf8ff21d76950c0bc58952933968bab.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/8cf8ff21d76950c0bc58952933968bab.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c8ed17128c235b83a1c0c018a445b89e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c8ed17128c235b83a1c0c018a445b89e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/eccce342398f7d042ebd053807295030.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/eccce342398f7d042ebd053807295030.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/ed00c05cf18bfe6156335d8de82ce361.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/ed00c05cf18bfe6156335d8de82ce361.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/0976173f93a5537d41ed7a74cfc3784c.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/0976173f93a5537d41ed7a74cfc3784c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/14d74d4d5098410604573c2e3e22f986.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/14d74d4d5098410604573c2e3e22f986.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/1bf007c063c4d07a38a238db5d6beb62.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/1bf007c063c4d07a38a238db5d6beb62.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/22135231cbbabdfe406d43ffd6c9fb19.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/22135231cbbabdfe406d43ffd6c9fb19.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2f6f8d79b07044a03ddf6bd0c42ab4ec.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/2f6f8d79b07044a03ddf6bd0c42ab4ec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/36cc59f6c263486d4d8bfb95259b8daa.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/36cc59f6c263486d4d8bfb95259b8daa.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4b84b1f6ccb2622779f13df00167b6a2.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/4b84b1f6ccb2622779f13df00167b6a2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/549c9f1b6c120e19e21afad335f30090.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/549c9f1b6c120e19e21afad335f30090.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5afe2e9230d5ba89161f8bf001480f81.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/5afe2e9230d5ba89161f8bf001480f81.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/72b7d744fc91baeb0d420b8c6aeaaaee.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/72b7d744fc91baeb0d420b8c6aeaaaee.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/7ddc1e9316abd1b9c18672364e39e584.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/7ddc1e9316abd1b9c18672364e39e584.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a235268fc85bdd36bfe8e67c58b35e2d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a235268fc85bdd36bfe8e67c58b35e2d.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a64a6ab195c178a75e22a4632100dd81.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/a64a6ab195c178a75e22a4632100dd81.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cbb66fe3b881a8a1e7b365da96e05e06.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cbb66fe3b881a8a1e7b365da96e05e06.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cc8e1d882255f745e45052c110c31de9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/cc8e1d882255f745e45052c110c31de9.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d3477371c4db68c6d636de2d56ad49a8.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d3477371c4db68c6d636de2d56ad49a8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/06bdef5c8dd3353c6c76164fac51a548.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/06bdef5c8dd3353c6c76164fac51a548.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3574f9f239ede819a516b501239e4a18.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/3574f9f239ede819a516b501239e4a18.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d7af5f2ac01a25e57b7aba43f113745d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/d7af5f2ac01a25e57b7aba43f113745d.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dcb8f0aa0039267e1ec50a32184e1f00.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/dcb8f0aa0039267e1ec50a32184e1f00.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/eeca9ba12ae1ce9fcef3cc834b39efc4.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/eeca9ba12ae1ce9fcef3cc834b39efc4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/f4f8c98c1d99635f218118af6e435fb6.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/f4f8c98c1d99635f218118af6e435fb6.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MenuList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MenuList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/laboratory.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/laboratory.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +167,7 @@
       <workItem from="1651560603874" duration="5546000" />
       <workItem from="1651627278790" duration="8969000" />
       <workItem from="1651665328652" duration="979000" />
-      <workItem from="1651732005852" duration="7190000" />
+      <workItem from="1651732005852" duration="10951000" />
     </task>
     <servers />
   </component>
@@ -223,30 +201,34 @@
     </state>
     <state x="499" y="198" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1536.824@0.40.1536.824" timestamp="1643712704391" />
     <state x="624" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1920.1040@0.40.1920.1040" timestamp="1651492164621" />
+    <state x="92" y="132" width="1736" height="856" key="DiffContextDialog" timestamp="1651751925574">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="92" y="132" width="1736" height="856" key="DiffContextDialog/0.40.1920.1040@0.40.1920.1040" timestamp="1651751925574" />
     <state x="686" y="251" key="FileChooserDialogImpl" timestamp="1651375003844">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="686" y="251" key="FileChooserDialogImpl/0.40.1920.1040@0.40.1920.1040" timestamp="1651375003844" />
-    <state width="1899" height="155" key="GridCell.Tab.0.bottom" timestamp="1651737058280">
+    <state width="1899" height="260" key="GridCell.Tab.0.bottom" timestamp="1651751889482">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="155" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1651737058280" />
-    <state width="1899" height="155" key="GridCell.Tab.0.center" timestamp="1651737058280">
+    <state width="1899" height="260" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1651751889482" />
+    <state width="1899" height="260" key="GridCell.Tab.0.center" timestamp="1651751889482">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="155" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1651737058280" />
-    <state width="1899" height="155" key="GridCell.Tab.0.left" timestamp="1651737058279">
+    <state width="1899" height="260" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1651751889482" />
+    <state width="1899" height="260" key="GridCell.Tab.0.left" timestamp="1651751889481">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="155" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1651737058279" />
-    <state width="1899" height="155" key="GridCell.Tab.0.right" timestamp="1651737058280">
+    <state width="1899" height="260" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1651751889481" />
+    <state width="1899" height="260" key="GridCell.Tab.0.right" timestamp="1651751889482">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="155" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1651737058280" />
+    <state width="1899" height="260" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1651751889482" />
     <state x="787" y="261" key="RollbackChangesDialog" timestamp="1651481622498">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
