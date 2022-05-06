@@ -5,7 +5,6 @@
         v-model="activeName"
         type="card"
         class="demo-tabs"
-        @tab-click="handleClick"
     >
       <el-tab-pane label="党史学习教育文件" name="first">
         <list :url="url1"></list>
@@ -34,16 +33,10 @@ export default {
     return {
       activeName: "first",
       url1: "/api/party/fileandtrends?category=教育文件",
-      url2: '/api/party/fileandtrends?category=学习动态"'
+      url2: '/api/party/fileandtrends?category=学习动态'
     }
   },
   methods: {
-    handleClick(tab) {
-      console.log(tab.props.name)
-      // if (names === "second"){
-      //   Pass
-      // }
-    }
   }
 }
 </script>

@@ -34,25 +34,7 @@
         <el-header><p>{{ where }}</p></el-header>
         <el-main>
 
-          <div class="news-list">
-            <el-table :data="newsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
-                      @cell-click="changetodetail" v-loading="loading">
-              <el-table-column prop="title" label="标题" width="600px"/>
-              <el-table-column prop="create_time" label="时间" width="300px" :formatter="formatted_time"/>
-            </el-table>
-          </div>
-          <div class="paginationbox">
-            <el-pagination
-                v-model:currentPage="currentPage"
-                :page-sizes="[10, 20, 30, 40]"
-                :page-size="pageSize"
-                layout="total, prev, pager, next, jumper"
-                :total="totalPages"
-                @size-change="handleSizeChange"
-                @current-change="handleCurrentChange"
-            >
-            </el-pagination>
-          </div>
+          <list :url="url"></list>
         </el-main>
       </el-container>
     </el-container>
@@ -64,83 +46,40 @@
 <script>
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import formatted_time from "@/composables/formatted_time";
-import axios from "axios";
+import list from "@/components/list"
 
 export default {
   name: "GroupNews",
-  components: {Header, Footer}
-  ,
+  components: {Header, Footer, list},
   data: function () {
     return {
-      loading: false,
-      newsList: [],
-      totalPages: 0,
-      pageSize: 10,
-      currentPage: 1,
-      where: "学工新闻",
-      formatted_time
+      url: "/api/group/groupnews",
     }
   },
   created() {
     this.change()
   },
   methods: {
-    getList(url) {
-      axios
-          .get(url)
-          .then(response => {
-            (this.totalPages = response.data.count),
-                (this.inforsList = response.data.results)
-            // console.log(this.newsList)
-            if (response.data.next !== null) {
-              this.getData(response.data.next.charAt(response.data.next.length - 1), url)
-            }
-          })
-      this.loading = false;
-    },
-    getData(number, url) {
-      axios.get(url, {params: {page: number}})
-          .then(response => {
-                this.inforsList = this.inforsList.concat(response.data.results)
-                // console.log(this.newsList)
-                if (response.data.next !== null) {
-                  this.getData(response.data.next.charAt(response.data.next.length - 1), url)
-                }
-              }
-          )
-    },
-    handleSizeChange(val) {
-      // console.log(`每页 ${val} 条`);
-      this.pageSize = val;
-    },
-    handleCurrentChange(val) {
-      // console.log(`当前页: ${val}`);
-      this.currentPage = val;
-    },
-    changetodetail(row) {
-      this.$router.push({name: 'NewsDetail', params: {id: row.id}})
-    },
     change() {
       const paths = this.$route.fullPath.split('/')[2]
-      console.log(paths)
+      // console.log(paths)
       if (paths === "news") {
-        this.getList('/api/group/groupnews')
+        this.url = "/api/group/groupnews"
       }
       if (paths === "group") {
-        this.getList('/api/group/group')
+        this.url = '/api/group/group'
         this.where = "团学组织"
       }
       if (paths === "service") {
-        this.getList('/api/group/party')
+        this.url = '/api/group/party'
         this.where = "党员服务"
       }
       if (paths === "management") {
-        this.getList('/api/group/manage')
+        this.url = '/api/group/manage'
         this.where = "管理制度"
       }
       if (paths === "honor") {
-        this.getList('/api/group/honor')
+        this.url = '/api/group/honor'
         this.where = "荣誉室"
       }
     }
@@ -149,5 +88,5 @@ export default {
 </script>
 
 <style scoped>
- @import "~@/styles/body.css";
+@import "~@/styles/body.css";
 </style>

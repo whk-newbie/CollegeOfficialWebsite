@@ -42,8 +42,8 @@
           <div class="news-list">
             <el-table :data="inforsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
                       @cell-click="changetodetail">
-              <el-table-column prop="title" label="标题" width="600px"/>
-              <el-table-column prop="create_time" label="时间" width="300px" :formatter="formatted_time"/>
+              <el-table-column prop="title" width="600px"/>
+              <el-table-column prop="create_time" width="300px" :formatter="formatted_time"/>
             </el-table>
           </div>
           <div class="paginationbox">

@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 
 # Base admin class
-from Group.models import GroupNews, Group, Party, System, Honor
+from Group.models import GroupNews, Group, Party, Management, Honor
 
 
 class BaseAdmin(admin.ModelAdmin):
@@ -29,8 +29,8 @@ class PartyAdmin(BaseAdmin):
     pass
 
 
-@admin.register(System)
-class SystemAdmin(BaseAdmin):
+@admin.register(Management)
+class ManagementAdmin(BaseAdmin):
     pass
 
 

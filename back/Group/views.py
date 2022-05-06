@@ -3,9 +3,9 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets
 
-from Group.models import GroupNews, Group, Party, System, Honor
+from Group.models import GroupNews, Group, Party, Management, Honor
 from Group.serializers import GroupNewsSerializer, GroupNewsDetailSerializer, GroupSerializer, GroupDetailSerializer, \
-    PartySerializer, PartyDetailSerializer, SystemSerializer, SystemDetailSerializer, HonorSerializer, \
+    PartySerializer, PartyDetailSerializer, ManagementSerializer, ManagementDetailSerializer, HonorSerializer, \
     HonorDetailSerializer
 
 
@@ -42,15 +42,15 @@ class PartyViewSet(viewsets.ModelViewSet):
             return PartyDetailSerializer
 
 
-class SystemViewSet(viewsets.ViewSet):
-    queryset = System.objects.all().order_by('-create_time')
-    serializer_class = SystemSerializer
+class ManagementViewSet(viewsets.ViewSet):
+    queryset = Management.objects.all().order_by('-create_time')
+    serializer_class = ManagementSerializer
 
     def get_serializer_class(self):
         if self.action == 'list':
-            return SystemSerializer
+            return ManagementSerializer
         else:
-            return SystemDetailSerializer
+            return ManagementDetailSerializer
 
 
 class HonorViewSet(viewsets.ModelViewSet):

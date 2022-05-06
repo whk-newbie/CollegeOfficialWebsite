@@ -65,9 +65,9 @@ class Party(BaseModel):
 
 
 # 管理制度
-class System(BaseModel):
+class Management(BaseModel):
     """
-    System
+    Management
     """
 
     class Meta:

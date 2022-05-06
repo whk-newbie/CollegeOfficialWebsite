@@ -17,9 +17,9 @@ class ResearchAdmin(admin.ModelAdmin):
 
 @admin.register(institutions)
 class InstitutionsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'create_time')
-    list_display_links = ('id', 'name')
-    search_fields = ('name', 'create_time')
+    list_display = ('id', 'title', 'create_time')
+    list_display_links = ('id', 'title')
+    search_fields = ('title', 'create_time')
     list_per_page = 25
     list_filter = ('create_time',)
     date_hierarchy = 'create_time'
@@ -28,9 +28,9 @@ class InstitutionsAdmin(admin.ModelAdmin):
 
 @admin.register(achievements)
 class AchievementsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'create_time')
-    list_display_links = ('id', 'name')
-    search_fields = ('name', 'create_time')
+    list_display = ('id', 'title', 'create_time')
+    list_display_links = ('id', 'title')
+    search_fields = ('title', 'create_time')
     list_per_page = 25
     list_filter = ('create_time',)
     date_hierarchy = 'create_time'

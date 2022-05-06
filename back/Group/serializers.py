@@ -8,7 +8,7 @@
 """
 from rest_framework import serializers
 
-from Group.models import GroupNews, Group, Party, System, Honor
+from Group.models import GroupNews, Group, Party, Management, Honor
 
 
 class BaseSerializer(serializers.HyperlinkedModelSerializer):
@@ -67,15 +67,15 @@ class PartyDetailSerializer(BaseDetailSerializer):
         fields = ['id', 'title', 'create_time', 'update_time', 'desc_html']
 
 
-class SystemSerializer(BaseSerializer):
+class ManagementSerializer(BaseSerializer):
     class Meta:
-        model = System
+        model = Management
         fields = ['id', 'url', 'title', 'create_time', 'update_time']
 
 
-class SystemDetailSerializer(BaseDetailSerializer):
+class ManagementDetailSerializer(BaseDetailSerializer):
     class Meta:
-        model = System
+        model = Management
         fields = ['id', 'title', 'create_time', 'update_time', 'desc_html']
 
 

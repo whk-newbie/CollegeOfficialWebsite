@@ -33,7 +33,7 @@ class ResearchDetailSerializer(BaseSerializer):
 class InstitutionsSerializer(BaseSerializer):
     class Meta:
         model = institutions
-        fields = ['id', 'url', 'name', 'create_time']
+        fields = ['id', 'url', 'title', 'create_time']
 
 
 class InstitutionsDetailSerializer(BaseSerializer):
@@ -45,13 +45,13 @@ class InstitutionsDetailSerializer(BaseSerializer):
 
     class Meta:
         model = institutions
-        fields = ['id', 'name', 'create_time', 'content_html']
+        fields = ['id', 'title', 'create_time', 'content_html']
 
 
 class AchievementsSerializer(BaseSerializer):
     class Meta:
         model = institutions
-        fields = ['id', 'url', 'name', 'create_time']
+        fields = ['id', 'url', 'title', 'create_time']
 
 
 class AchievementsDetailSerializer(BaseSerializer):
@@ -63,4 +63,4 @@ class AchievementsDetailSerializer(BaseSerializer):
 
     class Meta:
         model = institutions
-        fields = ['id', 'name', 'create_time', 'content_html', 'file']
+        fields = ['id', 'title', 'create_time', 'content_html', 'file']

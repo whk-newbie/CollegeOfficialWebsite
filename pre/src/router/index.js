@@ -461,7 +461,6 @@ const routes = [
             },
         ]
     },
-
     {
         path: '/PartyLearning',
         name: 'PartyLearning',
@@ -471,33 +470,13 @@ const routes = [
         },
         children: null
     },
-
     {
-        path: '/newdetail/:id',
-        name: 'NewsDetail',
-        component: () => import("@/views/news/NewsDetail"),
-        meta: {is_show: false,},
-        children: null
-    },
-    {
-        path: '/infosdetail/:id',
-        name: 'InfosDetail',
-        component: () => import('@/views/news/InforsDetail'),
-        meta: {is_show: false,},
-        children: null
-    },
-    {
-        path: '/teacherDetail/:id',
-        name: 'TeacherDetail',
-        component: () => import('@/views/teachers/TeacherDetail'),
-        meta: {is_show: false,},
-        children: null
-    },
-    {
-        path: '/TmoralityDetail/:id',
-        name: 'TmoralityDetail',
-        component: () => import('@/views/teachers/TmoralityDetail'),
-        meta: {is_show: false,},
+        path: '/thematic',
+        name: 'thematic',
+        component: () => import("@/views/Party/ThematicEducation"),
+        meta: {
+            is_show: false,
+        },
         children: null
     },
 ]

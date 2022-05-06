@@ -278,7 +278,7 @@ SIMPLEUI_CONFIG = {
             }, {
                 'name': '管理制度',
                 'icon': '',
-                'url': 'Group/system'
+                'url': 'Group/management'
             }, {
                 'name': '荣誉室',
                 'icon': '',

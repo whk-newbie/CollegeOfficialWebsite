@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework.routers import DefaultRouter
 
-from Group.views import GroupNewsViewSet, GroupViewSet, PartyViewSet, SystemViewSet, HonorViewSet
+from Group.views import GroupNewsViewSet, GroupViewSet, PartyViewSet, HonorViewSet, ManagementViewSet
 from News.views import NewsViewSet
 from Thematic.views import InfosViewSet, FilelearnViewSet, ReportViewSet
 from information.views import InformationViewSet
@@ -60,8 +60,10 @@ router.register(r'party/fileandtrends', PartyFileAndTrendsViewSet)
 router.register(r'group/groupnews', GroupNewsViewSet)
 router.register(r'group/group', GroupViewSet)
 router.register(r'group/party', PartyViewSet)
-router.register(r'group/manage', SystemViewSet)
+router.register(r'group/Management', ManagementViewSet)
 router.register(r'group/honor', HonorViewSet)
+
+
 # 主题教育模块api
 router.register(r'education/report', ReportViewSet)
 router.register(r'education/infos', InfosViewSet)

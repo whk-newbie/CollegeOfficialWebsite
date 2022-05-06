@@ -48,7 +48,7 @@
             <span>党史学习专栏</span></div>
         </el-col>
         <el-col :span="6">
-          <div class="grid-content zhuti">
+          <div class="grid-content zhuti" @click="this.$router.push('/thematic')">
             <el-icon :size="30" color="white" class="icon">
               <collection/>
             </el-icon>
@@ -77,7 +77,7 @@
       <el-table v-loading="loading_info" :data="infoData.results" stripe style="width: 100%;height:400px;"
                 @cell-click="changetoInfosdetail">
         <el-table-column prop="title" label="通知"/>
-        <el-table-column prop="pub_time" :formatter="formatted_time" width="180">
+        <el-table-column prop="create_time" :formatter="formatted_time" width="180">
           <template #header>
             <el-button @click="$router.push('/information')" style="border:0;textStyle:#8e0e0a">更多+</el-button>
           </template>
@@ -283,7 +283,7 @@ export default {
 }
 
 .grid-content > span {
-  font-family: 华文仿宋;
+  font-family: 华文仿宋,serif;
   font-style: normal;
   font-size: 28px;
   margin-left: 20%;

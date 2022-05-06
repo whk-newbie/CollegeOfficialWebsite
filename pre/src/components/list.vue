@@ -2,8 +2,8 @@
   <div class="news-list">
     <el-table :data="lists.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
               @cell-click="changetodetail" v-loading="loading">
-      <el-table-column prop="title" label="标题" width="600px"/>
-      <el-table-column prop="create_time" label="时间" width="300px" :formatter="formatted_time"/>
+      <el-table-column prop="title"  width="600px"/>
+      <el-table-column prop="create_time"  width="300px" :formatter="formatted_time"/>
     </el-table>
   </div>
   <div class="paginationbox">
@@ -26,7 +26,7 @@ import axios from "axios";
 
 export default {
   name: "list",
-  props: { url: String},
+  props: {url: String},
   data() {
     return {
       lists: [],
@@ -47,11 +47,11 @@ export default {
       axios
           .get(this.url)
           .then(response => {
-            this.totalPages = response.data.count,
-                (this.lists = response.data.results)
+            this.lists = response.data.results;
             if (response.data.next !== null) {
               this.getData(response.data.next.charAt(response.data.next.length - 1))
             }
+
           })
       this.loading = false;
     },
@@ -59,10 +59,13 @@ export default {
       axios.get(this.url, {params: {page: number}})
           .then(
               response => {
+                // console.log(response.data);
+                this.totalPages = response.data.count;
                 this.lists = this.lists.concat(response.data.results)
                 if (response.data.next !== null) {
                   this.getData(response.data.next.charAt(response.data.next.length - 1))
                 }
+
               }
           )
     },
@@ -75,12 +78,12 @@ export default {
       this.currentPage = val;
     },
     changetodetail(row) {
-      this.$router.push({name: 'TmoralityDetail', params: {id: row.id}})
+      console.log(row)
+      const loact = this.url
+      console.log(loact)
+      // this.$router.push({name: 'TmoralityDetail', params: {id: row.id}})
     },
-    change(){
-
-    }
-  }
+  },
 }
 </script>
 

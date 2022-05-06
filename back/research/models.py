@@ -33,13 +33,13 @@ class Research(models.Model):
 
 # 科研机构
 class institutions(models.Model):
-    name = models.CharField(max_length=100, verbose_name='机构名称')
+    title = models.CharField(max_length=100, verbose_name='机构名称')
     logo = models.ImageField(upload_to='research/institutions/', blank=True, null=True, verbose_name='机构logo')
     description = MDTextField(blank=True, null=True, verbose_name='简介')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_md(self):
         md = Markdown(
@@ -58,13 +58,13 @@ class institutions(models.Model):
 
 # 　科研成果
 class achievements(models.Model):
-    name = models.CharField(max_length=100, verbose_name='成果名称')
+    title = models.CharField(max_length=100, verbose_name='成果名称')
     description = MDTextField(blank=True, null=True, verbose_name='简介')
     file = models.FileField(upload_to='research/achievements/', blank=True, null=True, verbose_name='文件')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_md(self):
         md = Markdown(
