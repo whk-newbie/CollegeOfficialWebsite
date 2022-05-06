@@ -22,7 +22,7 @@ class InformationBaseSerializer(serializers.HyperlinkedModelSerializer):
 class InformationSerializer(InformationBaseSerializer):
     class Meta:
         model = Information
-        fields = ['id', 'title',  'author','pub_time']
+        fields = ['id', 'title',  'author','create_time']
         extra_kwargs = {'content': {'write_only': True}}
 
 
@@ -36,4 +36,4 @@ class InformationDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Information
-        fields = ['id', 'title', 'file', 'content_html', 'pub_time']
+        fields = ['id', 'title', 'file', 'content_html', 'create_time']

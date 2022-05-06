@@ -6,9 +6,9 @@ from information.models import Information
 
 @admin.register(Information)
 class InformationAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'pub_time')
-    list_display_links = ('id', 'title', 'pub_time')
-    list_filter = ('pub_time',)
+    list_display = ('id', 'title', 'create_time')
+    list_display_links = ('id', 'title', 'create_time')
+    list_filter = ('create_time',)
     search_fields = ('title',)
     list_per_page = 10
     ordering = ("id",)

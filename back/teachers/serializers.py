@@ -34,7 +34,7 @@ class TeacherDetailSerializer(BaseSerializer):
 class TeacherMoralitySerializer(BaseSerializer):
     class Meta:
         model = TeacherMorality
-        fields = ['id', 'title', 'created']
+        fields = ['id', 'title', 'create_time']
 
 
 class TeacherMoralityDetailSerializer(BaseSerializer):
@@ -47,13 +47,13 @@ class TeacherMoralityDetailSerializer(BaseSerializer):
 
     class Meta:
         model = TeacherMorality
-        fields = ['id', 'title', 'content_html', 'created']
+        fields = ['id', 'title', 'content_html', 'create_time']
 
 
 class RecruitingSerializer(BaseSerializer):
     class Meta:
         model = recruiting
-        fields = ['id', 'title', 'created']
+        fields = ['id', 'title', 'create_time']
 
 
 class RecruitingDetailSerializer(BaseSerializer):
@@ -66,7 +66,7 @@ class RecruitingDetailSerializer(BaseSerializer):
 
     class Meta:
         model = recruiting
-        fields = ['id', 'title', 'content_html', 'created']
+        fields = ['id', 'title', 'content_html', 'create_time']
 
 # class TeacherBaserSerializer(serializers.HyperlinkedModelSerializer):
 #     id = serializers.IntegerField(read_only=True)
@@ -102,7 +102,7 @@ class RecruitingDetailSerializer(BaseSerializer):
 #
 # class TeacherMoralitySerializer(TeacherMoralBaseSerializer):
 #     class Meta(TeacherMoralBaseSerializer.Meta):
-#         fields = ['id', 'title', 'created']
+#         fields = ['id', 'title', 'create_time']
 #
 #
 # class TeacherMoralityDetailSerializer(TeacherMoralBaseSerializer):
@@ -113,7 +113,7 @@ class RecruitingDetailSerializer(BaseSerializer):
 #         return obj.get_md()
 #
 #     class Meta(TeacherMoralBaseSerializer.Meta):
-#         fields = ['id', 'title', 'created', 'content_html']
+#         fields = ['id', 'title', 'create_time', 'content_html']
 #
 #
 # class RecuitingBaseSerializer(serializers.HyperlinkedModelSerializer):
@@ -126,7 +126,7 @@ class RecruitingDetailSerializer(BaseSerializer):
 #
 # class RecuitingSerializer(RecuitingBaseSerializer):
 #     class Meta(RecuitingBaseSerializer.Meta):
-#         fields = ['id', 'title', 'created']
+#         fields = ['id', 'title', 'create_time']
 #
 #
 # class RecuitingDetailSerializer(RecuitingBaseSerializer):
@@ -137,4 +137,4 @@ class RecruitingDetailSerializer(BaseSerializer):
 #         return obj.get_md()
 #
 #     class Meta(RecuitingBaseSerializer.Meta):
-#         fields = ['id', 'title', 'created', 'content_html']
+#         fields = ['id', 'title', 'create_time', 'content_html']

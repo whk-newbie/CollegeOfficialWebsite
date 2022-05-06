@@ -9,7 +9,7 @@ from research.serializers import ResearchSerializer, ResearchDetailSerializer, I
 
 
 class ResearchViewSet(viewsets.ModelViewSet):
-    queryset = Research.objects.all().order_by('-date')
+    queryset = Research.objects.all().order_by('-create_time')
     serializer_class = ResearchSerializer
 
     def get_serializer_class(self):
@@ -20,7 +20,7 @@ class ResearchViewSet(viewsets.ModelViewSet):
 
 
 class InstitutionsViewSet(viewsets.ModelViewSet):
-    queryset = institutions.objects.all().order_by('-date')
+    queryset = institutions.objects.all().order_by('-create_time')
     serializer_class = InstitutionsSerializer
 
     def get_serializer_class(self):
@@ -31,7 +31,7 @@ class InstitutionsViewSet(viewsets.ModelViewSet):
 
 
 class AchievementsViewSet(viewsets.ModelViewSet):
-    queryset = achievements.objects.all().order_by('-date')
+    queryset = achievements.objects.all().order_by('-create_time')
     serializer_class = AchievementsSerializer
 
     def get_serializer_class(self):

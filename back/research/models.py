@@ -11,7 +11,7 @@ class Research(models.Model):
     title = models.CharField(max_length=100, verbose_name='标题')
     content = MDTextField(blank=True, verbose_name='内容')
     file = models.FileField(upload_to='research/files/', blank=True, null=True, verbose_name='文件')
-    date = models.DateTimeField(auto_now_add=True, verbose_name='日期')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='日期')
 
     def __str__(self):
         return self.title
@@ -36,7 +36,7 @@ class institutions(models.Model):
     name = models.CharField(max_length=100, verbose_name='机构名称')
     logo = models.ImageField(upload_to='research/institutions/', blank=True, null=True, verbose_name='机构logo')
     description = MDTextField(blank=True, null=True, verbose_name='简介')
-    date = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
         return self.name
@@ -61,7 +61,7 @@ class achievements(models.Model):
     name = models.CharField(max_length=100, verbose_name='成果名称')
     description = MDTextField(blank=True, null=True, verbose_name='简介')
     file = models.FileField(upload_to='research/achievements/', blank=True, null=True, verbose_name='文件')
-    date = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
         return self.name

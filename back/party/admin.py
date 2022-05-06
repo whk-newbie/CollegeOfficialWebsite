@@ -6,19 +6,19 @@ from party.models import PartyBuilding, PartyFileAndTrends
 
 @admin.register(PartyBuilding)
 class PartyBuildingAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'content', 'time')
+    list_display = ('id', 'title', 'content', 'create_time')
     list_display_links = ('id', 'title')
-    list_filter = ('time',)
+    list_filter = ('create_time',)
     search_fields = ('title', 'content')
     list_per_page = 50
-    ordering = ('-time',)
+    ordering = ('-create_time',)
 
 
 @admin.register(PartyFileAndTrends)
 class PartyFileAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'category', 'time')
+    list_display = ('id', 'title', 'category', 'create_time')
     list_display_links = ('id', 'title')
-    list_filter = ('time',)
+    list_filter = ('create_time',)
     search_fields = ('title', 'category')
     list_per_page = 50
 

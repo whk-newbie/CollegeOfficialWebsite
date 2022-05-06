@@ -23,7 +23,7 @@ class Information(models.Model):
     title = models.CharField(max_length=100, verbose_name="标题")
     content = MDTextField(blank=True,verbose_name="内容")
     file = models.FileField(upload_to="information/%Y%m%d", verbose_name="通知文件", blank=True, null=True)
-    pub_time = models.DateTimeField(auto_now_add=True, verbose_name="发布时间")
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name="发布时间")
 
     class Meta:
         verbose_name = "学院通知"

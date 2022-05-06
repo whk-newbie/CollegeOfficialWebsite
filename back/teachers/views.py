@@ -63,7 +63,7 @@ class TeacherViewSet(viewsets.ModelViewSet):
 
 
 class TeacherMoralityViewSet(viewsets.ModelViewSet):
-    queryset = TeacherMorality.objects.all().order_by('-created')
+    queryset = TeacherMorality.objects.all().order_by('-create_time')
     serializer_class = TeacherMoralitySerializer
 
     def get_serializer_class(self):
@@ -74,7 +74,7 @@ class TeacherMoralityViewSet(viewsets.ModelViewSet):
 
 
 class RecruitingViewSet(viewsets.ModelViewSet):
-    queryset = recruiting.objects.all().order_by('-created')
+    queryset = recruiting.objects.all().order_by('-create_time')
     serializer_class = RecruitingSerializer
 
     def get_serializer_class(self):

@@ -2,67 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a52b83e3-1613-4d29-9c04-449666280092" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/009bd6238c6c62d2378b84cdb27fece1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/16288637ae40653cc34cb3e6f8048981.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/529cf23de68e478bb260fba18c98146d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/ad1ef6987bfbfc17e3ade9663faf6881.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/e3254748adb8317be8bf4481afaa55e9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/006d6d0582004965c312b216f5925af8925382af.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/0582aceb7ea4be38dc2cf317c0dca17ceeb3d26d.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/20bb5812cbfdd3a7429ae62f955a10524e87658c.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/2d9e94ef7ffc57cccc02717800b9ba090888540c.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/38f96ac5ea2a8731434f487b2869c2d3de22d6da.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/54f36b9814f4d2cee08f0d7b9c23beecd4b01571.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/59befe97fe340c1b3265ed030558957b7925ce96.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/82ace1a7e72e8a1094813e2c49132e96d86dc375.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/8883dc10a2d64b2c463cfd3c71cf3d6d9d672afb.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/8cb01d770ef44b393c618a0e73a19107b32461c2.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/966b524c2427676f2d9da8a389e57a974dc02011.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/9fb57a0d30a1e3377451ae50571df25ded14d800.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/a51df46ff561bb5d83167dd2ce8e509b408e9741.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/aa1e0da80f2d3f9c9f461c24987da3dde9867fe0.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/b9852f8f713abc560cf1981daf12bc9782f14151.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/c13c97f1521f0a5a382f3a740051ec247fdd239f.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/d28d280c10107f7bf252c5ab8e6566106dda4d64.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/d6ef629572e975b8f3ad6a353fe68d0d436514cc.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/d8c2dc4d274fdd568093bfdfc00312ec2b8725ab.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/dc76bf343226d6deff30bc901a21b0dc7158a983.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/dd8e3867a0000b8cb13e767976c7fb177b69238e.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/decf6cd84b39f450c55f0ae507a1165ed3dfa998.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/e0a3398a40ab36308e8181d6eb74a264b327206d.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/e1699f40c5e8a348454e6c2ea4e19eb29a19faa6.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/e1e4810be1ca278d50edf62499db3bd4bb3e5ba6.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/e2d2daeb45c97166c258906809770abb34e176c6.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/e48b80b46b5d213f295a8a71ffb60401db84cfbf.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/e97927727901ddc245787ee2d3ba29d9542c9bc8.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/eeb677c2d93cacd09404d6178fb635c28c9cde31.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/f1058ab54effb396343f6c1579ce1aad3ab59511.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/fad65790f1f624955ecc6a35f5d133897cedfdc0.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/eslint-loader/fbdd8790a3066f9f234f3f2df105d3706baca059.json.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/35e3d77a819063fea223be73752586a5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/4f370035de45c03957717c0af5f5c81e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/619256a4bd0c9c8e8aa6cebf96e16da6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/714727dea375b78873cba119eb561dd2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/8189fbcbfa2147427777db79a601ed51.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/975768bb8c5ad8b94ac4bbafc6ab31d9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/a64612c34273081b374961cab66697d9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/e8bd82ca6deafb367bda0553f838850d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/f48fed06720bf650dc059f89af5e1118.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/src/components/list.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pre/src/views/Party/PartyLearning.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/eccce342398f7d042ebd053807295030.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/eccce342398f7d042ebd053807295030.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/ed00c05cf18bfe6156335d8de82ce361.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/ed00c05cf18bfe6156335d8de82ce361.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/1bf007c063c4d07a38a238db5d6beb62.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/1bf007c063c4d07a38a238db5d6beb62.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/36cc59f6c263486d4d8bfb95259b8daa.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/36cc59f6c263486d4d8bfb95259b8daa.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/a64a6ab195c178a75e22a4632100dd81.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/a64a6ab195c178a75e22a4632100dd81.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/dcb8f0aa0039267e1ec50a32184e1f00.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/dcb8f0aa0039267e1ec50a32184e1f00.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/src/components/Homebody.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/components/Homebody.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pre/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/information/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/information/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/information/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/information/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/information/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/information/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/information/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/information/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/party/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/party/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/party/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/party/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/party/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/party/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/party/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/party/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/research/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/research/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/research/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/research/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/research/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teachers/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/teachers/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teachers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/teachers/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teachers/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/teachers/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/teachers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/teachers/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +127,7 @@
       <workItem from="1651664508679" duration="697000" />
       <workItem from="1651667790448" duration="594000" />
       <workItem from="1651732955120" duration="5953000" />
-      <workItem from="1651824648621" duration="2307000" />
+      <workItem from="1651824648621" duration="2791000" />
     </task>
     <servers />
   </component>

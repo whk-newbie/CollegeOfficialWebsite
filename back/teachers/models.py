@@ -24,7 +24,7 @@ class Teacher(models.Model):
 
     personal_profile = MDTextField(verbose_name="个人简介")  # teacher personal profile
     photo = models.ImageField(upload_to='teachers/', blank=True, verbose_name="教师图片")  # teacher photo
-    created = models.DateTimeField(auto_now_add=True)  # create time
+    create_time = models.DateTimeField(auto_now_add=True)  # create time
     updated = models.DateTimeField(auto_now=True)  # update time
 
     def get_md(self):
@@ -53,7 +53,7 @@ class TeacherMorality(models.Model):
     """
     title = models.CharField(max_length=50, verbose_name="标题")  # morality title
     content = MDTextField(verbose_name="文章内容")
-    created = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")  # create time
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")  # create time
 
     def __str__(self):
         return self.title
@@ -81,7 +81,7 @@ class recruiting(models.Model):
     """
     title = models.CharField(max_length=50, verbose_name="标题")  # recuiting title
     content = MDTextField(verbose_name="招聘信息") # recuiting content
-    created = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")  # create time
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")  # create time
 
     def __str__(self):
         return self.title

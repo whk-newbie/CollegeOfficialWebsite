@@ -9,7 +9,7 @@ from party.serializers import PartyBuildingSerializer, PartyBuildingDetailSerial
 
 
 class PartyBuildingViewSet(viewsets.ModelViewSet):
-    queryset = PartyBuilding.objects.all().order_by('-time')
+    queryset = PartyBuilding.objects.all().order_by('-create_time')
     serializer_class = PartyBuildingSerializer
 
     def get_serializer_class(self):
@@ -20,11 +20,11 @@ class PartyBuildingViewSet(viewsets.ModelViewSet):
 
 
 class PartyFileAndTrendsViewSet(viewsets.ModelViewSet):
-    queryset = PartyFileAndTrends.objects.all().order_by('-time')
+    queryset = PartyFileAndTrends.objects.all().order_by('-create_time')
     serializer_class = PartyFileAndTrendsSerializer
 
     def get_queryset(self):
-        queryset = PartyFileAndTrends.objects.all().order_by('-time')
+        queryset = PartyFileAndTrends.objects.all().order_by('-create_time')
         category = self.request.query_params.get('category', None)
         if category is not None:
             queryset = queryset.filter(category=category)

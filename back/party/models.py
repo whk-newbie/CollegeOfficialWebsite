@@ -8,7 +8,7 @@ from mdeditor.fields import MDTextField
 class PartyBuilding(models.Model):
     title = models.CharField(max_length=100, verbose_name='标题')
     content = MDTextField(verbose_name='内容')
-    time = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
 
     def __str__(self):
         return self.title
@@ -32,7 +32,7 @@ class PartyFileAndTrends(models.Model):
     category = models.CharField(max_length=100, verbose_name='分类', choices=(('教育文件', '教育文件'), ('学习动态', '学习动态')))
     content = MDTextField(verbose_name='内容')
     file = models.FileField(upload_to='party/files/', blank=True, verbose_name='文件')
-    time = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
 
     def __str__(self):
         return self.title

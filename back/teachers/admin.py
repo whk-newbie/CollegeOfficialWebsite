@@ -16,17 +16,17 @@ class TeacherAdmin(admin.ModelAdmin):
 
 @admin.register(TeacherMorality)
 class TeacherMoralityAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content', 'created')
-    list_display_links = ('title', 'content', 'created')
-    list_filter = ('created',)
+    list_display = ('title', 'content', 'create_time')
+    list_display_links = ('title', 'content', 'create_time')
+    list_filter = ('create_time',)
     search_fields = ('name', 'content')
     list_per_page = 25
 
 
 @admin.register(recruiting)
 class recruitingAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content', 'created')
-    list_display_links = ('title', 'content', 'created')
-    list_filter = ('created',)
+    list_display = ('title', 'content', 'create_time')
+    list_display_links = ('title', 'content', 'create_time')
+    list_filter = ('create_time',)
     search_fields = ('name', 'content')
     list_per_page = 25

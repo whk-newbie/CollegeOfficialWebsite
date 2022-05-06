@@ -6,32 +6,32 @@ from research.models import Research, institutions, achievements
 
 @admin.register(Research)
 class ResearchAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'date')
+    list_display = ('id', 'title', 'create_time')
     list_display_links = ('id', 'title')
-    search_fields = ('title', 'date')
+    search_fields = ('title', 'create_time')
     list_per_page = 25
-    list_filter = ('date',)
-    date_hierarchy = 'date'
-    ordering = ('-date',)
+    list_filter = ('create_time',)
+    date_hierarchy = 'create_time'
+    ordering = ('-create_time',)
 
 
 @admin.register(institutions)
 class InstitutionsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'date')
+    list_display = ('id', 'name', 'create_time')
     list_display_links = ('id', 'name')
-    search_fields = ('name', 'date')
+    search_fields = ('name', 'create_time')
     list_per_page = 25
-    list_filter = ('date',)
-    date_hierarchy = 'date'
-    ordering = ('-date',)
+    list_filter = ('create_time',)
+    date_hierarchy = 'create_time'
+    ordering = ('-create_time',)
 
 
 @admin.register(achievements)
 class AchievementsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'date')
+    list_display = ('id', 'name', 'create_time')
     list_display_links = ('id', 'name')
-    search_fields = ('name', 'date')
+    search_fields = ('name', 'create_time')
     list_per_page = 25
-    list_filter = ('date',)
-    date_hierarchy = 'date'
-    ordering = ('-date',)
+    list_filter = ('create_time',)
+    date_hierarchy = 'create_time'
+    ordering = ('-create_time',)

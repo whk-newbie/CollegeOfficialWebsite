@@ -4,7 +4,7 @@
 @File    ：serializers.py
 @IDE     ：PyCharm 
 @Author  ：whk
-@Date    ：2022/4/29 20:48 
+@create_time    ：2022/4/29 20:48 
 """
 from rest_framework import serializers
 
@@ -15,7 +15,7 @@ from students.serializers import BaseSerializer
 class ResearchSerializer(BaseSerializer):
     class Meta:
         model = Research
-        fields = ['id', 'url', 'title', 'date']
+        fields = ['id', 'url', 'title', 'create_time']
 
 
 class ResearchDetailSerializer(BaseSerializer):
@@ -27,13 +27,13 @@ class ResearchDetailSerializer(BaseSerializer):
 
     class Meta:
         model = Research
-        fields = ['id', 'title', 'date', 'content_html', 'file']
+        fields = ['id', 'title', 'create_time', 'content_html', 'file']
 
 
 class InstitutionsSerializer(BaseSerializer):
     class Meta:
         model = institutions
-        fields = ['id', 'url', 'name', 'date']
+        fields = ['id', 'url', 'name', 'create_time']
 
 
 class InstitutionsDetailSerializer(BaseSerializer):
@@ -45,13 +45,13 @@ class InstitutionsDetailSerializer(BaseSerializer):
 
     class Meta:
         model = institutions
-        fields = ['id', 'name', 'date', 'content_html']
+        fields = ['id', 'name', 'create_time', 'content_html']
 
 
 class AchievementsSerializer(BaseSerializer):
     class Meta:
         model = institutions
-        fields = ['id', 'url', 'name', 'date']
+        fields = ['id', 'url', 'name', 'create_time']
 
 
 class AchievementsDetailSerializer(BaseSerializer):
@@ -63,4 +63,4 @@ class AchievementsDetailSerializer(BaseSerializer):
 
     class Meta:
         model = institutions
-        fields = ['id', 'name', 'date', 'content_html', 'file']
+        fields = ['id', 'name', 'create_time', 'content_html', 'file']

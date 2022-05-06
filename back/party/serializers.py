@@ -15,7 +15,7 @@ from students.serializers import BaseSerializer
 class PartyBuildingSerializer(BaseSerializer):
     class Meta:
         model = PartyBuilding
-        fields = ['id', 'url', 'title', 'time']
+        fields = ['id', 'url', 'title', 'create_time']
 
 
 class PartyBuildingDetailSerializer(BaseSerializer):
@@ -27,13 +27,13 @@ class PartyBuildingDetailSerializer(BaseSerializer):
 
     class Meta:
         model = PartyBuilding
-        fields = ['id', 'title', 'time', 'content_html']
+        fields = ['id', 'title', 'create_time', 'content_html']
 
 
 class PartyFileAndTrendsSerializer(BaseSerializer):
     class Meta:
         model = PartyFileAndTrends
-        fields = ['id', 'url', 'title', 'time']
+        fields = ['id', 'url', 'title', 'create_time']
 
 
 class PartyFileAndTrendsDetailSerializer(BaseSerializer):
@@ -45,4 +45,4 @@ class PartyFileAndTrendsDetailSerializer(BaseSerializer):
 
     class Meta:
         model = PartyFileAndTrends
-        fields = ['id', 'title', 'time', 'content_html']
+        fields = ['id', 'title', 'create_time', 'content_html']
