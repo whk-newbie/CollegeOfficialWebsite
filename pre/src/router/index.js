@@ -461,6 +461,17 @@ const routes = [
             },
         ]
     },
+
+    {
+        path: '/PartyLearning',
+        name: 'PartyLearning',
+        component: () => import("@/views/Party/PartyLearning"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+
     {
         path: '/newdetail/:id',
         name: 'NewsDetail',

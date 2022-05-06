@@ -256,7 +256,7 @@ SIMPLEUI_CONFIG = {
             }, {
                 'name': '党史学习教育',
                 'icon': '',
-                'url': 'party/partybuilding'
+                'url': 'party/partyfileandtrends'
             }]
         },
         {

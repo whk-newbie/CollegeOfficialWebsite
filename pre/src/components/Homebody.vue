@@ -41,7 +41,7 @@
     <div class="midlist">
       <el-row :gutter="2">
         <el-col :span="6">
-          <div class="grid-content dangshi">
+          <div class="grid-content dangshi" @click="this.$router.push('/PartyLearning')">
             <el-icon :size="30" color="white" class="icon">
               <reading/>
             </el-icon>
