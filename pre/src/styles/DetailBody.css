@@ -1,0 +1,27 @@
+.grid-container {
+    margin: 1% 2% 2% 10%;
+    height: auto;
+    width: 80%;
+    box-shadow: 4px 4px 15px #dad9d9;
+}
+
+
+#title {
+    margin-top: 5%;
+    text-align: center;
+    font-size: x-large;
+}
+
+#subtitle {
+    text-align: center;
+    color: gray;
+    font-size: small;
+}
+
+.news-body {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}

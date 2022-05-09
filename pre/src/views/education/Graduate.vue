@@ -4,12 +4,11 @@
     <el-container>
       <el-aside width="20%">
         <el-menu
-            default-active="activeMenu"
+            :default-active="activeMenu"
             class="el-menu-vertical-demo"
             @select="handleSelect"
-            :default-openeds="defaultopen"
             background-color="#92f6ce"
-            unique-opened=true
+            :unique-opened=true
         >
           <el-sub-menu index="1">
             <template #title>
@@ -35,9 +34,10 @@
           <el-breadcrumb-item>当前位置:</el-breadcrumb-item>
           <el-breadcrumb-item :to="{ path: '/home' }">主页</el-breadcrumb-item>
           <el-breadcrumb-item>人才培养</el-breadcrumb-item>
-          <el-breadcurmb-item>{{ where }}</el-breadcurmb-item>
+          <el-breadcrumb-item>{{it}}</el-breadcrumb-item>
+          <el-breadcrumb-item>{{ where }}</el-breadcrumb-item>
         </el-breadcrumb>
-        <el-header><p>{{where}}</p></el-header>
+        <el-header><p>{{ where }}</p></el-header>
         <el-main>
           <div class="news-list">
             <el-table :data="inforsList.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
@@ -87,7 +87,7 @@ export default {
       currentPage: 1,
       detail: 'majorDetail',
       activeMenu: "1-1",
-      defaultopen: ['1',],
+      it:'本科生教育',
       where: '专业介绍',
       formatted_time
     }
@@ -130,54 +130,85 @@ export default {
     },
     handleSelect(key) {
       if (key === '1-1') {
-        this.getList('/api/student/major?category=本科生')
-        this.detail = "majorDetail"
-        this.where = "专业介绍"
-        // console.log("change sucessful")
+        this.$router.push('/education/graduate/magjor')
+        this.judge()
       }
       if (key === '1-2') {
-        this.getList('/api/student/plan?category=本科生')
-        this.detail = "planDetail"
-        this.where = "培养方案"
+        this.$router.push('/education/graduate/plan')
+        this.judge()
       }
       if (key === '1-3') {
-        this.getList('/api/student/teaching?category=本科生')
-        this.detail = "teachingDetail"
-        this.where = "教学成果"
+        this.$router.push('/education/graduate/achieve')
+        this.judge()
       }
       if (key === '1-4') {
-        this.getList('/api/student/course?category=本科生')
-        this.detail = "courseDetail"
-        this.where = "精品课程"
+        this.$router.push('/education/graduate/course')
+        this.judge()
       }
+
       if (key === '2-1') {
-        this.getList('/api/student/major?category=研究生')
-        this.detail = "majorDetail"
-        this.where = "学位点介绍"
+        this.$router.push('/education/undergraduate/major')
+        this.judge()
       }
       if (key === '2-2') {
-        this.getList('/api/student/plan?category=研究生')
-        this.detail = "planDetail"
-        this.where = "培养方案"
+        this.$router.push('/education/undergraduate/plan')
+        this.judge()
       }
       if (key === '2-3') {
-        this.getList('/api/student/notice')
-        this.detail = "noticeDetail"
-        this.where = "信息公告"
+        this.$router.push('/education/undergraduate/notice')
+        this.judge()
       }
     },
     judge() {
       // console.log(this.$route.fullPath)
-      const paths = this.$route.fullPath.split('/')[2]
+      const paths = this.$route.fullPath.split('/')
       // console.log(paths)
-      if (paths === "undergraduate") {
-        this.getList('/api/student/major?category=研究生')
-        this.detail = "majorDetail"
-        this.where = "学位点介绍"
-        this.defaultopen = ['2',]
-      }
-      else {
-        this.getList('/api/student/major?category=本科生')
+      if (paths[2] === "graduate") {
+        if (paths[3] === "major") {
+          this.getList('/api/student/major?category=本科生')
+          this.detail = "majorDetail"
+          this.where = "专业介绍"
+          this.activeMenu='1-1'
+        }
+        if (paths[3] === "plan") {
+          this.getList('/api/student/plan?category=本科生')
+          this.detail = "planDetail"
+          this.where = "培养方案"
+          this.activeMenu='1-2'
+        }
+        if (paths[3] === "achieve") {
+          this.getList('/api/student/teaching?category=本科生')
+          this.detail = "teachingDetail"
+          this.where = "教学成果"
+          this.activeMenu='1-3'
+        }
+        if (paths[3] === "course") {
+          this.getList('/api/student/course?category=本科生')
+          this.detail = "courseDetail"
+          this.where = "精品课程"
+          this.activeMenu='1-4'
+        }
+
+      } else {
+        this.it="研究生教育"
+        if (paths[3]==='major') {
+          this.getList('/api/student/major?category=研究生')
+          this.detail = "majorDetail"
+          this.where = "学位点介绍"
+          this.activeMenu='2-1'
+        }
+        if (paths[3]==='plan') {
+          this.getList('/api/student/plan?category=研究生')
+          this.detail = "planDetail"
+          this.where = "培养方案"
+          this.activeMenu='2-2'
+        }
+        if (paths[3]==='notice') {
+          this.getList('/api/student/notice')
+          this.detail = "noticeDetail"
+          this.where = "信息公告"
+          this.activeMenu='2-3'
+        }
       }
     }
   }
@@ -190,7 +221,6 @@ export default {
   width: 80%;
   box-shadow: 4px 4px 15px #dad9d9;
 }
-
 
 
 .el-aside {

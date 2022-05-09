@@ -11,7 +11,7 @@ choices = (('本科生', '本科生'), ('研究生', '研究生'), ('博士生',
 class Major(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name='专业名称')
     category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别')
-    description = MDTextField(max_length=200, blank=True, verbose_name='专业介绍')
+    description = MDTextField(blank=True, verbose_name='专业介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
@@ -37,7 +37,7 @@ class Plan(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name='培养方案名称')
     category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别')
     file = models.FileField(upload_to='student/plan/', blank=True, verbose_name='培养方案文件')
-    description = MDTextField(max_length=200, blank=True, verbose_name='培养方案介绍')
+    description = MDTextField(blank=True, verbose_name='培养方案介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
@@ -64,7 +64,7 @@ class Teaching(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name='教学成果名称')
     category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别', default='本科生')
     file = models.FileField(upload_to='student/teaching/', blank=True, verbose_name='教学成果文件')
-    description = MDTextField(max_length=200, blank=True, verbose_name='教学成果介绍')
+    description = MDTextField(blank=True, verbose_name='教学成果介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
@@ -90,7 +90,7 @@ class Course(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name='精品课程名称')
     category = models.CharField(max_length=20, choices=choices, default='本科生', verbose_name='学生类别')
     file = models.FileField(upload_to='student/course/', blank=True, verbose_name='精品课程文件')
-    description = MDTextField(max_length=200, blank=True, verbose_name='精品课程介绍')
+    description = MDTextField( blank=True, verbose_name='精品课程介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
@@ -116,7 +116,7 @@ class Notice(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name="标题")
     category = models.CharField(max_length=20, choices=choices, default='研究生', verbose_name='学生类别')
     file = models.FileField(upload_to='student/notice/', blank=True, verbose_name='文件')
-    description = MDTextField(max_length=200, blank=True, verbose_name='文字介绍')
+    description = MDTextField( blank=True, verbose_name='文字介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
@@ -142,7 +142,7 @@ class Enrollment(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name="标题")
     category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别')
     file = models.FileField(upload_to='student/Enrollment/', blank=True, verbose_name='文件')
-    description = MDTextField(max_length=200, blank=True, verbose_name='文字介绍')
+    description = MDTextField(blank=True, verbose_name='文字介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
@@ -168,7 +168,7 @@ class Employment(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name="标题")
     category = models.CharField(max_length=20, choices=choices, verbose_name='学生类别')
     file = models.FileField(upload_to='student/job/', blank=True, verbose_name='文件')
-    description = MDTextField(max_length=200, blank=True, verbose_name='文字介绍')
+    description = MDTextField(blank=True, verbose_name='文字介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):

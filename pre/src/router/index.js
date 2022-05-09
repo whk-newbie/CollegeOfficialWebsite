@@ -117,8 +117,8 @@ const routes = [
             title: "新闻公告",
         },
         children: [{
-            path: '/newsAndinfos/overview',
-            name: '/collegeOverViewoverview',
+            path: '/newsAndinfos/newscenter',
+            name: '/newscenter',
             component: () => import("@/views/news/NewsCenter"),
             meta: {
                 is_show: true,
@@ -149,22 +149,87 @@ const routes = [
             {
                 path: '/education/graduate',
                 name: "graduate_1",
-                component: () => import('@/views/education/Graduate'),
+                component: Second,
                 meta: {
                     is_show: true,
                     title: "本科生教育"
                 },
-                children: []
+                children: [{
+                    path: '/education/graduate/major',
+                    name: "major1",
+                    component: () => import ("@/views/education/Graduate"),
+                    meta: {
+                        is_show: true,
+                        title: "专业介绍"
+                    },
+                    children: []
+                }, {
+                    path: '/education/graduate/plan',
+                    name: "plan1",
+                    component: () => import ("@/views/education/Graduate"),
+                    meta: {
+                        is_show: true,
+                        title: "培养方案"
+                    },
+                    children: []
+                }, {
+                    path: '/education/graduate/achieve',
+                    name: "achieve",
+                    component: () => import ("@/views/education/Graduate"),
+                    meta: {
+                        is_show: true,
+                        title: "教学成果"
+                    },
+                    children: []
+                }, {
+                    path: '/education/graduate/course',
+                    name: "course",
+                    component: () => import ("@/views/education/Graduate"),
+                    meta: {
+                        is_show: true,
+                        title: "精品课程"
+                    },
+                    children: []
+                },
+                ]
             },
             {
                 path: '/education/undergraduate',
                 name: "undergraduate_1",
-                component: () => import('@/views/education/Undergraduate'),
+                component: Second,
                 meta: {
                     is_show: true,
                     title: "研究生教育"
                 },
-                children: []
+                children: [{
+                    path: '/education/undergraduate/major',
+                    name: "major2",
+                    component: () => import('@/views/education/Undergraduate'),
+                    meta: {
+                        is_show: true,
+                        title: "学位点介绍"
+                    },
+                    children: []
+                },
+                    {
+                        path: '/education/undergraduate/plan',
+                        name: "plan2",
+                        component: () => import('@/views/education/Undergraduate'),
+                        meta: {
+                            is_show: true,
+                            title: "培养方案"
+                        },
+                        children: []
+                    },{
+                        path: '/education/undergraduate/notice',
+                        name: "notice",
+                        component: () => import('@/views/education/Undergraduate'),
+                        meta: {
+                            is_show: true,
+                            title: "信息公告"
+                        },
+                        children: []
+                    }]
             }
         ]
     },
@@ -479,11 +544,94 @@ const routes = [
         },
         children: null
     },
+    {
+        path: '/newsDetail/:id',
+        name: 'newsDetail',
+        component: () => import('@/views/PageDetail/NewsDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/infosDetail/:id',
+        name: 'infosDetail',
+        component: () => import('@/views/PageDetail/InforsDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/TeacherDetail/:id',
+        name: 'TeacherDetail',
+        component: () => import('@/views/PageDetail/TeacherDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/majorDetail/:id',
+        name: 'majorDetail',
+        component: () => import('@/views/PageDetail/majorDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/planDetail/:id',
+        name: 'planDetail',
+        component: () => import('@/views/PageDetail/planDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/teachingDetail/:id',
+        name: 'teachingDetail',
+        component: () => import('@/views/PageDetail/teachingDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/courseDetail/:id',
+        name: 'courseDetail',
+        component: () => import('@/views/PageDetail/courseDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/noticeDetail/:id',
+        name: 'noticeDetail',
+        component: () => import('@/views/PageDetail/noticeDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/TmoralityDetail/:id',
+        name: 'TmoralityDetail',
+        component: () => import('@/views/PageDetail/TmoralityDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+
 ]
+
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routes,
 })
 
 export default router

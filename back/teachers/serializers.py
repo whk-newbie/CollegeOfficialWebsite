@@ -28,7 +28,7 @@ class TeacherDetailSerializer(BaseSerializer):
 
     class Meta:
         model = Teacher
-        fields = ['id', 'name', 'job_title', 'position', 'degree', 'personal_profile_html', 'updated']
+        fields = ['id', 'name', 'photo', 'job_title', 'position', 'degree', 'personal_profile_html', 'updated']
 
 
 class TeacherMoralitySerializer(BaseSerializer):

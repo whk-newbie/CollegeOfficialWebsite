@@ -78,9 +78,21 @@ export default {
       this.currentPage = val;
     },
     changetodetail(row) {
-      console.log(row)
-      const loact = this.url
+      const loact = this.url.split('/')
       console.log(loact)
+      if (loact.length === 4 && loact[2]==='news')
+      {
+        this.$router.push({name: 'newsDetail', params: {id: row.id}})
+      }
+      if (loact.length === 3 && loact[2]==='infos')
+      {
+        this.$router.push({name: 'infosDetail', params: {id: row.id}})
+      }
+      if (loact.length === 4 && loact[3]==='Tmorality')
+      {
+        this.$router.push({name: 'TmoralityDetail', params: {id: row.id}})
+      }
+
       // this.$router.push({name: 'TmoralityDetail', params: {id: row.id}})
     },
   },

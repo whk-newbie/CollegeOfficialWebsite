@@ -10,7 +10,7 @@
               <template v-for="(item,index) in tableData.results" :key="index">
 
                 <el-carousel-item v-if="index < 6 && item.cover"
-                                  @click="$router.push({ name: 'NewsDetail', params: { id: item.id }})">
+                                  @click="$router.push({ name: 'newsDetail', params: { id: item.id }})">
                   <!--                  <router-view :to="{ name: 'NewsDetail', params: { id: item.id }}">-->
                   <div class="pic_item">
                     <img class="small" :src="item.cover"/>
@@ -31,7 +31,7 @@
                 <el-table-column prop="create_time" :formatter="formatted_time" width="180"/>
               </el-table>
               <div style="border:0;margin-bottom: 50%">
-                <el-button style="border:0;margin-left:85%;" @click="$router.push()">更多+</el-button>
+                <el-button style="border:0;margin-left:85%;" @click="$router.push('/newsAndinfos/newscenter')">更多+</el-button>
               </div>
             </div>
           </div>
@@ -178,10 +178,10 @@ export default {
       this.loading_info = false
     },
     changetoNewsDetail(row) {
-      this.$router.push({name: 'NewsDetail', params: {id: row.id}})
+      this.$router.push({name: 'newsDetail', params: {id: row.id}})
     },
     changetoInfosdetail(row) {
-      this.$router.push({name: 'InfosDetail', params: {id: row.id}})
+      this.$router.push({name: 'infosDetail', params: {id: row.id}})
     },
     moreinfo() {
 

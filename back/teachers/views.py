@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from requests import Response
+
 from rest_framework import viewsets
 from teachers.models import Teacher, TeacherMorality, recruiting
 from teachers.serializers import TeacherSerializer, TeacherDetailSerializer, TeacherMoralitySerializer, \

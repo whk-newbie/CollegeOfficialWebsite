@@ -128,14 +128,23 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads').replace("\\", "/")
-MEDIA_URL = '/uploads/'
+X_FRAME_OPTIONS = 'SAMEORIGIN'  # 允许同源资源访问
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/uploads/' # 媒体资源访问路径
+
+MDEDITOR_CONFIGS = {
+    'default': {
+        "lineWrapping": True,
+    },
+}
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],  # 开启过滤
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+
 # simpleui settings
 SIMPLEUI_HOME_INFO = False
 SIMPLEUI_HOME_QUICK = False
