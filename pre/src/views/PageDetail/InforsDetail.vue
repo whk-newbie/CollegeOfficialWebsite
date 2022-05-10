@@ -1,6 +1,6 @@
 <template>
   <Header/>
-  <div class="grid-container" v-loading="loading">
+  <div class="grid-container">
     <div v-if="news!==null">
       <h1 id="title">{{ news.title }}</h1>
       <p id="subtitle">

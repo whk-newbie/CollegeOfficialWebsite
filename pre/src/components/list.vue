@@ -78,20 +78,30 @@ export default {
       this.currentPage = val;
     },
     changetodetail(row) {
-      const loact = this.url.split('/')
-      console.log(loact)
-      if (loact.length === 4 && loact[2]==='news')
-      {
-        this.$router.push({name: 'newsDetail', params: {id: row.id}})
-      }
-      if (loact.length === 3 && loact[2]==='infos')
-      {
-        this.$router.push({name: 'infosDetail', params: {id: row.id}})
-      }
-      if (loact.length === 4 && loact[3]==='Tmorality')
-      {
-        this.$router.push({name: 'TmoralityDetail', params: {id: row.id}})
-      }
+      const locat = this.url.split('/')
+      const names = locat[locat.length-1]+'Detail'
+      this.$router.push({name: names,params: {id: row.id}})
+      // if (locat.length === 4 && locat[2]==='news')
+      // {
+      //   this.$router.push({name: 'newsDetail', params: {id: row.id}})
+      // }
+      // if (locat.length === 3 && locat[2]==='infos')
+      // {
+      //   this.$router.push({name: 'infosDetail', params: {id: row.id}})
+      // }
+      // if (locat.length === 4 && locat[3]==='Tmorality')
+      // {
+      //   this.$router.push({name: 'TmoralityDetail', params: {id: row.id}})
+      // }
+      // if (locat.length === 4 && locat[3]==='research'){
+      //   this.$router.push({name:'researchDetail',params: {id: row.id}})
+      // }
+      // if (locat.length===4 && locat[3]==='institutions'){
+      //   this.$router.push({name:'institutionDetail',params: {id: row.id}})
+      // }
+      // if (locat.length===4 && locat[3]==='achievements'){
+      //   this.$router.push({name:'achievementsDetail',params: {id: row.id}})
+      // }
 
       // this.$router.push({name: 'TmoralityDetail', params: {id: row.id}})
     },

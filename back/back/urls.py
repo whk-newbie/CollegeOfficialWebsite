@@ -71,7 +71,6 @@ router.register(r'education/filelearn', FilelearnViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('rest_framework.urls')),
     path('api/', include(router.urls)),
     path(r'mdeditor/', include('mdeditor.urls'))
 ]

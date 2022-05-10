@@ -1,5 +1,5 @@
 .grid-container {
-    margin: 1% 2% 2% 10%;
+    margin: 1% 2% 5% 10%;
     height: auto;
     width: 80%;
     box-shadow: 4px 4px 15px #dad9d9;
@@ -7,6 +7,7 @@
 
 
 #title {
+    padding-top: 2%;
     margin-top: 5%;
     text-align: center;
     font-size: x-large;
@@ -25,3 +26,22 @@
     padding-right: 5%;
     padding-bottom: 5%;
 }
+
+table {
+    border:1px solid #000000;
+    margin: 0;
+    padding: 0;
+}
+tbody,thead {
+    margin: 0;
+}
+table td,th{
+    border:1px solid #000000;
+    margin: 0;
+    padding: 10px;
+}
+table tr {
+    margin: 0;
+    padding: 0;
+}
+

@@ -82,7 +82,7 @@ export default {
       totalPages: 0,
       pageSize: 10,
       currentPage: 1,
-      detail: 'majorDetail',
+      detail: 'enrollment',
       category: "本科生",
       activeMenu: "1-1",
       defaultopen: ['1',],
@@ -124,7 +124,8 @@ export default {
       this.currentPage = val;
     },
     changetodetail(row) {
-      this.$router.push({name: this.detail, params: {id: row.id}})
+      const names = this.detail + 'Detail'
+      this.$router.push({name: names, params: {id: row.id}})
     },
     handleSelect(key) {
       if (key === '1-1') {
@@ -152,7 +153,7 @@ export default {
       if (paths[1] === "graduate") {
         if (paths[2] === 'enrollment') {
 
-          this.detail = "majorDetail"
+          this.detail = "enrollment"
           this.where = "招生"
           this.category = "本科生"
           this.activeMenu = '1-1'
@@ -160,7 +161,7 @@ export default {
           this.getList('/api/student/enrollment?category=本科生')
         } else {
 
-          this.detail = "majorDetail"
+          this.detail = "employment"
           this.where = "就业"
           this.category = "本科生"
           this.activeMenu = '1-2'
@@ -173,7 +174,7 @@ export default {
 
         if (paths[2] === 'enrollment') {
 
-          this.detail = "majorDetail"
+          this.detail = "enrollment"
           this.where = "招生"
           this.category = "研究生"
           this.activeMenu = '2-1'
@@ -181,7 +182,7 @@ export default {
           this.getList('/api/student/enrollment?category=研究生')
         } else {
 
-          this.detail = "majorDetail"
+          this.detail = "employment"
           this.where = "就业"
           this.category = "研究生"
           this.activeMenu = '2-2'

@@ -1,7 +1,7 @@
 <template>
   <div v-if="news!==null">
     <Header/>
-    <div class="grid-container" v-loading="loading">
+    <div class="grid-container">
       <h1 id="title">{{ news.title }}</h1>
       <p id="subtitle">
         发布时间: {{ DetailTime(news.create_time) }}

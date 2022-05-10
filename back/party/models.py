@@ -17,6 +17,8 @@ class PartyBuilding(models.Model):
         md = Markdown(
             extensions=[
                 'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.content)
@@ -41,6 +43,8 @@ class PartyFileAndTrends(models.Model):
         md = Markdown(
             extensions=[
                 'markdown.extensions.extra',
+                'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.content)
@@ -49,5 +53,3 @@ class PartyFileAndTrends(models.Model):
     class Meta:
         verbose_name = '党史教育文件及动态'
         verbose_name_plural = verbose_name
-
-

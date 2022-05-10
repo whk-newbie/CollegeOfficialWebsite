@@ -20,6 +20,7 @@ class BasemodelOfTH(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.content)

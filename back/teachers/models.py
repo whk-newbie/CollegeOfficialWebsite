@@ -32,7 +32,7 @@ class Teacher(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
-                'markdown.extensions.toc',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.personal_profile)
@@ -64,7 +64,7 @@ class TeacherMorality(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
-                'markdown.extensions.toc',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.content)
@@ -80,7 +80,7 @@ class recruiting(models.Model):
     recuiting of teachers
     """
     title = models.CharField(max_length=50, verbose_name="标题")  # recuiting title
-    content = MDTextField(verbose_name="招聘信息") # recuiting content
+    content = MDTextField(verbose_name="招聘信息")  # recuiting content
     create_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")  # create time
 
     def __str__(self):
@@ -91,7 +91,7 @@ class recruiting(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
-                'markdown.extensions.toc',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.content)

@@ -617,9 +617,54 @@ const routes = [
         children: null
     },
     {
+        path: '/researchDetail/:id',
+        name: 'researchDetail',
+        component: () => import('@/views/PageDetail/researchDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/institutionDetail/:id',
+        name: 'institutionDetail',
+        component: () => import('@/views/PageDetail/institutionDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/achievementsDetail/:id',
+        name: 'achievementsDetail',
+        component: () => import('@/views/PageDetail/achievementsDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
         path: '/TmoralityDetail/:id',
         name: 'TmoralityDetail',
         component: () => import('@/views/PageDetail/TmoralityDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/enrollmentDetail/:id',
+        name: 'enrollmentDetail',
+        component: () => import('@/views/PageDetail/enrollmentDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path: '/employmentDetail/:id',
+        name: 'employmentDetail',
+        component: () => import('@/views/PageDetail/employmentDetail'),
         meta: {
             is_show: false,
         },

@@ -1,7 +1,7 @@
 <template>
   <Header/>
   <div v-if="pages!==null">
-    <div class="grid-container" v-loading="loading">
+    <div class="grid-container">
       <h1 id="title">{{ pages.name }}({{ pages.job_title }}{{ pages.position }})</h1>
       <p id="subtitle">
         发布时间: {{ DetailTime(pages.updated) }}

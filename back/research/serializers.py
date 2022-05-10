@@ -8,7 +8,7 @@
 """
 from rest_framework import serializers
 
-from research.models import Research, institutions
+from research.models import Research, institutions, achievements
 from students.serializers import BaseSerializer
 
 
@@ -27,7 +27,7 @@ class ResearchDetailSerializer(BaseSerializer):
 
     class Meta:
         model = Research
-        fields = ['id', 'title', 'create_time', 'content_html', 'file']
+        fields = ['id', 'title', 'create_time', 'content_html']
 
 
 class InstitutionsSerializer(BaseSerializer):
@@ -45,12 +45,12 @@ class InstitutionsDetailSerializer(BaseSerializer):
 
     class Meta:
         model = institutions
-        fields = ['id', 'title', 'create_time', 'content_html']
+        fields = ['id', 'title', 'logo','create_time', 'content_html']
 
 
 class AchievementsSerializer(BaseSerializer):
     class Meta:
-        model = institutions
+        model = achievements
         fields = ['id', 'url', 'title', 'create_time']
 
 
@@ -62,5 +62,5 @@ class AchievementsDetailSerializer(BaseSerializer):
         return obj.get_md()
 
     class Meta:
-        model = institutions
+        model = achievements
         fields = ['id', 'title', 'create_time', 'content_html', 'file']

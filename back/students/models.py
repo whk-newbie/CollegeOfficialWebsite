@@ -22,6 +22,7 @@ class Major(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.description)
@@ -48,6 +49,7 @@ class Plan(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.description)
@@ -75,6 +77,7 @@ class Teaching(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.description)
@@ -90,7 +93,7 @@ class Course(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name='精品课程名称')
     category = models.CharField(max_length=20, choices=choices, default='本科生', verbose_name='学生类别')
     file = models.FileField(upload_to='student/course/', blank=True, verbose_name='精品课程文件')
-    description = MDTextField( blank=True, verbose_name='精品课程介绍')
+    description = MDTextField(blank=True, verbose_name='精品课程介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
@@ -101,6 +104,7 @@ class Course(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.description)
@@ -116,7 +120,7 @@ class Notice(models.Model):
     title = models.CharField(max_length=20, unique=True, verbose_name="标题")
     category = models.CharField(max_length=20, choices=choices, default='研究生', verbose_name='学生类别')
     file = models.FileField(upload_to='student/notice/', blank=True, verbose_name='文件')
-    description = MDTextField( blank=True, verbose_name='文字介绍')
+    description = MDTextField(blank=True, verbose_name='文字介绍')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
 
     def __str__(self):
@@ -127,6 +131,7 @@ class Notice(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.description)
@@ -153,6 +158,7 @@ class Enrollment(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.description)
@@ -179,6 +185,7 @@ class Employment(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.description)

@@ -10,7 +10,6 @@ from mdeditor.fields import MDTextField
 class Research(models.Model):
     title = models.CharField(max_length=100, verbose_name='标题')
     content = MDTextField(blank=True, verbose_name='内容')
-    file = models.FileField(upload_to='research/files/', blank=True, null=True, verbose_name='文件')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='日期')
 
     def __str__(self):
@@ -21,6 +20,7 @@ class Research(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.content)
@@ -46,6 +46,7 @@ class institutions(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.description)
@@ -71,6 +72,7 @@ class achievements(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.description)

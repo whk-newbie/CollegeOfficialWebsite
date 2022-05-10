@@ -22,6 +22,7 @@ class BaseModel(models.Model):
             extensions=[
                 'markdown.extensions.extra',
                 'markdown.extensions.codehilite',
+                'markdown.extensions.tables',
             ]
         )
         md_body = md.convert(self.desc)
