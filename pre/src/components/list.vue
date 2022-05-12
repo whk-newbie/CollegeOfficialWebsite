@@ -2,8 +2,8 @@
   <div class="news-list">
     <el-table :data="lists.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
               @cell-click="changetodetail" v-loading="loading">
-      <el-table-column prop="title"  width="600px"/>
-      <el-table-column prop="create_time"  width="300px" :formatter="formatted_time"/>
+      <el-table-column prop="title" width="600px"/>
+      <el-table-column prop="create_time" width="300px" :formatter="formatted_time"/>
     </el-table>
   </div>
   <div class="paginationbox">
@@ -79,31 +79,27 @@ export default {
     },
     changetodetail(row) {
       const locat = this.url.split('/')
-      const names = locat[locat.length-1]+'Detail'
-      this.$router.push({name: names,params: {id: row.id}})
-      // if (locat.length === 4 && locat[2]==='news')
+      // console.log(locat)
+      const names = locat[locat.length - 1] + 'Detail'
+      if (names === 'Learning?category=学习资料Detail' || names === 'Learning?category=软件Detail') {
+        this.$router.push({name: 'Download', params: {id: row.id}})
+      }
+      if (names === 'fileandtrends?category=教育文件Detail' || names === 'fileandtrends?category=教育动态Detail') {
+        this.$router.push({name: 'fileleanDetail', params: {id: row.id}})
+      }
+      // if (locat[2] === 'education')
       // {
-      //   this.$router.push({name: 'newsDetail', params: {id: row.id}})
+      //   if (locat[3] === 'report') {
+      //     this.$router.push({name: 'EreportDetail', params: {id: row.id}})
+      //   }
+      //   else if(locat[3]==='infos'){
+      //     this.$router.push({name: 'EinfosDetail', params: {id: row.id}})
+      //   }
+      //   else {
+      //     this.$router.push({name: 'EfileLearnDetail', params: {id: row.id}})
+      //   }
       // }
-      // if (locat.length === 3 && locat[2]==='infos')
-      // {
-      //   this.$router.push({name: 'infosDetail', params: {id: row.id}})
-      // }
-      // if (locat.length === 4 && locat[3]==='Tmorality')
-      // {
-      //   this.$router.push({name: 'TmoralityDetail', params: {id: row.id}})
-      // }
-      // if (locat.length === 4 && locat[3]==='research'){
-      //   this.$router.push({name:'researchDetail',params: {id: row.id}})
-      // }
-      // if (locat.length===4 && locat[3]==='institutions'){
-      //   this.$router.push({name:'institutionDetail',params: {id: row.id}})
-      // }
-      // if (locat.length===4 && locat[3]==='achievements'){
-      //   this.$router.push({name:'achievementsDetail',params: {id: row.id}})
-      // }
-
-      // this.$router.push({name: 'TmoralityDetail', params: {id: row.id}})
+      this.$router.push({name: names, params: {id: row.id}})
     },
   },
 }

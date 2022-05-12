@@ -28,11 +28,12 @@
               <el-table v-loading="loading_news" :data="tableData.results" stripe style="width: 100%;height:135%"
                         @cell-click="changetoNewsDetail">
                 <el-table-column prop="title" label="学院新闻"/>
-                <el-table-column prop="create_time" :formatter="formatted_time" width="180"/>
+                <el-table-column prop="create_time" :formatter="formatted_time" width="180">
+                  <template #header>
+                    <el-button style="border:0;textStyle:#8e0e0a" @click="$router.push('/newsAndinfos/newscenter')">更多+</el-button>
+                  </template>
+                </el-table-column>
               </el-table>
-              <div style="border:0;margin-bottom: 50%">
-                <el-button style="border:0;margin-left:85%;" @click="$router.push('/newsAndinfos/newscenter')">更多+</el-button>
-              </div>
             </div>
           </div>
         </el-col>
@@ -79,7 +80,7 @@
         <el-table-column prop="title" label="通知"/>
         <el-table-column prop="create_time" :formatter="formatted_time" width="180">
           <template #header>
-            <el-button @click="$router.push('/information')" style="border:0;textStyle:#8e0e0a">更多+</el-button>
+            <el-button @click="$router.push('/newsAndinfos/inforsCenter')" style="border:0;textStyle:#8e0e0a">更多+</el-button>
           </template>
         </el-table-column>
       </el-table>

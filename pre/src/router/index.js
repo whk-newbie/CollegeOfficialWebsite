@@ -670,6 +670,96 @@ const routes = [
         },
         children: null
     },
+    {
+        path: '/buildingDetail/:id',
+        name: 'buildingDetail',
+        component: () => import('@/views/PageDetail/buildingDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/groupnewsDetail/:id',
+        name: "groupnewsDetail",
+        component: () => import("@/views/PageDetail/groupnewsDetail"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/groupDetail/:id',
+        name: "groupDetail",
+        component: () => import("@/views/PageDetail/groupDetail"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/partyDetail/:id',
+        name: "partyDetail",
+        component: () => import("@/views/PageDetail/partyDetail"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/honorDetail/:id',
+        name: "honorDetail",
+        component: () => import("@/views/PageDetail/honorDetail"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/Download/:id',
+        name: "Download",
+        component: () => import("@/views/Download"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/fileleanDetail/:id',
+        name: "fileleanDetail",
+        component: () => import("@/views/PageDetail/PartyLearnDetail"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/filelearnDetail/:id',
+        name: "filelearnDetail",
+        component: () => import("@/views/PageDetail/filelearnDetail"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/inforDetail/:id',
+        name: "inforDetail",
+        component: () => import("@/views/PageDetail/inforDetail"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/reportDetail/:id',
+        name: "reportDetail",
+        component: () => import("@/views/PageDetail/reportDetail"),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
 
 ]
 

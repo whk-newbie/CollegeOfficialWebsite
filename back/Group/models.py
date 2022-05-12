@@ -10,7 +10,7 @@ class BaseModel(models.Model):
     BaseModel
     """
     title = models.CharField(max_length=100, verbose_name='标题')
-    desc = MDTextField(max_length=255, verbose_name='文章内容')
+    desc = MDTextField(verbose_name='文章内容')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
     update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
 
@@ -81,6 +81,7 @@ class Honor(BaseModel):
     """
     Honor
     """
+    file = models.FileField(upload_to='honor/%Y/%m', verbose_name='文件', blank=True, null=True)
 
     class Meta:
         verbose_name = '荣誉室'

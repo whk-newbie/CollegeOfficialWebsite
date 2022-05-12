@@ -88,4 +88,4 @@ class HonorSerializer(BaseSerializer):
 class HonorDetailSerializer(BaseDetailSerializer):
     class Meta:
         model = Honor
-        fields = ['id', 'title', 'create_time', 'update_time', 'desc_html']
+        fields = ['id', 'title', 'create_time', 'update_time', 'desc_html','file']

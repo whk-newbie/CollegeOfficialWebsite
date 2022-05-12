@@ -60,13 +60,13 @@ router.register(r'party/fileandtrends', PartyFileAndTrendsViewSet)
 router.register(r'group/groupnews', GroupNewsViewSet)
 router.register(r'group/group', GroupViewSet)
 router.register(r'group/party', PartyViewSet)
-router.register(r'group/Management', ManagementViewSet)
+router.register(r'group/manage', ManagementViewSet)
 router.register(r'group/honor', HonorViewSet)
 
 
 # 主题教育模块api
 router.register(r'education/report', ReportViewSet)
-router.register(r'education/infos', InfosViewSet)
+router.register(r'education/infor', InfosViewSet)
 router.register(r'education/filelearn', FilelearnViewSet)
 
 urlpatterns = [

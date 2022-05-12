@@ -1,6 +1,26 @@
 
 .news-body p img {
     position: center;
-    max-width: 150%;
+    max-width: 100%;
     border-radius: 5px;
 }
+
+
+.news-body table {
+    border:1px solid #000000;
+    margin: 0;
+    padding: 0;
+}
+.news-body tbody,thead {
+    margin: 0;
+}
+.news-body table td,th{
+    border:1px solid #000000;
+    margin: 0;
+    padding: 10px;
+}
+.news-body table tr {
+    margin: 0;
+    padding: 0;
+}
+

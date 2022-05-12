@@ -1,6 +1,7 @@
 function getName(file){
     if (file){
-        return file.split('/')[file.split('/').length - 1]
+        const news = decodeURIComponent(file)
+        return news.split('/')[file.split('/').length - 1]
     }
 }
 
