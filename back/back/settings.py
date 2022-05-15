@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'party',  # 党建模块
     'Group',  # 团学模块
     'Thematic',  # 主题教育模块
+    'MSboard',  # 留言板模块
     'userinfo',
     'mdeditor',
 ]
@@ -131,7 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 X_FRAME_OPTIONS = 'SAMEORIGIN'  # 允许同源资源访问
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
-MEDIA_URL = '/uploads/' # 媒体资源访问路径
+MEDIA_URL = '/uploads/'  # 媒体资源访问路径
 
 MDEDITOR_CONFIGS = {
     'default': {
@@ -178,6 +179,16 @@ SIMPLEUI_CONFIG = {
                 'name': "新闻列表",
                 'icon': '',
                 'url': 'News/news'
+            }]
+        },
+        {
+            'app': 'MSboard',
+            'name': '留言板',
+            'icon': 'fa fa-comments',
+            'models': [{
+                'name': "留言列表",
+                'icon': '',
+                'url': 'MSboard/board'
             }]
         },
         {

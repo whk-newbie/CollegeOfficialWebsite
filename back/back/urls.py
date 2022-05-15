@@ -19,6 +19,7 @@ from django.conf.urls import include
 from rest_framework.routers import DefaultRouter
 
 from Group.views import GroupNewsViewSet, GroupViewSet, PartyViewSet, HonorViewSet, ManagementViewSet
+from MSboard.views import BoardViewSet
 from News.views import NewsViewSet
 from Thematic.views import InfosViewSet, FilelearnViewSet, ReportViewSet
 from information.views import InformationViewSet
@@ -68,6 +69,11 @@ router.register(r'group/honor', HonorViewSet)
 router.register(r'education/report', ReportViewSet)
 router.register(r'education/infor', InfosViewSet)
 router.register(r'education/filelearn', FilelearnViewSet)
+
+
+
+
+router.register(r'board', BoardViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
