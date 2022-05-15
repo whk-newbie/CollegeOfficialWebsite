@@ -760,6 +760,24 @@ const routes = [
         },
         children: null
     },
+    {
+        path: '/alumnus',
+        name: "Alummus",
+        component: () => import("@/views/alumnus/Alumnus"),
+        meta: {
+            is_show: false,
+        },
+        children:null
+    },
+    {
+        path:'/anniversary',
+        name: 'anniversary',
+        component: () => import("@/views/anniversary/Anniversary"),
+        meta: {
+            is_show: false
+        },
+        children:null
+    }
 
 ]
 

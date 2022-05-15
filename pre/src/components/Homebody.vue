@@ -57,7 +57,7 @@
           </div>
         </el-col>
         <el-col :span="6">
-          <div class="grid-content xiaoqing">
+          <div class="grid-content xiaoqing" @click="this.$router.push('/anniversary')">
             <el-icon :size="30" color="white" class="icon">
               <checked/>
             </el-icon>
@@ -65,7 +65,7 @@
           </div>
         </el-col>
         <el-col :span="6">
-          <div class="grid-content xiaoyou">
+          <div class="grid-content xiaoyou" @click="this.$router.push('/alumnus')">
             <el-icon :size="30" color="white" class="icon">
               <connection/>
             </el-icon>

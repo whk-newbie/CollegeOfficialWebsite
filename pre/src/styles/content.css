@@ -6,21 +6,15 @@
 }
 
 
-.news-body table {
+.grid-container .news-body table {
     border:1px solid #000000;
     margin: 0;
     padding: 0;
 }
-.news-body tbody,thead {
-    margin: 0;
-}
-.news-body table td,th{
+
+.grid-container .news-body table td{
     border:1px solid #000000;
     margin: 0;
     padding: 10px;
-}
-.news-body table tr {
-    margin: 0;
-    padding: 0;
 }
 
