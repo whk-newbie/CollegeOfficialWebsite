@@ -11,9 +11,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046e9d47-1e6f-4d06-9e1a-8ffd0e788c5c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/views/MSBoard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../back/MSboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../back/MSboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../back/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../back/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/529cf23de68e478bb260fba18c98146d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/529cf23de68e478bb260fba18c98146d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/ad1ef6987bfbfc17e3ade9663faf6881.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/ad1ef6987bfbfc17e3ade9663faf6881.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bfe52225a71a47ff3a3ddf1c40502771.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/bfe52225a71a47ff3a3ddf1c40502771.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c183e98ff7f10febe2923765a020f4a1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c183e98ff7f10febe2923765a020f4a1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c8ed17128c235b83a1c0c018a445b89e.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/c8ed17128c235b83a1c0c018a445b89e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/35e3d77a819063fea223be73752586a5.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/35e3d77a819063fea223be73752586a5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/36cc59f6c263486d4d8bfb95259b8daa.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/36cc59f6c263486d4d8bfb95259b8daa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/8189fbcbfa2147427777db79a601ed51.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/8189fbcbfa2147427777db79a601ed51.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/8caf78503d39f6565fea1c3084ad26a5.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/8caf78503d39f6565fea1c3084ad26a5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/975768bb8c5ad8b94ac4bbafc6ab31d9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/975768bb8c5ad8b94ac4bbafc6ab31d9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/b7cab5d6146620820ad6428f124e4726.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/b7cab5d6146620820ad6428f124e4726.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/e8bd82ca6deafb367bda0553f838850d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/e8bd82ca6deafb367bda0553f838850d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/composables/get_Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/composables/get_Data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Party/PartyLearning.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Party/PartyLearning.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +64,15 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="23lWulnwVLOltZ90OKl0o8EcLkW" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -162,7 +182,9 @@
       <workItem from="1652166357712" duration="10746000" />
       <workItem from="1652273665813" duration="2069000" />
       <workItem from="1652340914603" duration="8098000" />
-      <workItem from="1652599198109" duration="3025000" />
+      <workItem from="1652599198109" duration="4497000" />
+      <workItem from="1652618587037" duration="6470000" />
+      <workItem from="1652680130103" duration="1074000" />
     </task>
     <servers />
   </component>
@@ -182,19 +204,24 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
+    <state x="823" y="450" key="#ESLint" timestamp="1652623744330">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="823" y="450" key="#ESLint/0.40.1920.1040@0.40.1920.1040" timestamp="1652623744330" />
     <state x="748" y="345" key="#Web_Browsers" timestamp="1651829040557">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="748" y="345" key="#Web_Browsers/0.40.1920.1040@0.40.1920.1040" timestamp="1651829040557" />
-    <state x="624" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1651492164621">
+    <state x="624" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1652621565075">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state x="624" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1920.1040@0.40.1920.1040" timestamp="1651492164621" />
+    <state x="624" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1920.1040@0.40.1920.1040" timestamp="1652621565075" />
     <state x="92" y="132" width="1736" height="856" key="DiffContextDialog" timestamp="1651751925574">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
@@ -203,26 +230,26 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="686" y="251" key="FileChooserDialogImpl/0.40.1920.1040@0.40.1920.1040" timestamp="1651375003844" />
-    <state width="1899" height="245" key="GridCell.Tab.0.bottom" timestamp="1652599729379">
+    <state width="1899" height="245" key="GridCell.Tab.0.bottom" timestamp="1652625120475">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="245" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1652599729379" />
-    <state width="1899" height="245" key="GridCell.Tab.0.center" timestamp="1652599729377">
+    <state width="1899" height="245" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1652625120475" />
+    <state width="1899" height="245" key="GridCell.Tab.0.center" timestamp="1652625120475">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="245" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1652599729377" />
-    <state width="1899" height="245" key="GridCell.Tab.0.left" timestamp="1652599729377">
+    <state width="1899" height="245" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1652625120475" />
+    <state width="1899" height="245" key="GridCell.Tab.0.left" timestamp="1652625120475">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="245" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1652599729377" />
-    <state width="1899" height="245" key="GridCell.Tab.0.right" timestamp="1652599729377">
+    <state width="1899" height="245" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1652625120475" />
+    <state width="1899" height="245" key="GridCell.Tab.0.right" timestamp="1652625120475">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state width="1515" height="218" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1644409575966" />
-    <state width="1899" height="245" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1652599729377" />
+    <state width="1899" height="245" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1652625120475" />
     <state x="787" y="261" key="RollbackChangesDialog" timestamp="1651481622498">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>

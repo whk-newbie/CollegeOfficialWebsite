@@ -527,6 +527,16 @@ const routes = [
         ]
     },
     {
+        path: '/messageBoard',
+        name: "messageBorad",
+        component: () => import('@/views/MSBoard'),
+        meta: {
+            is_show: true,
+            title: "留言板",
+        },
+        children: []
+    },
+    {
         path: '/PartyLearning',
         name: 'PartyLearning',
         component: () => import("@/views/Party/PartyLearning"),

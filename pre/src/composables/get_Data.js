@@ -1,14 +1,8 @@
 import axios from 'axios';
 import {onMounted} from 'vue'
 
-export default function get_Data(data, choice) {
+export default function get_Data(data, url) {
     const get_all_data = async () => {
-        let url = '/api/';
-        // let params = new URLSearchParams();
-        let choices = {1: 'news', 2: 'infos', 3: "teacher"}
-        url += choices[choice]
-
-        console.log(url)
         getList(url, data)
 
     };
@@ -22,13 +16,11 @@ function getList(url, data) {
     axios
         .get(url)
         .then(response => {
-            this.totalPages = response.data.count,
                 (data.value = response.data.results)
             if (response.data.next !== null) {
                 getData(response.data.next.charAt(response.data.next.length - 1), url, data)
             }
         })
-    this.loading = false;
 }
 
 function getData(number, url, data) {

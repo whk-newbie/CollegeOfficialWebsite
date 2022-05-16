@@ -2,22 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a52b83e3-1613-4d29-9c04-449666280092" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MSboard/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/migrations/0002_remove_msboard_reply_to_msboardreply.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/migrations/0003_delete_msboardreply.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSboard/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pre/src/components/vform.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pre/src/views/MSBoard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSboard/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MSboard/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pre/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/529cf23de68e478bb260fba18c98146d.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/529cf23de68e478bb260fba18c98146d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/ad1ef6987bfbfc17e3ade9663faf6881.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/ad1ef6987bfbfc17e3ade9663faf6881.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/bfe52225a71a47ff3a3ddf1c40502771.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/bfe52225a71a47ff3a3ddf1c40502771.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/c183e98ff7f10febe2923765a020f4a1.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/c183e98ff7f10febe2923765a020f4a1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/c8ed17128c235b83a1c0c018a445b89e.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/babel-loader/c8ed17128c235b83a1c0c018a445b89e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/35e3d77a819063fea223be73752586a5.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/35e3d77a819063fea223be73752586a5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/36cc59f6c263486d4d8bfb95259b8daa.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/36cc59f6c263486d4d8bfb95259b8daa.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/8189fbcbfa2147427777db79a601ed51.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/8189fbcbfa2147427777db79a601ed51.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/8caf78503d39f6565fea1c3084ad26a5.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/8caf78503d39f6565fea1c3084ad26a5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/975768bb8c5ad8b94ac4bbafc6ab31d9.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/975768bb8c5ad8b94ac4bbafc6ab31d9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/b7cab5d6146620820ad6428f124e4726.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/b7cab5d6146620820ad6428f124e4726.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/e8bd82ca6deafb367bda0553f838850d.json" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/node_modules/.cache/vue-loader/e8bd82ca6deafb367bda0553f838850d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/src/composables/get_Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/composables/get_Data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pre/src/views/Party/PartyLearning.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../pre/src/views/Party/PartyLearning.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +143,8 @@
       <workItem from="1652341109038" duration="7173000" />
       <workItem from="1652349670736" duration="142000" />
       <workItem from="1652349867462" duration="31000" />
-      <workItem from="1652599397534" duration="2921000" />
+      <workItem from="1652599397534" duration="4336000" />
+      <workItem from="1652619144638" duration="1254000" />
     </task>
     <servers />
   </component>

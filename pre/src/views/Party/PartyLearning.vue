@@ -12,9 +12,6 @@
       <el-tab-pane label="党史学习教育动态" name="second">
         <list :url="url2"></list>
       </el-tab-pane>
-      <el-tab-pane label="党史学习教育活动意见征集" name="third">
-          意见
-      </el-tab-pane>
     </el-tabs>
   </div>
   <Footer/>
