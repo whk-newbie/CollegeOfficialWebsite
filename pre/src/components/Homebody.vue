@@ -7,17 +7,16 @@
             <!--    轮播图-->
             <el-carousel class="carousel">
               <!--              生成五个-->
-              <template v-for="(item,index) in tableData.results" :key="index">
+              <template v-for="(item,index) in tableData" :key="index">
 
                 <el-carousel-item v-if="index < 6 && item.cover"
                                   @click="$router.push({ name: 'newsDetail', params: { id: item.id }})">
                   <!--                  <router-view :to="{ name: 'NewsDetail', params: { id: item.id }}">-->
                   <div class="pic_item">
-                    <img class="small" :src="item.cover"/>
+                    <img class="small" :src="item.cover" alt="封面图片"/>
                     <h3>{{ item.title }}</h3>
                   </div>
                 </el-carousel-item>
-
               </template>
             </el-carousel>
           </div>
@@ -25,12 +24,12 @@
         <el-col :span="12">
           <div class="grid-content bg-purple">
             <div class="newslist">
-              <el-table v-loading="loading_news" :data="tableData.results" stripe style="width: 100%;height:135%"
+              <el-table :data="tableData" stripe style="width: 100%;height:135%"
                         @cell-click="changetoNewsDetail">
                 <el-table-column prop="title" label="学院新闻"/>
                 <el-table-column prop="create_time" :formatter="formatted_time" width="180">
                   <template #header>
-                    <el-button style="border:0;textStyle:#8e0e0a" @click="$router.push('/newsAndinfos/newscenter')">更多+</el-button>
+                    <el-button style="border:0;" @click="$router.push('/newsAndinfos/newscenter')">更多+</el-button>
                   </template>
                 </el-table-column>
               </el-table>
@@ -75,12 +74,12 @@
       </el-row>
     </div>
     <div class="info">
-      <el-table v-loading="loading_info" :data="infoData.results" stripe style="width: 100%;height:400px;"
+      <el-table :data="infoData" stripe style="width: 100%;height:400px;"
                 @cell-click="changetoInfosdetail">
         <el-table-column prop="title" label="通知"/>
         <el-table-column prop="create_time" :formatter="formatted_time" width="180">
           <template #header>
-            <el-button @click="$router.push('/newsAndinfos/inforsCenter')" style="border:0;textStyle:#8e0e0a">更多+</el-button>
+            <el-button @click="$router.push('/newsAndinfos/inforsCenter')" style="border:0;">更多+</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -96,7 +95,7 @@
         <el-aside width="30%">
           <el-card :body-style="{ padding: '0px' }" shadow="hover">
             <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-                 class="image"/>
+                 class="image" alt="成就图片"/>
             <div style="padding: 14px">
               <span>Yummy hamburger</span>
             </div>
@@ -134,50 +133,36 @@
 
     </div>
   </div>
-  <el-backtop/>
+  <el-backtop/> #快速回顶部
 </template>
 
 <script>
 import {Connection, Checked, Collection, Reading} from '@element-plus/icons-vue'
-import axios from 'axios';
+// import axios from 'axios';
+import {ref} from "vue"
 import formatted_time from '@/composables/formatted_time';
+import get_Data from "@/composables/get_Data";
 
 export default {
   name: "homebody",
   components: {
     Connection, Checked, Collection, Reading
   },
-  data() {
+  setup() {
+    const tableData = ref([])
+    const infoData = ref([])
+    get_Data(tableData, '/api/news')
+    get_Data(infoData, '/api/infos')
     return {
-      loading: false,
-      loading_news: false,
-      loading_info: false,
-      tableData: '',
-      infoData: '',
+      tableData,
+      infoData,
       formatted_time
-    };
+    }
   },
-  mounted() {
-    this.loading_news = true
-    this.loading_info = true
-    this.getNews()
-    this.getInfos()
+  data() {
+    return {};
   },
-
   methods: {
-    /// get pagedate
-    getNews() {
-      axios
-          .get('/api/news')
-          .then(response => (this.tableData = response.data))
-      this.loading_news = false
-    },
-    getInfos() {
-      axios
-          .get('/api/infos')
-          .then(response => (this.infoData = response.data))
-      this.loading_info = false
-    },
     changetoNewsDetail(row) {
       this.$router.push({name: 'newsDetail', params: {id: row.id}})
     },
@@ -185,7 +170,7 @@ export default {
       this.$router.push({name: 'infosDetail', params: {id: row.id}})
     },
     moreinfo() {
-
+      console.log("test")
     },
   }
 }
@@ -284,7 +269,7 @@ export default {
 }
 
 .grid-content > span {
-  font-family: 华文仿宋,serif;
+  font-family: 华文仿宋, serif;
   font-style: normal;
   font-size: 28px;
   margin-left: 20%;

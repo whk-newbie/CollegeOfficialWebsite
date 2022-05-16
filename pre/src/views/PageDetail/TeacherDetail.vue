@@ -39,6 +39,7 @@ export default {
 <style scoped>
 
 @import '~@/styles/DetailBody.css';
+@import '~@/styles/content.css';
 h3 {
   margin-top: 5%;
   text-align: center;
@@ -46,7 +47,4 @@ h3 {
 }
 </style>
 
-<style>
-@import '~@/styles/content.css';
-</style>
 

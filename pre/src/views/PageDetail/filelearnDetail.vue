@@ -36,5 +36,5 @@ name: "filelearnDetail",
 
 <style scoped>
 @import '~@/styles/DetailBody.css';
-
+@import '~@/styles/content.css';
 </style>

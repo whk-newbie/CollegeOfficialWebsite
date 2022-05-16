@@ -21,60 +21,37 @@
 </template>
 
 <script>
+import {ref} from 'vue'
 import formatted_time from "@/composables/formatted_time";
-import axios from "axios";
+// import axios from "axios";
+import get_Data from "@/composables/get_Data";
 
 export default {
   name: "list",
   props: {url: String},
-  data() {
+  setup(props){
+    const lists = ref('')
+    const totalPages = ref(0)
+    console.log(props)
+    get_Data(lists,props.url,totalPages)
+    console.log(totalPages)
     return {
-      lists: [],
-      totalPages: 0,
-      pageSize: 10,
-      currentPage: 1,
-      loading: false,
+      lists,
+      totalPages,
       formatted_time
     }
   },
-  mounted() {
-    this.loading = true;
-    this.getData();
-    this.loading = false;
+  data() {
+    return {
+      pageSize: 10,
+      currentPage: 1,
+    }
   },
   methods: {
-    getList() {
-      axios
-          .get(this.url)
-          .then(response => {
-            this.lists = response.data.results;
-            if (response.data.next !== null) {
-              this.getData(response.data.next.charAt(response.data.next.length - 1))
-            }
-
-          })
-      this.loading = false;
-    },
-    getData(number) {
-      axios.get(this.url, {params: {page: number}})
-          .then(
-              response => {
-                // console.log(response.data);
-                this.totalPages = response.data.count;
-                this.lists = this.lists.concat(response.data.results)
-                if (response.data.next !== null) {
-                  this.getData(response.data.next.charAt(response.data.next.length - 1))
-                }
-
-              }
-          )
-    },
     handleSizeChange(val) {
-      // console.log(`每页 ${val} 条`);
       this.pageSize = val;
     },
     handleCurrentChange(val) {
-      // console.log(`当前页: ${val}`);
       this.currentPage = val;
     },
     changetodetail(row) {
@@ -87,18 +64,6 @@ export default {
       if (names === 'fileandtrends?category=教育文件Detail' || names === 'fileandtrends?category=教育动态Detail') {
         this.$router.push({name: 'fileleanDetail', params: {id: row.id}})
       }
-      // if (locat[2] === 'education')
-      // {
-      //   if (locat[3] === 'report') {
-      //     this.$router.push({name: 'EreportDetail', params: {id: row.id}})
-      //   }
-      //   else if(locat[3]==='infos'){
-      //     this.$router.push({name: 'EinfosDetail', params: {id: row.id}})
-      //   }
-      //   else {
-      //     this.$router.push({name: 'EfileLearnDetail', params: {id: row.id}})
-      //   }
-      // }
       this.$router.push({name: names, params: {id: row.id}})
     },
   },

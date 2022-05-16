@@ -1,25 +1,30 @@
 import axios from 'axios';
 import {onMounted} from 'vue'
 
-export default function get_Data(data, url) {
+export default function get_Data(data, url,count=null) {
     const get_all_data = async () => {
-        getList(url, data)
+        getList(url, data,count)
 
     };
 
     onMounted(get_all_data);
-    console.log(data.value)
+    // console.log(data.value)
 }
 
 
-function getList(url, data) {
+function getList(url, data,count=null) {
     axios
         .get(url)
         .then(response => {
                 (data.value = response.data.results)
-            if (response.data.next !== null) {
-                getData(response.data.next.charAt(response.data.next.length - 1), url, data)
+                // console.log(response.data)
+            if (count!==null){
+                count.value = response.data.count
+                if (response.data.next !== null) {
+                    getData(response.data.next.charAt(response.data.next.length - 1), url, data)
+                }
             }
+
         })
 }
 

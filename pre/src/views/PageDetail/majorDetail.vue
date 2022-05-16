@@ -38,6 +38,7 @@ export default {
 <style scoped>
 
 @import '~@/styles/DetailBody.css';
+@import '~@/styles/content.css';
 .grid-container {
   margin: 1% 2% 2% 10%;
   height: 800px;
@@ -45,8 +46,4 @@ export default {
   box-shadow: 4px 4px 15px #dad9d9;
 }
 
-</style>
-
-<style>
-@import '~@/styles/content.css';
 </style>

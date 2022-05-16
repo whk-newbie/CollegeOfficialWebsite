@@ -56,7 +56,7 @@ export default {
 <style scoped>
 
 @import '~@/styles/DetailBody.css';
-
+@import '~@/styles/content.css';
 .content_body {
   margin-right: 5%;
   margin-left: 5%;
@@ -67,8 +67,4 @@ export default {
   margin-left: 45%;
   margin-bottom: 2%;
 }
-</style>
-
-<style>
-@import '~@/styles/content.css';
 </style>

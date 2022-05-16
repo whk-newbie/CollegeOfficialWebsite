@@ -42,14 +42,11 @@ name: "employmentDetail",
 
 <style scoped>
 @import '~@/styles/DetailBody.css';
+@import '~@/styles/content.css';
 .file-container{
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 5px;
   text-decoration: underline;
 }
-</style>
-
-<style>
-@import '~@/styles/content.css';
 </style>

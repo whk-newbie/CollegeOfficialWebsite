@@ -39,8 +39,5 @@ export default {
 <style scoped>
 
 @import '~@/styles/DetailBody.css';
-</style>
-
-<style>
 @import '~@/styles/content.css';
 </style>
