@@ -64,11 +64,11 @@
           </div>
         </el-col>
         <el-col :span="6">
-          <div class="grid-content xiaoyou" @click="this.$router.push('/alumnus')">
+          <div class="grid-content xiaoyou" @click="xiaoyou">
             <el-icon :size="30" color="white" class="icon">
               <connection/>
             </el-icon>
-            <span>计信校友专栏</span>
+            <span style="padding-left: 18%;">校友会</span>
           </div>
         </el-col>
       </el-row>
@@ -133,12 +133,11 @@
 
     </div>
   </div>
-  <el-backtop/> #快速回顶部
+  <el-backtop/>
 </template>
 
 <script>
 import {Connection, Checked, Collection, Reading} from '@element-plus/icons-vue'
-// import axios from 'axios';
 import {ref} from "vue"
 import formatted_time from '@/composables/formatted_time';
 import get_Data from "@/composables/get_Data";
@@ -172,6 +171,9 @@ export default {
     moreinfo() {
       console.log("test")
     },
+    xiaoyou(){
+      window.open('https://xy.jxnu.edu.cn/#/','_blank')
+    }
   }
 }
 </script>

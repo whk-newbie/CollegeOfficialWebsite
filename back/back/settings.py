@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'Group',  # 团学模块
     'Thematic',  # 主题教育模块
     'MSboard',  # 留言板模块
+    'anniversary',  # 校庆模块
     'userinfo',
     'mdeditor',
 ]
@@ -323,7 +324,16 @@ SIMPLEUI_CONFIG = {
                 'url': 'Thematic/filelearn'
             }]
         },
-
+        {
+            'app': 'anniversary',
+            'name': '校庆活动',
+            'icon': 'fa fa-birthday-cake',
+            'models': [{
+                'name': '校庆活动',
+                'icon': '',
+                'url': 'anniversary/anniversary'
+            }]
+        },
         {
             'app': 'auth',
             'name': '权限认证',

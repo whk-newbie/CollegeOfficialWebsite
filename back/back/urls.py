@@ -22,6 +22,7 @@ from Group.views import GroupNewsViewSet, GroupViewSet, PartyViewSet, HonorViewS
 from MSboard.views import BoardViewSet
 from News.views import NewsViewSet
 from Thematic.views import InfosViewSet, FilelearnViewSet, ReportViewSet
+from anniversary.views import AnniversaryViewSet
 from information.views import InformationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
@@ -70,6 +71,7 @@ router.register(r'education/infor', InfosViewSet)
 router.register(r'education/filelearn', FilelearnViewSet)
 
 router.register(r'board', BoardViewSet)
+router.register(r'anniversary', AnniversaryViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
