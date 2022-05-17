@@ -1,7 +1,7 @@
 <template>
   <div class="news-list">
     <el-table :data="lists.slice((currentPage-1)*pageSize,currentPage*pageSize)" style="width: 100%"
-              @cell-click="changetodetail" v-loading="loading">
+              @cell-click="changetodetail">
       <el-table-column prop="title" width="600px"/>
       <el-table-column prop="create_time" width="300px" :formatter="formatted_time"/>
     </el-table>
@@ -23,18 +23,17 @@
 <script>
 import {ref} from 'vue'
 import formatted_time from "@/composables/formatted_time";
-// import axios from "axios";
 import get_Data from "@/composables/get_Data";
 
 export default {
   name: "list",
   props: {url: String},
   setup(props){
-    const lists = ref('')
+    const lists = ref([])
     const totalPages = ref(0)
-    console.log(props)
+    // console.log(props)
     get_Data(lists,props.url,totalPages)
-    console.log(totalPages)
+    // console.log(totalPages)
     return {
       lists,
       totalPages,

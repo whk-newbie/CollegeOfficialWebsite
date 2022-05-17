@@ -105,6 +105,15 @@ const routes = [
                         title: "专任教师"
                     },
                 },
+                {
+                    path: "/teacher/recruiting",
+                    name: 'recruiting',
+                    component: () => import("@/views/teachers/Enrollful"),
+                    meta: {
+                        is_show: true,
+                        title:"招贤纳士"
+                    }
+                }
             ]
         },]
     },
@@ -603,6 +612,15 @@ const routes = [
         path: '/teachingDetail/:id',
         name: 'teachingDetail',
         component: () => import('@/views/PageDetail/teachingDetail'),
+        meta: {
+            is_show: false,
+        },
+        children: null
+    },
+    {
+        path:'/recruitingDetail/:id',
+        name: "recruitingDetail",
+        component: () => import("@/views/PageDetail/recruitingDetail"),
         meta: {
             is_show: false,
         },

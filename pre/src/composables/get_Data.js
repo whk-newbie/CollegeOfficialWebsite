@@ -24,6 +24,11 @@ function getList(url, data,count=null) {
                     getData(response.data.next.charAt(response.data.next.length - 1), url, data)
                 }
             }
+            else{
+                if (response.data.next !== null){
+                    getData(2,url,data)
+                }
+            }
 
         })
 }

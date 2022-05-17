@@ -66,7 +66,7 @@ export default {
   methods: {
     getList() {
       axios
-          .get('/api//teachers/teacher')
+          .get('/api/teachers/teacher')
           .then(response => {
             this.totalPages = response.data.count,
                 (this.teachersList = response.data.results)
