@@ -64,14 +64,10 @@ router.register(r'group/party', PartyViewSet)
 router.register(r'group/manage', ManagementViewSet)
 router.register(r'group/honor', HonorViewSet)
 
-
 # 主题教育模块api
 router.register(r'education/report', ReportViewSet)
 router.register(r'education/infor', InfosViewSet)
 router.register(r'education/filelearn', FilelearnViewSet)
-
-
-
 
 router.register(r'board', BoardViewSet)
 

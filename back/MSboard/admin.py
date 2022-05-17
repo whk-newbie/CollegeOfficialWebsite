@@ -6,7 +6,7 @@ from MSboard.models import board
 
 @admin.register(board)
 class boardAdmin(admin.ModelAdmin):
-    list_display = ('title', 'is_reply', 'created_at')
+    list_display = ('title', 'is_reply', 'content','created_at')
     list_filter = ('is_reply',)
     ordering = ('-created_at',)
     list_editable = ('is_reply',)
