@@ -9,6 +9,13 @@ module.exports = {
                 pathRewrite: {
                     '^/api': ''
                 }
+            },
+            '/admin': {
+                target: 'http://127.0.0.1:8000/admin',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/admin': ''
+                }
             }
         }
     },

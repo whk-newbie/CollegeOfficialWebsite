@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0a38da"],{"0356":function(e,n,o){"use strict";o.r(n);var c=o("7a23");function r(e,n,o,r,t,a){var p=Object(c["resolveComponent"])("GroupNews");return Object(c["openBlock"])(),Object(c["createBlock"])(p)}var t=o("d2f5"),a={name:"Honor",components:{GroupNews:t["default"]}},p=o("6b0d"),s=o.n(p);const u=s()(a,[["render",r]]);n["default"]=u}}]);
+//# sourceMappingURL=chunk-2d0a38da.2e3fe667.js.map
