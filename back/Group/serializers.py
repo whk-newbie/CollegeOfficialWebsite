@@ -82,7 +82,7 @@ class ManagementDetailSerializer(BaseDetailSerializer):
 class HonorSerializer(BaseSerializer):
     class Meta:
         model = Honor
-        fields = ['id', 'url', 'title', 'create_time', 'update_time']
+        fields = ['id', 'url', 'title','photo', 'create_time', 'update_time']
 
 
 class HonorDetailSerializer(BaseDetailSerializer):

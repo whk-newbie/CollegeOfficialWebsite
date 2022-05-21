@@ -12,7 +12,7 @@ export default function get_Data(data, url,count=null) {
 }
 
 
-function getList(url, data,count=null) {
+export function getList(url, data, count=null) {
     axios
         .get(url)
         .then(response => {

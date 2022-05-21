@@ -62,3 +62,12 @@ class HonorViewSet(viewsets.ModelViewSet):
             return HonorSerializer
         else:
             return HonorDetailSerializer
+
+    def get_queryset(self):
+        queryset = Honor.objects.all().order_by('-create_time')
+        # 查询参数带有photo的方位photo不为空的数据
+        ptoto = self.request.query_params.get('photo', None)
+        if ptoto is not None:
+            queryset = queryset.exclude(photo='')
+
+        return queryset

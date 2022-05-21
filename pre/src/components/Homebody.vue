@@ -85,48 +85,79 @@
       </el-table>
     </div>
     <div class="achives">
-      <el-header>
-        <el-container>
-          <div style="margin-right: 90%;margin-top:1%">成就</div>
-          <el-button @click="moreinfo" style="border:0;margin-top:1%">更多+</el-button>
-        </el-container>
-      </el-header>
       <el-container>
-        <el-aside width="30%">
-          <el-card :body-style="{ padding: '0px' }" shadow="hover">
-            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png"
-                 class="image" alt="成就图片"/>
-            <div style="padding: 14px">
-              <span>Yummy hamburger</span>
-            </div>
-          </el-card>
-        </el-aside>
-        <el-container>
-          <el-main>
-            <el-row :gutter="12" style="margin-top:2%;margin-bottom: 2%">
-              <el-col :span="8">
-                <el-card shadow="hover"> hover</el-card>
-              </el-col>
-              <el-col :span="8">
-                <el-card shadow="hover"> Hover</el-card>
-              </el-col>
-              <el-col :span="8">
-                <el-card shadow="hover"> hover</el-card>
-              </el-col>
-            </el-row>
-            <el-row :gutter="12" style="margin-top:2%;margin-bottom: 2%">
-              <el-col :span="8">
-                <el-card shadow="hover"> hover</el-card>
-              </el-col>
-              <el-col :span="8">
-                <el-card shadow="hover"> Hover</el-card>
-              </el-col>
-              <el-col :span="8">
-                <el-card shadow="hover"> hover</el-card>
-              </el-col>
-            </el-row>
-          </el-main>
-        </el-container>
+        <el-header>
+          <el-container>
+            <span style="margin-right: 90%;margin-top:1%">成就</span>
+            <el-button style="border:0;margin-top:1%" @click="this.$router.push('/group/honor')">更多+</el-button>
+          </el-container>
+        </el-header>
+        <el-main style="padding-bottom: 0;padding-top: 0">
+          <el-row :gutter="24">
+            <el-col :span="8">
+              <el-card class="card-box" :body-style="{ padding: '0px'}">
+                <div v-if="achieve[0]">
+                  <img class="card-image" alt="成就图片" :src="achieve[0].photo"/>
+                  <span class="card-title">{{ achieve[0].title }}</span>
+                </div>
+              </el-card>
+            </el-col>
+            <el-col :span="16">
+              <el-row :gutter="20" style="margin: 0;padding: 0;">
+                <el-col :span="6">
+                  <el-card class="card-box" :body-style="{ padding: '0px'}">
+                    <div v-if="achieve[0]">
+                      <img class="card-image" alt="成就图片" :src="achieve[0].photo"/>
+                      <span class="card-title">{{ achieve[0].title }}</span>
+                    </div>
+                  </el-card>
+                </el-col>
+                <el-col :span="6">
+                  <el-card class="card-box" :body-style="{ padding: '0px'}">
+                    <div v-if="achieve[0]">
+                      <img class="card-image" alt="成就图片" :src="achieve[0].photo"/>
+                      <span class="card-title">{{ achieve[0].title }}</span>
+                    </div>
+                  </el-card>
+                </el-col>
+                <el-col :span="6">
+                  <el-card class="card-box" :body-style="{ padding: '0px'}">
+                    <div v-if="achieve[0]">
+                      <img class="card-image" alt="成就图片" :src="achieve[0].photo"/>
+                      <span class="card-title">{{ achieve[0].title }}</span>
+                    </div>
+                  </el-card>
+                </el-col>
+              </el-row>
+              <el-row :gutter="20" style="margin: 0;padding: 0;">
+                <el-col :span="6">
+                  <el-card class="card-box" :body-style="{ padding: '0px'}">
+                    <div v-if="achieve[0]">
+                      <img class="card-image" alt="成就图片" :src="achieve[0].photo"/>
+                      <span class="card-title">{{ achieve[0].title }}</span>
+                    </div>
+                  </el-card>
+                </el-col>
+                <el-col :span="6">
+                  <el-card class="card-box" :body-style="{ padding: '0px'}">
+                    <div v-if="achieve[0]">
+                      <img class="card-image" alt="成就图片" :src="achieve[0].photo"/>
+                      <span class="card-title">{{ achieve[0].title }}</span>
+                    </div>
+                  </el-card>
+                </el-col>
+                <el-col :span="6">
+                  <el-card class="card-box" :body-style="{ padding: '0px'}">
+                    <div v-if="achieve[0]">
+                      <img class="card-image" alt="成就图片" :src="achieve[0].photo"/>
+                      <span class="card-title">{{ achieve[0].title }}</span>
+                    </div>
+                  </el-card>
+                </el-col>
+              </el-row>
+            </el-col>
+          </el-row>
+        </el-main>
       </el-container>
     </div>
     <div class="Academic">
@@ -141,6 +172,7 @@ import {Connection, Checked, Collection, Reading} from '@element-plus/icons-vue'
 import {ref} from "vue"
 import formatted_time from '@/composables/formatted_time';
 import get_Data from "@/composables/get_Data";
+import get_achieve from "@/composables/get_achieve";
 
 export default {
   name: "homebody",
@@ -150,11 +182,14 @@ export default {
   setup() {
     const tableData = ref([])
     const infoData = ref([])
+    const achieve = ref([])
     get_Data(tableData, '/api/news')
     get_Data(infoData, '/api/infos')
+    get_achieve(achieve)
     return {
       tableData,
       infoData,
+      achieve,
       formatted_time
     }
   },
@@ -168,11 +203,8 @@ export default {
     changetoInfosdetail(row) {
       this.$router.push({name: 'infosDetail', params: {id: row.id}})
     },
-    moreinfo() {
-      console.log("test")
-    },
-    xiaoyou(){
-      window.open('https://xy.jxnu.edu.cn/#/','_blank')
+    xiaoyou() {
+      window.open('https://xy.jxnu.edu.cn/#/', '_blank')
     }
   }
 }
@@ -248,7 +280,7 @@ export default {
 .achives {
   margin: 2% 10%;
   width: 80%;
-  height: 35%;
+  height: 25%;
   box-shadow: 5px 5px 15px #dad9d9;
   border-radius: 5px;
 }
@@ -308,6 +340,27 @@ export default {
   height: auto;
 }
 
+
+.card-box ::v-deep {
+  width: 80%;
+  height: 60%;
+}
+.card-box div{
+  width: 100%;
+  height: 100%;
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.card-title{
+  position: relative;
+  color: black;
+  left: 1rem;
+  bottom: 3rem;
+}
 </style>
 
 

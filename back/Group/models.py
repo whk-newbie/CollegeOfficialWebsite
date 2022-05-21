@@ -81,6 +81,7 @@ class Honor(BaseModel):
     """
     Honor
     """
+    photo = models.ImageField(upload_to='honor', verbose_name='封面图片', null=True, blank=True, default=None)
     file = models.FileField(upload_to='honor/%Y/%m', verbose_name='文件', blank=True, null=True)
 
     class Meta:
