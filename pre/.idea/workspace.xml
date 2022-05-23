@@ -11,7 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="046e9d47-1e6f-4d06-9e1a-8ffd0e788c5c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dist/css/chunk-44aa345c.0c965720.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/chunk-2c8c045f.0bfbb60a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.0044daf0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.0044daf0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2c8c045f.7598ccd0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-2c8c045f.7598ccd0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/0e2f1975995ecaab73c877c449a19f26.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/0e2f1975995ecaab73c877c449a19f26.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/74a8f372826ed7d7141b2fa49571d055.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/74a8f372826ed7d7141b2fa49571d055.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/babel-loader/ff5c55486b074db58339ecc6581067a7.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/ff5c55486b074db58339ecc6581067a7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/59866606dc699addbefab14d0eb77edd.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/59866606dc699addbefab14d0eb77edd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/6cec2d5e0f8bcd1571daa6fc37b29ad9.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/6cec2d5e0f8bcd1571daa6fc37b29ad9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/79cc34415570ed2fa2aeaae6a3bba2df.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/79cc34415570ed2fa2aeaae6a3bba2df.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/99ff4af12a46bf85b646328f13f3d83d.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/99ff4af12a46bf85b646328f13f3d83d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9ce25471974eb0df4325e88e1832c8f4.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/9ce25471974eb0df4325e88e1832c8f4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/vue-loader/bb4952a0547620946de6bce4415fd4dd.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/vue-loader/bb4952a0547620946de6bce4415fd4dd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Homebody.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homebody.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +196,7 @@
       <workItem from="1652788525331" duration="6465000" />
       <workItem from="1653117793594" duration="6450000" />
       <workItem from="1653125617834" duration="1962000" />
+      <workItem from="1653293510283" duration="3192000" />
     </task>
     <servers />
   </component>
@@ -223,22 +242,22 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="686" y="251" key="FileChooserDialogImpl/0.40.1920.1040@0.40.1920.1040" timestamp="1651375003844" />
-    <state width="1899" height="245" key="GridCell.Tab.0.bottom" timestamp="1653128197513">
+    <state width="1899" height="245" key="GridCell.Tab.0.bottom" timestamp="1653296732979">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1899" height="245" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1653128197513" />
-    <state width="1899" height="245" key="GridCell.Tab.0.center" timestamp="1653128197513">
+    <state width="1899" height="245" key="GridCell.Tab.0.bottom/0.40.1920.1040@0.40.1920.1040" timestamp="1653296732979" />
+    <state width="1899" height="245" key="GridCell.Tab.0.center" timestamp="1653296732979">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1899" height="245" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1653128197513" />
-    <state width="1899" height="245" key="GridCell.Tab.0.left" timestamp="1653128197513">
+    <state width="1899" height="245" key="GridCell.Tab.0.center/0.40.1920.1040@0.40.1920.1040" timestamp="1653296732979" />
+    <state width="1899" height="245" key="GridCell.Tab.0.left" timestamp="1653296732978">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1899" height="245" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1653128197513" />
-    <state width="1899" height="245" key="GridCell.Tab.0.right" timestamp="1653128197513">
+    <state width="1899" height="245" key="GridCell.Tab.0.left/0.40.1920.1040@0.40.1920.1040" timestamp="1653296732978" />
+    <state width="1899" height="245" key="GridCell.Tab.0.right" timestamp="1653296732979">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
-    <state width="1899" height="245" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1653128197513" />
+    <state width="1899" height="245" key="GridCell.Tab.0.right/0.40.1920.1040@0.40.1920.1040" timestamp="1653296732979" />
     <state x="787" y="261" key="RollbackChangesDialog" timestamp="1651481622498">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>

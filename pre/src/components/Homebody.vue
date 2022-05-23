@@ -1,6 +1,6 @@
 <template>
   <div class="body">
-    <div class="newsbox">
+    <div class="news-box">
       <el-row :gutter="28">
         <el-col :span="12">
           <div class="grid-content bg-purple">
@@ -86,11 +86,15 @@
     </div>
     <div class="achives">
       <el-container>
-        <el-header>
-          <el-container>
-            <span style="margin-right: 90%;margin-top:1%">成就</span>
-            <el-button style="border:0;margin-top:1%" @click="this.$router.push('/group/honor')">更多+</el-button>
-          </el-container>
+        <el-header class="span-head">
+          <el-row :gutter="24">
+            <el-col :span="12">
+              <div class="span-1">成就</div>
+            </el-col>
+            <el-col :span="12">
+              <el-button class="head-button" @click="this.$router.push('/group/honor')">更多+</el-button>
+            </el-col>
+          </el-row>
         </el-header>
         <el-main style="padding-bottom: 0;padding-top: 0">
           <el-row :gutter="24">
@@ -211,12 +215,16 @@ export default {
 </script>
 
 <style scoped>
-.newsbox {
+.news-box {
   margin: 2% 10%;
   width: 80%;
   height: 35%;
   box-shadow: 5px 4px 15px #dad9d9;
   border-radius: 5px;
+}
+
+.el-row {
+  margin-top: 0;
 }
 
 .small {
@@ -341,21 +349,38 @@ export default {
 }
 
 
+
+.head-button {
+  border: 0;
+  margin-top: 3%;
+  margin-left: 75%;
+}
+
+.span-1 {
+  margin-top: 4%;
+  font-size: 14px;
+  font-family: 微软雅黑, serif;
+  color: gray;
+}
+
 .card-box ::v-deep {
   width: 80%;
   height: 60%;
 }
-.card-box div{
+
+.card-box div {
   width: 100%;
   height: 100%;
 }
+
 .card-image {
   width: 100%;
   height: 100%;
   padding-bottom: 0;
   margin-bottom: 0;
 }
-.card-title{
+
+.card-title {
   position: relative;
   color: black;
   left: 1rem;
